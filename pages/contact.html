@@ -134,6 +134,28 @@
             -webkit-box-shadow: 0 0 0px 1000px #131313 inset;
             transition: background-color 5000s ease-in-out 0s;
         }
+
+        .sidebar-link {
+            position: relative;
+            display: block;
+            padding: 0.75rem 1.5rem;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            color: #d0c5af;
+            transition: all 0.2s;
+            border-left: 2px solid transparent;
+        }
+        .sidebar-link:hover {
+            color: #f2ca50;
+            background: rgba(242, 202, 80, 0.05);
+            border-left-color: #f2ca50;
+        }
+        .sidebar-link.active {
+            color: #f2ca50;
+            border-left-color: #f2ca50;
+            background: rgba(242, 202, 80, 0.08);
+        }
     </style>
 </head>
 
@@ -159,6 +181,9 @@
                     href="testimonials.html">Testimonials</a>
             </div>
             <div class="flex items-center gap-6">
+                <button id="sidebar-toggle" class="md:hidden text-on-surface-variant hover:text-primary transition-colors" aria-label="Toggle menu">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
                 <button
                     class="hidden md:block px-6 py-2 bg-primary-container text-on-primary-container font-label-md text-label-md rounded hover:opacity-90 transition-all scale-95 active:scale-90">
                     Book a Table
@@ -483,7 +508,55 @@
                 nav.classList.remove('bg-surface/80');
             }
         });
+        // Sidebar toggle
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+        const sidebarClose = document.getElementById('sidebar-close');
+        const sidebar = document.getElementById('sidebar');
+        const sidebarOverlay = document.getElementById('sidebar-overlay');
+
+        function openSidebar() {
+            sidebar.classList.remove('-translate-x-full');
+            sidebarOverlay.classList.remove('hidden');
+            setTimeout(() => { sidebarOverlay.classList.remove('opacity-0'); }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSidebar() {
+            sidebar.classList.add('-translate-x-full');
+            sidebarOverlay.classList.add('opacity-0');
+            setTimeout(() => {
+                sidebarOverlay.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        if (sidebarToggle) sidebarToggle.addEventListener('click', openSidebar);
+        if (sidebarClose) sidebarClose.addEventListener('click', closeSidebar);
+        if (sidebarOverlay) sidebarOverlay.addEventListener('click', closeSidebar);
     </script>
+    <!-- Sidebar Overlay -->
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] hidden opacity-0 transition-opacity duration-300"></div>
+    <!-- Sidebar Panel -->
+    <div id="sidebar" class="fixed top-0 left-0 h-full w-72 bg-surface-container-high border-r border-white/5 z-[70] transform -translate-x-full transition-transform duration-300 flex flex-col overflow-y-auto">
+        <div class="flex justify-between items-center p-6 border-b border-white/5">
+            <span class="font-headline-md text-headline-md text-primary">L'ELIXIR</span>
+            <button id="sidebar-close" class="text-on-surface-variant hover:text-primary transition-colors" aria-label="Close menu">
+                <span class="material-symbols-outlined text-3xl">close</span>
+            </button>
+        </div>
+        <nav class="flex flex-col py-4">
+            <a class="sidebar-link" href="../index.html">Home</a>
+            <a class="sidebar-link" href="about.html">About</a>
+            <a class="sidebar-link" href="menu.html">Menu</a>
+            <a class="sidebar-link" href="services.html">Services</a>
+            <a class="sidebar-link" href="gallery.html">Gallery</a>
+            <a class="sidebar-link" href="testimonials.html">Testimonials</a>
+            <a class="sidebar-link active" href="contact.html">Contact</a>
+        </nav>
+        <div class="mt-auto p-6 border-t border-white/5">
+            <a href="contact.html" class="block w-full bg-primary text-on-primary text-center py-3 rounded-full font-label-md text-label-md hover:scale-95 active:scale-90 transition-transform">Book a Table</a>
+        </div>
+    </div>
 </body>
 
 </html>
