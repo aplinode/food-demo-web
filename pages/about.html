@@ -1,417 +1,520 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>About L'ELIXIR | Luxury Dining</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Tailwind Configuration -->
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "on-primary-container": "#554300",
-                    "tertiary-fixed-dim": "#c8c6c2",
-                    "surface-dim": "#131313",
-                    "surface-bright": "#393939",
-                    "on-secondary": "#313030",
-                    "on-primary-fixed": "#241a00",
-                    "secondary-fixed": "#e5e2e1",
-                    "on-secondary-container": "#b7b5b4",
-                    "surface-container-lowest": "#0e0e0e",
-                    "secondary-fixed-dim": "#c8c6c5",
-                    "on-tertiary": "#30312e",
-                    "on-secondary-fixed-variant": "#474746",
-                    "on-tertiary-fixed": "#1b1c19",
-                    "tertiary-container": "#b4b3af",
-                    "inverse-on-surface": "#303030",
-                    "surface-container-low": "#1b1c1c",
-                    "primary-container": "#d4af37",
-                    "surface-container-high": "#2a2a2a",
-                    "on-secondary-fixed": "#1c1b1b",
-                    "primary-fixed": "#ffe088",
-                    "on-surface": "#e4e2e1",
-                    "surface-container": "#1f2020",
-                    "inverse-primary": "#735c00",
-                    "error-container": "#93000a",
-                    "on-primary": "#3c2f00",
-                    "tertiary-fixed": "#e4e2dd",
-                    "outline": "#99907c",
-                    "error": "#ffb4ab",
-                    "surface-tint": "#e9c349",
-                    "surface": "#131313",
-                    "on-error": "#690005",
-                    "surface-container-highest": "#353535",
-                    "secondary": "#c8c6c5",
-                    "on-surface-variant": "#d0c5af",
-                    "secondary-container": "#474746",
-                    "on-background": "#e4e2e1",
-                    "tertiary": "#d0ceca",
-                    "primary": "#f2ca50",
-                    "on-primary-fixed-variant": "#574500",
-                    "on-tertiary-container": "#454542",
-                    "surface-variant": "#353535",
-                    "on-tertiary-fixed-variant": "#474744",
-                    "background": "#131313",
-                    "primary-fixed-dim": "#e9c349",
-                    "inverse-surface": "#e4e2e1",
-                    "outline-variant": "#4d4635",
-                    "on-error-container": "#ffdad6"
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About L'ELIXIR | Luxury Dining</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#554300",
+                        "tertiary-fixed-dim": "#c8c6c2",
+                        "surface-dim": "#131313",
+                        "surface-bright": "#393939",
+                        "on-secondary": "#313030",
+                        "on-primary-fixed": "#241a00",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-secondary-container": "#b7b5b4",
+                        "surface-container-lowest": "#0e0e0e",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-tertiary": "#30312e",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-tertiary-fixed": "#1b1c19",
+                        "tertiary-container": "#b4b3af",
+                        "inverse-on-surface": "#303030",
+                        "surface-container-low": "#1b1c1c",
+                        "primary-container": "#d4af37",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "primary-fixed": "#ffe088",
+                        "on-surface": "#e4e2e1",
+                        "surface-container": "#1f2020",
+                        "inverse-primary": "#735c00",
+                        "error-container": "#93000a",
+                        "on-primary": "#3c2f00",
+                        "tertiary-fixed": "#e4e2dd",
+                        "outline": "#99907c",
+                        "error": "#ffb4ab",
+                        "surface-tint": "#e9c349",
+                        "surface": "#131313",
+                        "on-error": "#690005",
+                        "surface-container-highest": "#353535",
+                        "secondary": "#c8c6c5",
+                        "on-surface-variant": "#d0c5af",
+                        "secondary-container": "#474746",
+                        "on-background": "#e4e2e1",
+                        "tertiary": "#d0ceca",
+                        "primary": "#f2ca50",
+                        "on-primary-fixed-variant": "#574500",
+                        "on-tertiary-container": "#454542",
+                        "surface-variant": "#353535",
+                        "on-tertiary-fixed-variant": "#474744",
+                        "background": "#131313",
+                        "primary-fixed-dim": "#e9c349",
+                        "inverse-surface": "#e4e2e1",
+                        "outline-variant": "#4d4635",
+                        "on-error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "section-gap": "120px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-xl": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.08em", "fontWeight": "600" }]
+                    }
+                },
             },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "margin-desktop": "64px",
-                    "margin-mobile": "20px",
-                    "section-gap": "120px",
-                    "container-max": "1280px",
-                    "gutter": "24px",
-                    "unit": "8px"
-            },
-            "fontFamily": {
-                    "display-lg-mobile": ["Playfair Display"],
-                    "headline-lg": ["Playfair Display"],
-                    "label-md": ["Inter"],
-                    "body-lg": ["Inter"],
-                    "body-md": ["Inter"],
-                    "headline-xl": ["Playfair Display"],
-                    "display-lg": ["Playfair Display"],
-                    "headline-md": ["Playfair Display"],
-                    "label-sm": ["Inter"]
-            },
-            "fontSize": {
-                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
-                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
-                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
-                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
-                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
-                    "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.08em", "fontWeight": "600"}]
-            }
-          },
-        },
-      }
+        }
     </script>
-<style>
+    <style>
         body {
             background-color: #131313;
             color: #e4e2e1;
             overflow-x: hidden;
         }
+
         .glass-card {
             background: rgba(38, 38, 38, 0.4);
             backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
+
         .premium-shadow {
             box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.5);
         }
+
         .scroll-reveal {
             opacity: 0;
             transform: translateY(20px);
             transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
         }
+
         .scroll-reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
+
         .timeline-line {
             background: linear-gradient(to bottom, transparent, #f2ca50, transparent);
         }
     </style>
 </head>
+
 <body class="selection:bg-primary selection:text-on-primary">
-<!-- Top Navigation Bar -->
-<nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-surface/40 backdrop-blur-xl shadow-2xl shadow-black/20">
-<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
-<a class="font-headline-md text-headline-md tracking-tighter text-primary dark:text-primary-fixed" href="#">L'ELIXIR</a>
-<div class="hidden md:flex items-center space-x-8">
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
-<a class="font-label-md text-label-md text-primary dark:text-primary-fixed border-b-2 border-primary pb-1" href="#">About</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Menu</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Services</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Gallery</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Testimonials</a>
-</div>
-<button class="bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded-full hover:bg-primary-fixed transition-all active:scale-95">
+    <!-- Top Navigation Bar -->
+    <nav
+        class="fixed top-0 w-full z-50 border-b border-white/5 bg-surface/40 backdrop-blur-xl shadow-2xl shadow-black/20">
+        <div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+            <a class="font-headline-md text-headline-md tracking-tighter text-primary dark:text-primary-fixed"
+                href="../index.html">L'ELIXIR</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+                    href="../index.html">Home</a>
+                <a class="font-label-md text-label-md text-primary dark:text-primary-fixed border-b-2 border-primary pb-1"
+                    href="about.html">About</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+                    href="menu.html">Menu</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+                    href="services.html">Services</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+                    href="gallery.html">Gallery</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+                    href="testimonials.html">Testimonials</a>
+            </div>
+            <a href="contact.html"
+                class="bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded-full hover:bg-primary-fixed transition-all active:scale-95 inline-block">
                 Book a Table
-            </button>
-</div>
-</nav>
-<!-- Hero Section -->
-<section class="relative h-[819px] flex items-center justify-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<div class="absolute inset-0 bg-black/60 z-10"></div>
-<img class="w-full h-full object-cover scale-105 animate-[subtle-zoom_20s_infinite_alternate]" data-alt="A cinematic, high-contrast shot of a luxury restaurant interior at night. Warm amber lighting catches the edges of polished crystal glassware and dark marble tables. The atmosphere is intimate and sophisticated, with deep charcoal shadows and subtle gold accents reflecting the premium L'ELIXIR brand identity. The focus is sharp on the elegant table setting with soft bokeh blurring the opulent background décor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfFeUeo8Qr1xIkGy4WAMojmTndXoYd7vMb3Ihyj6AxR6QKhkjx2ItpamOT2jvuBdI6nGVH0qODtVR_uiyWROorPxlMFTzk7OFW_yUMvKuS6FZM2XMIymyuWoerauGi7aGaE4unscnP7vaojCWF58_1EjlXaZO6q_Bv1P3GburJsiuEsN3dKAvS48X9KQ-0UPrbkEGO0beK21W6XIPqQ4I-EvLXDn6n8UhnSdSSkAH9Hd-xVpYgD1RFgcff7j5zJSKMw9TDSjDYoDEc"/>
-</div>
-<div class="relative z-20 text-center px-margin-mobile">
-<h1 class="font-display-lg text-display-lg mb-4 text-primary">The Art of Alchemy</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Where tradition meets innovation in a symphony of sensory excellence.</p>
-</div>
-</section>
-<!-- Brand Story Section -->
-<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
-<div class="lg:col-span-7 scroll-reveal">
-<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.2em] mb-4 block">Our Heritage</span>
-<h2 class="font-headline-xl text-headline-xl mb-8">A Legacy Carved in Gold</h2>
-<div class="space-y-6 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-<p>Founded in 1994, L'ELIXIR began as a quiet ambition in the heart of the culinary district. What started as a small, experimental kitchen has evolved into a sanctuary for gourmands who seek more than just a meal—they seek a transformation.</p>
-<p>Our philosophy is rooted in the concept of "Gastronomic Alchemy." We believe that through precision, passion, and the finest ingredients, we can turn the base elements of nature into something extraordinary. Every dish is a chapter in our history, every flavor a tribute to our craft.</p>
-</div>
-</div>
-<div class="lg:col-span-5 relative scroll-reveal">
-<div class="aspect-[4/5] rounded-xl overflow-hidden glass-card p-2">
-<img class="w-full h-full object-cover rounded-lg" data-alt="A stunning macro photograph of a chef's hands meticulously garnishing a contemporary dish with delicate gold leaf. The lighting is focused and warm, highlighting the texture of the food and the precision of the movement. Dark, moody background with subtle steam rising, embodying the 'Gastronomic Alchemy' of L'ELIXIR. Rich golden tones contrast with the deep charcoal shadows for a premium, high-end culinary aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfi5qZAt-P-R0YR5-BL843sb90Phgmqi7Dau25vBwL3fO9GK4D1fTP7V5tmXmAQEWfGWO-AS3C6m3PKAFqDjV41hOlojhZ7-c-dUkIKHgg_Y6-Bh3Vb_-bgO-c7r1kMMGWJzpjJLuUvgujR0vZByJ6BkJOv-a_F5ylkLLl1WSIRXn8McVAgBUnya9A45_EEJ8W1TNj95qwrWz2zDtd0YmiLg8XUoLC4VC1CKXYuWDV_iDNzp3wOgLQFBQMaRdeaZMBq6J3zmS7ZLOR"/>
-</div>
-<div class="absolute -bottom-8 -left-8 bg-surface-container-high p-8 rounded-xl glass-card hidden md:block">
-<span class="text-primary font-headline-xl text-headline-xl block">30</span>
-<span class="font-label-md text-label-md uppercase tracking-wider">Years of Craft</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Mission & Vision Bento Grid -->
-<section class="py-section-gap bg-surface-container-lowest">
-<div class="px-margin-desktop max-w-container-max mx-auto">
-<div class="text-center mb-16 scroll-reveal">
-<h2 class="font-headline-xl text-headline-xl text-white mb-4">Our Core Ethos</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">Defining the future of luxury dining through three fundamental pillars.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<!-- Mission -->
-<div class="glass-card p-10 rounded-xl scroll-reveal group hover:bg-surface-bright/10 transition-all duration-500">
-<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-primary text-4xl" data-icon="auto_awesome">auto_awesome</span>
-</div>
-<h3 class="font-headline-md text-headline-md mb-4">The Mission</h3>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">To curate immersive culinary experiences that transcend the ordinary, utilizing the precision of modern science and the soul of traditional artistry.</p>
-</div>
-<!-- Vision -->
-<div class="glass-card p-10 rounded-xl scroll-reveal group hover:bg-surface-bright/10 transition-all duration-500">
-<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-primary text-4xl" data-icon="visibility">visibility</span>
-</div>
-<h3 class="font-headline-md text-headline-md mb-4">The Vision</h3>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">To lead the global standard for high-end hospitality, where sustainability and luxury coexist in a perfectly balanced ecosystem of flavor.</p>
-</div>
-<!-- Values -->
-<div class="glass-card p-10 rounded-xl scroll-reveal group hover:bg-surface-bright/10 transition-all duration-500">
-<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-primary text-4xl" data-icon="diamond">diamond</span>
-</div>
-<h3 class="font-headline-md text-headline-md mb-4">The Values</h3>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Integrity in sourcing, uncompromising quality, and an obsession with the subtle details that transform a meal into a memory.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Interactive Timeline -->
-<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto overflow-hidden">
-<div class="text-center mb-16 scroll-reveal">
-<h2 class="font-headline-xl text-headline-xl mb-4">A Journey Through Time</h2>
-</div>
-<div class="relative">
-<div class="absolute left-1/2 -translate-x-1/2 h-full w-[1px] timeline-line opacity-30"></div>
-<div class="space-y-24">
-<!-- 1994 -->
-<div class="relative flex items-center justify-between scroll-reveal">
-<div class="w-[45%] text-right hidden md:block">
-<h4 class="font-headline-md text-headline-md text-primary">The Genesis</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">L'ELIXIR opens its doors as a 12-seat experimental table.</p>
-</div>
-<div class="z-10 w-12 h-12 rounded-full bg-surface border-2 border-primary flex items-center justify-center absolute left-1/2 -translate-x-1/2">
-<span class="font-label-sm text-label-sm">94</span>
-</div>
-<div class="w-full md:w-[45%] ml-auto pl-8 md:pl-0">
-<div class="md:hidden mb-2">
-<h4 class="font-headline-md text-headline-md text-primary">The Genesis</h4>
-</div>
-<img class="rounded-xl premium-shadow grayscale hover:grayscale-0 transition-all duration-500" data-alt="Vintage-style black and white photography of a small, rustic kitchen with intense focus on a single flickering candle and hand-written recipe notes. The mood is nostalgic and intimate, reflecting the humble beginnings of L'ELIXIR in 1994. Deep shadows and a sense of quiet ambition permeate the scene, styled with a high-end editorial grain." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2yoE88oq9SFGbWxkNJYbai2LM1-NDmwykf8Jxp1zXuYb8k0Mw7_RsvtzLaB9sQKV6c3sjj9ZoiPvx8U6pbEwz9asG_1qWBzgRl8El19UMlWdgA4kHgWPd7QTPxUoMs_45wR9NQHaMpVWYrVi4eStz35BRloNLD-GdHW4l3ZwauQAGSvB4o5tVzHWli6Gy_m3MpQ07Ab-YnqQGQwPIJ7vu1b1sbg7JQPY1VxYo3YBLAQ4xI_30Yvfebl0YsPM4PaczsyoqflS7acqb"/>
-</div>
-</div>
-<!-- 2008 -->
-<div class="relative flex items-center justify-between scroll-reveal">
-<div class="w-full md:w-[45%] pr-8 md:pr-0">
-<div class="md:hidden mb-2">
-<h4 class="font-headline-md text-headline-md text-primary">Michelin Star</h4>
-</div>
-<img class="rounded-xl premium-shadow grayscale hover:grayscale-0 transition-all duration-500" data-alt="A close-up photograph of a prestigious culinary award resting on a dark velvet surface. The golden details of the award glint under a single spotlight. The background is a dark, out-of-focus dining room of L'ELIXIR, conveying success and high-end achievement. The lighting is dramatic and moody, emphasizing the brand's commitment to excellence and its 2008 milestone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHti4jDJr-Fi39Ie89XmwNDe7I19-wbwHwJGV0CB0NkJXC9qAeWNeQshnA_BHbwVhVH2n21wqBuZi-HrUwO-pUTK5bs4oOGc4GkHOLcq4xJPSO-BhiCGSDaNeNB0jAKJOmIkGPafkuZZJ09bxRr1TC9oU_QedZPhTKYv87LrkYKdFQuDnMmCChRmu5ARn1guk1T_JI3bH_d3uBCN-gtqCR66lv_cr5HdCBWZtUZ26CqcDAZlAGq1ZjP5W9uvferxezRBPqaJxi0AVA"/>
-</div>
-<div class="z-10 w-12 h-12 rounded-full bg-surface border-2 border-primary flex items-center justify-center absolute left-1/2 -translate-x-1/2">
-<span class="font-label-sm text-label-sm">08</span>
-</div>
-<div class="w-[45%] text-left hidden md:block">
-<h4 class="font-headline-md text-headline-md text-primary">The First Star</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">Awarded our first Michelin Star for innovation in modern French-fusion cuisine.</p>
-</div>
-</div>
-<!-- 2024 -->
-<div class="relative flex items-center justify-between scroll-reveal">
-<div class="w-[45%] text-right hidden md:block">
-<h4 class="font-headline-md text-headline-md text-primary">Modern Era</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">Full digital transformation and redesign into the atmospheric space we call home today.</p>
-</div>
-<div class="z-10 w-12 h-12 rounded-full bg-surface border-2 border-primary flex items-center justify-center absolute left-1/2 -translate-x-1/2">
-<span class="font-label-sm text-label-sm">24</span>
-</div>
-<div class="w-full md:w-[45%] ml-auto pl-8 md:pl-0">
-<div class="md:hidden mb-2">
-<h4 class="font-headline-md text-headline-md text-primary">Modern Era</h4>
-</div>
-<img class="rounded-xl premium-shadow grayscale hover:grayscale-0 transition-all duration-500" data-alt="A wide-angle, hyper-modern shot of the current L'ELIXIR interior. Sleek dark surfaces, intelligent architectural lighting, and minimalist luxury furniture define the space. The composition is balanced and airy, featuring deep blacks and warm gold highlights. The scene feels futuristic yet inviting, representing the brand's evolution into 2024 with a clean, high-tech aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqnHvpXELHUjqGpFlV_fGTN23jWLp7fqqkVjEih4Vj7eE4w_9JC88b2SHJsFLtAvQbXEXMYBfOz1h-hwc4UHPAZ3XcdoFq6aJboxGsJ-tFOjgkmKfgkl0tstwBlM6vyZvCEsdUjZiQjwQ30l7ZnWcCpeIuIgMiKPY9OfxsHfeIhET9ehzAKDZVVlGJOcouv_W31yrqZEkgxFOhF7VBg1TYjGx9il4oZ2v5x6HuuGFM-IJkHaeQ27THunboGE2MXILbUNUzBU-vHMqH"/>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Meet the Team -->
-<section class="py-section-gap bg-surface-container">
-<div class="px-margin-desktop max-w-container-max mx-auto">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16 scroll-reveal">
-<div class="max-w-xl">
-<h2 class="font-headline-xl text-headline-xl mb-4">Masters of the Kitchen</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">The visionary minds behind our award-winning menu and flawless service.</p>
-</div>
-<button class="hidden md:block border border-primary/30 text-primary font-label-md text-label-md px-8 py-3 rounded-full hover:bg-primary/10 transition-colors">
+            </a>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="relative h-[819px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-black/60 z-10"></div>
+            <img class="w-full h-full object-cover scale-105 animate-[subtle-zoom_20s_infinite_alternate]"
+                data-alt="A cinematic, high-contrast shot of a luxury restaurant interior at night. Warm amber lighting catches the edges of polished crystal glassware and dark marble tables. The atmosphere is intimate and sophisticated, with deep charcoal shadows and subtle gold accents reflecting the premium L'ELIXIR brand identity. The focus is sharp on the elegant table setting with soft bokeh blurring the opulent background décor."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfFeUeo8Qr1xIkGy4WAMojmTndXoYd7vMb3Ihyj6AxR6QKhkjx2ItpamOT2jvuBdI6nGVH0qODtVR_uiyWROorPxlMFTzk7OFW_yUMvKuS6FZM2XMIymyuWoerauGi7aGaE4unscnP7vaojCWF58_1EjlXaZO6q_Bv1P3GburJsiuEsN3dKAvS48X9KQ-0UPrbkEGO0beK21W6XIPqQ4I-EvLXDn6n8UhnSdSSkAH9Hd-xVpYgD1RFgcff7j5zJSKMw9TDSjDYoDEc" />
+        </div>
+        <div class="relative z-20 text-center px-margin-mobile">
+            <h1 class="font-display-lg text-display-lg mb-4 text-primary">The Art of Alchemy</h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Where tradition meets
+                innovation in a symphony of sensory excellence.</p>
+        </div>
+    </section>
+    <!-- Brand Story Section -->
+    <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+            <div class="lg:col-span-7 scroll-reveal">
+                <span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.2em] mb-4 block">Our
+                    Heritage</span>
+                <h2 class="font-headline-xl text-headline-xl mb-8">A Legacy Carved in Gold</h2>
+                <div class="space-y-6 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    <p>Founded in 1994, L'ELIXIR began as a quiet ambition in the heart of the culinary district. What
+                        started as a small, experimental kitchen has evolved into a sanctuary for gourmands who seek
+                        more than just a meal—they seek a transformation.</p>
+                    <p>Our philosophy is rooted in the concept of "Gastronomic Alchemy." We believe that through
+                        precision, passion, and the finest ingredients, we can turn the base elements of nature into
+                        something extraordinary. Every dish is a chapter in our history, every flavor a tribute to our
+                        craft.</p>
+                </div>
+            </div>
+            <div class="lg:col-span-5 relative scroll-reveal">
+                <div class="aspect-[4/5] rounded-xl overflow-hidden glass-card p-2">
+                    <img class="w-full h-full object-cover rounded-lg"
+                        data-alt="A stunning macro photograph of a chef's hands meticulously garnishing a contemporary dish with delicate gold leaf. The lighting is focused and warm, highlighting the texture of the food and the precision of the movement. Dark, moody background with subtle steam rising, embodying the 'Gastronomic Alchemy' of L'ELIXIR. Rich golden tones contrast with the deep charcoal shadows for a premium, high-end culinary aesthetic."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfi5qZAt-P-R0YR5-BL843sb90Phgmqi7Dau25vBwL3fO9GK4D1fTP7V5tmXmAQEWfGWO-AS3C6m3PKAFqDjV41hOlojhZ7-c-dUkIKHgg_Y6-Bh3Vb_-bgO-c7r1kMMGWJzpjJLuUvgujR0vZByJ6BkJOv-a_F5ylkLLl1WSIRXn8McVAgBUnya9A45_EEJ8W1TNj95qwrWz2zDtd0YmiLg8XUoLC4VC1CKXYuWDV_iDNzp3wOgLQFBQMaRdeaZMBq6J3zmS7ZLOR" />
+                </div>
+                <div
+                    class="absolute -bottom-8 -left-8 bg-surface-container-high p-8 rounded-xl glass-card hidden md:block">
+                    <span class="text-primary font-headline-xl text-headline-xl block">30</span>
+                    <span class="font-label-md text-label-md uppercase tracking-wider">Years of Craft</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Mission & Vision Bento Grid -->
+    <section class="py-section-gap bg-surface-container-lowest">
+        <div class="px-margin-desktop max-w-container-max mx-auto">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="font-headline-xl text-headline-xl text-white mb-4">Our Core Ethos</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant">Defining the future of luxury dining
+                    through three fundamental pillars.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <!-- Mission -->
+                <div
+                    class="glass-card p-10 rounded-xl scroll-reveal group hover:bg-surface-bright/10 transition-all duration-500">
+                    <div
+                        class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary text-4xl"
+                            data-icon="auto_awesome">auto_awesome</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md mb-4">The Mission</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">To curate immersive
+                        culinary experiences that transcend the ordinary, utilizing the precision of modern science and
+                        the soul of traditional artistry.</p>
+                </div>
+                <!-- Vision -->
+                <div
+                    class="glass-card p-10 rounded-xl scroll-reveal group hover:bg-surface-bright/10 transition-all duration-500">
+                    <div
+                        class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary text-4xl"
+                            data-icon="visibility">visibility</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md mb-4">The Vision</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">To lead the global
+                        standard for high-end hospitality, where sustainability and luxury coexist in a perfectly
+                        balanced ecosystem of flavor.</p>
+                </div>
+                <!-- Values -->
+                <div
+                    class="glass-card p-10 rounded-xl scroll-reveal group hover:bg-surface-bright/10 transition-all duration-500">
+                    <div
+                        class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary text-4xl" data-icon="diamond">diamond</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md mb-4">The Values</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Integrity in sourcing,
+                        uncompromising quality, and an obsession with the subtle details that transform a meal into a
+                        memory.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Interactive Timeline -->
+    <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+        <div class="text-center mb-16 scroll-reveal">
+            <h2 class="font-headline-xl text-headline-xl mb-4">A Journey Through Time</h2>
+        </div>
+        <div class="relative">
+            <div class="absolute left-1/2 -translate-x-1/2 h-full w-[1px] timeline-line opacity-30"></div>
+            <div class="space-y-24">
+                <!-- 1994 -->
+                <div class="relative flex items-center justify-between scroll-reveal">
+                    <div class="w-[45%] text-right hidden md:block">
+                        <h4 class="font-headline-md text-headline-md text-primary">The Genesis</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">L'ELIXIR opens its doors as a
+                            12-seat experimental table.</p>
+                    </div>
+                    <div
+                        class="z-10 w-12 h-12 rounded-full bg-surface border-2 border-primary flex items-center justify-center absolute left-1/2 -translate-x-1/2">
+                        <span class="font-label-sm text-label-sm">94</span>
+                    </div>
+                    <div class="w-full md:w-[45%] ml-auto pl-8 md:pl-0">
+                        <div class="md:hidden mb-2">
+                            <h4 class="font-headline-md text-headline-md text-primary">The Genesis</h4>
+                        </div>
+                        <img class="rounded-xl premium-shadow grayscale hover:grayscale-0 transition-all duration-500"
+                            data-alt="Vintage-style black and white photography of a small, rustic kitchen with intense focus on a single flickering candle and hand-written recipe notes. The mood is nostalgic and intimate, reflecting the humble beginnings of L'ELIXIR in 1994. Deep shadows and a sense of quiet ambition permeate the scene, styled with a high-end editorial grain."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2yoE88oq9SFGbWxkNJYbai2LM1-NDmwykf8Jxp1zXuYb8k0Mw7_RsvtzLaB9sQKV6c3sjj9ZoiPvx8U6pbEwz9asG_1qWBzgRl8El19UMlWdgA4kHgWPd7QTPxUoMs_45wR9NQHaMpVWYrVi4eStz35BRloNLD-GdHW4l3ZwauQAGSvB4o5tVzHWli6Gy_m3MpQ07Ab-YnqQGQwPIJ7vu1b1sbg7JQPY1VxYo3YBLAQ4xI_30Yvfebl0YsPM4PaczsyoqflS7acqb" />
+                    </div>
+                </div>
+                <!-- 2008 -->
+                <div class="relative flex items-center justify-between scroll-reveal">
+                    <div class="w-full md:w-[45%] pr-8 md:pr-0">
+                        <div class="md:hidden mb-2">
+                            <h4 class="font-headline-md text-headline-md text-primary">Michelin Star</h4>
+                        </div>
+                        <img class="rounded-xl premium-shadow grayscale hover:grayscale-0 transition-all duration-500"
+                            data-alt="A close-up photograph of a prestigious culinary award resting on a dark velvet surface. The golden details of the award glint under a single spotlight. The background is a dark, out-of-focus dining room of L'ELIXIR, conveying success and high-end achievement. The lighting is dramatic and moody, emphasizing the brand's commitment to excellence and its 2008 milestone."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHti4jDJr-Fi39Ie89XmwNDe7I19-wbwHwJGV0CB0NkJXC9qAeWNeQshnA_BHbwVhVH2n21wqBuZi-HrUwO-pUTK5bs4oOGc4GkHOLcq4xJPSO-BhiCGSDaNeNB0jAKJOmIkGPafkuZZJ09bxRr1TC9oU_QedZPhTKYv87LrkYKdFQuDnMmCChRmu5ARn1guk1T_JI3bH_d3uBCN-gtqCR66lv_cr5HdCBWZtUZ26CqcDAZlAGq1ZjP5W9uvferxezRBPqaJxi0AVA" />
+                    </div>
+                    <div
+                        class="z-10 w-12 h-12 rounded-full bg-surface border-2 border-primary flex items-center justify-center absolute left-1/2 -translate-x-1/2">
+                        <span class="font-label-sm text-label-sm">08</span>
+                    </div>
+                    <div class="w-[45%] text-left hidden md:block">
+                        <h4 class="font-headline-md text-headline-md text-primary">The First Star</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Awarded our first Michelin Star for
+                            innovation in modern French-fusion cuisine.</p>
+                    </div>
+                </div>
+                <!-- 2024 -->
+                <div class="relative flex items-center justify-between scroll-reveal">
+                    <div class="w-[45%] text-right hidden md:block">
+                        <h4 class="font-headline-md text-headline-md text-primary">Modern Era</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Full digital transformation and
+                            redesign into the atmospheric space we call home today.</p>
+                    </div>
+                    <div
+                        class="z-10 w-12 h-12 rounded-full bg-surface border-2 border-primary flex items-center justify-center absolute left-1/2 -translate-x-1/2">
+                        <span class="font-label-sm text-label-sm">24</span>
+                    </div>
+                    <div class="w-full md:w-[45%] ml-auto pl-8 md:pl-0">
+                        <div class="md:hidden mb-2">
+                            <h4 class="font-headline-md text-headline-md text-primary">Modern Era</h4>
+                        </div>
+                        <img class="rounded-xl premium-shadow grayscale hover:grayscale-0 transition-all duration-500"
+                            data-alt="A wide-angle, hyper-modern shot of the current L'ELIXIR interior. Sleek dark surfaces, intelligent architectural lighting, and minimalist luxury furniture define the space. The composition is balanced and airy, featuring deep blacks and warm gold highlights. The scene feels futuristic yet inviting, representing the brand's evolution into 2024 with a clean, high-tech aesthetic."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqnHvpXELHUjqGpFlV_fGTN23jWLp7fqqkVjEih4Vj7eE4w_9JC88b2SHJsFLtAvQbXEXMYBfOz1h-hwc4UHPAZ3XcdoFq6aJboxGsJ-tFOjgkmKfgkl0tstwBlM6vyZvCEsdUjZiQjwQ30l7ZnWcCpeIuIgMiKPY9OfxsHfeIhET9ehzAKDZVVlGJOcouv_W31yrqZEkgxFOhF7VBg1TYjGx9il4oZ2v5x6HuuGFM-IJkHaeQ27THunboGE2MXILbUNUzBU-vHMqH" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Meet the Team -->
+    <section class="py-section-gap bg-surface-container">
+        <div class="px-margin-desktop max-w-container-max mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 scroll-reveal">
+                <div class="max-w-xl">
+                    <h2 class="font-headline-xl text-headline-xl mb-4">Masters of the Kitchen</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant">The visionary minds behind our
+                        award-winning menu and flawless service.</p>
+                </div>
+                <button
+                    class="hidden md:block border border-primary/30 text-primary font-label-md text-label-md px-8 py-3 rounded-full hover:bg-primary/10 transition-colors">
                     Join Our Team
                 </button>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<!-- Chef 1 -->
-<div class="scroll-reveal group">
-<div class="relative overflow-hidden rounded-xl mb-6">
-<img class="w-full aspect-[3/4] object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A professional studio portrait of an executive chef in a crisp, black chef's jacket. The lighting is dramatic, coming from the side to accentuate facial features and character. The background is a textured dark charcoal. The chef has a look of intense focus and quiet confidence, embodying the premium and meticulous spirit of L'ELIXIR. Styled like a high-end magazine cover." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQwYJkPm6WDTXXK0rRxKr2dR78Zycp3EUgrAMkr2v_JVsHaYoxp1AQZtOIhNL9f2cJLD74ffl8WWvoIP8qNEyKB5GN5b9I5uvDwefpTolziHtZ7t5thp4q1-X5Qo5SQA7EX47CB_RJJXGSGViZZ81TzEKWA59XhavQCr7T4NNfB3mmgZKwEzV8Q3Z1xI9QnFuMY3KrItThswWrqX_nrPwXVmxl9erptmR4WKVS7myAfUp7W64hKqOCberp9YUc2NNqny56DG0U21QX"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-<p class="font-body-md text-white">"Cooking is a language that speaks to the soul."</p>
-</div>
-</div>
-<h4 class="font-headline-md text-headline-md">Julian Vane</h4>
-<p class="font-label-md text-label-md text-primary uppercase tracking-wider">Executive Chef</p>
-</div>
-<!-- Chef 2 -->
-<div class="scroll-reveal group" style="transition-delay: 100ms;">
-<div class="relative overflow-hidden rounded-xl mb-6">
-<img class="w-full aspect-[3/4] object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A portrait of a senior female pastry chef in a modern dark kitchen environment. She is dusting cocoa powder onto an intricate dessert. Soft focus on the background with warm golden lighting catching the fine particles in the air. Her expression is serene and artistic. The overall aesthetic is one of tactile sophistication and culinary mastery, aligned with the luxury L'ELIXIR brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCz0iKh4d6lES0Bw92haart4Y-Wcq3pP43xOC_nGSvFAJ8mncuhm5OvXGdH-hAKOyJVETOnn63ymKrY6CAZNwNm9wdH0WUN2rLjxYF6F1gnNWBlqE-bwliWK5DwWyUqjkfLKX6G5ltXAUMgIqjIzimnTIect_0Id5qhV95X-hjkxvOmrwoMfkIOZxGfGEXT1CLWBw2jiJe2tQI-0unMNfvAJ8lOyOiEYSZ5Glez02R27PKIgxqpcB2bEKIdWQ_kVmcnLBRYudeZKZF"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-<p class="font-body-md text-white">"Precision is the foundation of every great creation."</p>
-</div>
-</div>
-<h4 class="font-headline-md text-headline-md">Elena Rossi</h4>
-<p class="font-label-md text-label-md text-primary uppercase tracking-wider">Head Pastry Chef</p>
-</div>
-<!-- Chef 3 -->
-<div class="scroll-reveal group" style="transition-delay: 200ms;">
-<div class="relative overflow-hidden rounded-xl mb-6">
-<img class="w-full aspect-[3/4] object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A professional portrait of a head sommelier holding a crystal glass of red wine against a background of dimly lit wine cellars. The lighting highlights the clarity of the wine and the sommelier's professional demeanor. The environment is dark and rich, with wooden and stone textures. The mood is sophisticated and exclusive, reflecting the curated beverage experience at L'ELIXIR." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWzL2MRqbz17CDipi3i8hX40W3XGMjAurt19UMX8K6ErvwlJnOx39blfKD6SN1EdGYuyIq7AHoblb_mihd3w6-5ZNGrZv2bC_KC91hZ00rYKbNL6-HyP4o_Ikmv50n_MgyuNSvuGYy1HlpetIXCv3X-mHr5a2bo2vZxuB2qlkwn-uyoIVzWzmfuXSP11FPFtxTFReHvF_DhUIdltpr8LJc7ZtOPtLpeJ17Mum6oCbDdCrzjL4GinAUxYH-9JJzBTNHsvutu1p_3YZf"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-<p class="font-body-md text-white">"A perfect pairing is a dialogue between glass and plate."</p>
-</div>
-</div>
-<h4 class="font-headline-md text-headline-md">Marcus Thorne</h4>
-<p class="font-label-md text-label-md text-primary uppercase tracking-wider">Head Sommelier</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Quality Commitment -->
-<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-<div class="order-2 lg:order-1 relative scroll-reveal">
-<div class="grid grid-cols-2 gap-4">
-<img class="rounded-xl premium-shadow mt-12" data-alt="Macro photography of fresh, organic heirloom vegetables recently harvested, with morning dew still visible on their skins. The lighting is natural and crisp, emphasizing vibrant colors and raw textures. The composition is artistic and minimalist, representing L'ELIXIR's commitment to ingredient purity and quality. Styled with a dark, moody table surface that makes the colors pop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYO4hW4w3jCcq5McRnEKZrLLDNzHIa-ze0_1TUwVaDNcy7k5TacWChrZZT6d7AGmvJZwB8UP6cvLXk50LsMMKTdHvlNBnC2DQDs7Zndf-YGTBl3AZ_fPBkyqbziOhdfYXCYLuLj71Do7NA-8b0tB6i4Y5uXGZzUy-jKcRCUera6UPmAHSdEbl6dvFerqP_HRB7dGhkJtLfdjC9IwLNk-JO_64S5cFKdYSfSWeKF8ztIGfPUSr3ZzUj6zkbxP_Ca1ukYdxR7LJ352KW"/>
-<img class="rounded-xl premium-shadow" data-alt="Close-up of a farmer's hands holding a basket of fresh herbs in a sun-drenched greenhouse. The lighting is soft and golden, creating a sense of warmth and natural abundance. The focus is on the intricate details of the leaves. This image conveys the human connection and care behind L'ELIXIR's ingredient sourcing, maintaining a high-end, editorial feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHB765lRVEfp9NPp4cbVr2I7zLQl7ssDdsIb5tycnsdchM7p-RWwGJqiPHFzjXLtL0bVh5g_dMmtgCtjlAnpLFDkUExbfDe2is2AeEns7wD0ubtLRgBaCfMPKGf88cXYA-J1021e-qg4QjmYkh0UgmAaRxIiFgcwerznrJfRstoD8Gp4u3M-7LxRNQjzpxKJxiQCnC5dIRtUMOUrM1tTcokMhJTWl8APAoYXfePkwm_nDuhXWHy-n3bo0QvLjS996zdOycKxkXiZ_5"/>
-</div>
-</div>
-<div class="order-1 lg:order-2 scroll-reveal">
-<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.2em] mb-4 block">Our Commitment</span>
-<h2 class="font-headline-xl text-headline-xl mb-8">Uncompromising Purity</h2>
-<div class="space-y-8">
-<div class="flex gap-6">
-<span class="material-symbols-outlined text-primary text-3xl flex-shrink-0" data-icon="local_shipping">local_shipping</span>
-<div>
-<h4 class="font-headline-md text-headline-md mb-2">Direct Sourcing</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">We partner exclusively with local artisans and regenerative farms to ensure every ingredient is harvested at its absolute peak of flavor.</p>
-</div>
-</div>
-<div class="flex gap-6">
-<span class="material-symbols-outlined text-primary text-3xl flex-shrink-0" data-icon="biotech">biotech</span>
-<div>
-<h4 class="font-headline-md text-headline-md mb-2">Scientific Precision</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">Our kitchen utilizes state-of-the-art laboratory technology to monitor humidity, temperature, and aging processes with obsessive accuracy.</p>
-</div>
-</div>
-<div class="flex gap-6">
-<span class="material-symbols-outlined text-primary text-3xl flex-shrink-0" data-icon="eco">eco</span>
-<div>
-<h4 class="font-headline-md text-headline-md mb-2">Zero-Waste Philosophy</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">Every byproduct is repurposed through advanced fermentation or composting, closing the loop on our culinary footprint.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="bg-surface-container-lowest border-t border-white/5 py-section-gap w-full rounded-t-xl">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
-<div class="space-y-6">
-<h3 class="font-headline-lg text-headline-lg text-primary">L'ELIXIR</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Elevating the essence of dining to an art form. Join us for a journey of the senses.</p>
-<div class="flex space-x-4">
-<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all" href="#">
-<span class="material-symbols-outlined text-xl" data-icon="facebook">face_nod</span>
-</a>
-<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all" href="#">
-<span class="material-symbols-outlined text-xl" data-icon="camera">camera</span>
-</a>
-</div>
-</div>
-<div class="md:pl-12">
-<h4 class="font-label-md text-label-md text-white uppercase tracking-widest mb-6">Navigation</h4>
-<ul class="space-y-4 font-label-sm text-label-sm">
-<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a></li>
-<li><a class="text-primary" href="#">About</a></li>
-<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Menu</a></li>
-<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Reservations</a></li>
-</ul>
-</div>
-<div class="md:pl-12">
-<h4 class="font-label-md text-label-md text-white uppercase tracking-widest mb-6">Legal</h4>
-<ul class="space-y-4 font-label-sm text-label-sm">
-<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
-<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a></li>
-<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Careers</a></li>
-<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Press Kit</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-label-md text-label-md text-white uppercase tracking-widest mb-6">Newsletter</h4>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">Subscribe to receive invitations to private tastings.</p>
-<form class="relative">
-<input class="w-full bg-surface-container-high border-none rounded-full px-6 py-3 text-on-surface focus:ring-1 focus:ring-primary" placeholder="Your email address" type="email"/>
-<button class="absolute right-2 top-2 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center" type="submit">
-<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
-</button>
-</form>
-</div>
-</div>
-<div class="mt-20 border-t border-white/5 pt-8 text-center px-margin-desktop">
-<p class="font-label-sm text-label-sm text-on-surface-variant opacity-60">© 2024 L'ELIXIR LUXURY DINING. ALL RIGHTS RESERVED.</p>
-</div>
-</footer>
-<script>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <!-- Chef 1 -->
+                <div class="scroll-reveal group">
+                    <div class="relative overflow-hidden rounded-xl mb-6">
+                        <img class="w-full aspect-[3/4] object-cover group-hover:scale-110 transition-transform duration-700"
+                            data-alt="A professional studio portrait of an executive chef in a crisp, black chef's jacket. The lighting is dramatic, coming from the side to accentuate facial features and character. The background is a textured dark charcoal. The chef has a look of intense focus and quiet confidence, embodying the premium and meticulous spirit of L'ELIXIR. Styled like a high-end magazine cover."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQwYJkPm6WDTXXK0rRxKr2dR78Zycp3EUgrAMkr2v_JVsHaYoxp1AQZtOIhNL9f2cJLD74ffl8WWvoIP8qNEyKB5GN5b9I5uvDwefpTolziHtZ7t5thp4q1-X5Qo5SQA7EX47CB_RJJXGSGViZZ81TzEKWA59XhavQCr7T4NNfB3mmgZKwEzV8Q3Z1xI9QnFuMY3KrItThswWrqX_nrPwXVmxl9erptmR4WKVS7myAfUp7W64hKqOCberp9YUc2NNqny56DG0U21QX" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                            <p class="font-body-md text-white">"Cooking is a language that speaks to the soul."</p>
+                        </div>
+                    </div>
+                    <h4 class="font-headline-md text-headline-md">Julian Vane</h4>
+                    <p class="font-label-md text-label-md text-primary uppercase tracking-wider">Executive Chef</p>
+                </div>
+                <!-- Chef 2 -->
+                <div class="scroll-reveal group" style="transition-delay: 100ms;">
+                    <div class="relative overflow-hidden rounded-xl mb-6">
+                        <img class="w-full aspect-[3/4] object-cover group-hover:scale-110 transition-transform duration-700"
+                            data-alt="A portrait of a senior female pastry chef in a modern dark kitchen environment. She is dusting cocoa powder onto an intricate dessert. Soft focus on the background with warm golden lighting catching the fine particles in the air. Her expression is serene and artistic. The overall aesthetic is one of tactile sophistication and culinary mastery, aligned with the luxury L'ELIXIR brand."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCz0iKh4d6lES0Bw92haart4Y-Wcq3pP43xOC_nGSvFAJ8mncuhm5OvXGdH-hAKOyJVETOnn63ymKrY6CAZNwNm9wdH0WUN2rLjxYF6F1gnNWBlqE-bwliWK5DwWyUqjkfLKX6G5ltXAUMgIqjIzimnTIect_0Id5qhV95X-hjkxvOmrwoMfkIOZxGfGEXT1CLWBw2jiJe2tQI-0unMNfvAJ8lOyOiEYSZ5Glez02R27PKIgxqpcB2bEKIdWQ_kVmcnLBRYudeZKZF" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                            <p class="font-body-md text-white">"Precision is the foundation of every great creation."
+                            </p>
+                        </div>
+                    </div>
+                    <h4 class="font-headline-md text-headline-md">Elena Rossi</h4>
+                    <p class="font-label-md text-label-md text-primary uppercase tracking-wider">Head Pastry Chef</p>
+                </div>
+                <!-- Chef 3 -->
+                <div class="scroll-reveal group" style="transition-delay: 200ms;">
+                    <div class="relative overflow-hidden rounded-xl mb-6">
+                        <img class="w-full aspect-[3/4] object-cover group-hover:scale-110 transition-transform duration-700"
+                            data-alt="A professional portrait of a head sommelier holding a crystal glass of red wine against a background of dimly lit wine cellars. The lighting highlights the clarity of the wine and the sommelier's professional demeanor. The environment is dark and rich, with wooden and stone textures. The mood is sophisticated and exclusive, reflecting the curated beverage experience at L'ELIXIR."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWzL2MRqbz17CDipi3i8hX40W3XGMjAurt19UMX8K6ErvwlJnOx39blfKD6SN1EdGYuyIq7AHoblb_mihd3w6-5ZNGrZv2bC_KC91hZ00rYKbNL6-HyP4o_Ikmv50n_MgyuNSvuGYy1HlpetIXCv3X-mHr5a2bo2vZxuB2qlkwn-uyoIVzWzmfuXSP11FPFtxTFReHvF_DhUIdltpr8LJc7ZtOPtLpeJ17Mum6oCbDdCrzjL4GinAUxYH-9JJzBTNHsvutu1p_3YZf" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                            <p class="font-body-md text-white">"A perfect pairing is a dialogue between glass and
+                                plate."</p>
+                        </div>
+                    </div>
+                    <h4 class="font-headline-md text-headline-md">Marcus Thorne</h4>
+                    <p class="font-label-md text-label-md text-primary uppercase tracking-wider">Head Sommelier</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Quality Commitment -->
+    <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+            <div class="order-2 lg:order-1 relative scroll-reveal">
+                <div class="grid grid-cols-2 gap-4">
+                    <img class="rounded-xl premium-shadow mt-12"
+                        data-alt="Macro photography of fresh, organic heirloom vegetables recently harvested, with morning dew still visible on their skins. The lighting is natural and crisp, emphasizing vibrant colors and raw textures. The composition is artistic and minimalist, representing L'ELIXIR's commitment to ingredient purity and quality. Styled with a dark, moody table surface that makes the colors pop."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYO4hW4w3jCcq5McRnEKZrLLDNzHIa-ze0_1TUwVaDNcy7k5TacWChrZZT6d7AGmvJZwB8UP6cvLXk50LsMMKTdHvlNBnC2DQDs7Zndf-YGTBl3AZ_fPBkyqbziOhdfYXCYLuLj71Do7NA-8b0tB6i4Y5uXGZzUy-jKcRCUera6UPmAHSdEbl6dvFerqP_HRB7dGhkJtLfdjC9IwLNk-JO_64S5cFKdYSfSWeKF8ztIGfPUSr3ZzUj6zkbxP_Ca1ukYdxR7LJ352KW" />
+                    <img class="rounded-xl premium-shadow"
+                        data-alt="Close-up of a farmer's hands holding a basket of fresh herbs in a sun-drenched greenhouse. The lighting is soft and golden, creating a sense of warmth and natural abundance. The focus is on the intricate details of the leaves. This image conveys the human connection and care behind L'ELIXIR's ingredient sourcing, maintaining a high-end, editorial feel."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHB765lRVEfp9NPp4cbVr2I7zLQl7ssDdsIb5tycnsdchM7p-RWwGJqiPHFzjXLtL0bVh5g_dMmtgCtjlAnpLFDkUExbfDe2is2AeEns7wD0ubtLRgBaCfMPKGf88cXYA-J1021e-qg4QjmYkh0UgmAaRxIiFgcwerznrJfRstoD8Gp4u3M-7LxRNQjzpxKJxiQCnC5dIRtUMOUrM1tTcokMhJTWl8APAoYXfePkwm_nDuhXWHy-n3bo0QvLjS996zdOycKxkXiZ_5" />
+                </div>
+            </div>
+            <div class="order-1 lg:order-2 scroll-reveal">
+                <span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.2em] mb-4 block">Our
+                    Commitment</span>
+                <h2 class="font-headline-xl text-headline-xl mb-8">Uncompromising Purity</h2>
+                <div class="space-y-8">
+                    <div class="flex gap-6">
+                        <span class="material-symbols-outlined text-primary text-3xl flex-shrink-0"
+                            data-icon="local_shipping">local_shipping</span>
+                        <div>
+                            <h4 class="font-headline-md text-headline-md mb-2">Direct Sourcing</h4>
+                            <p class="font-body-md text-body-md text-on-surface-variant">We partner exclusively with
+                                local artisans and regenerative farms to ensure every ingredient is harvested at its
+                                absolute peak of flavor.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <span class="material-symbols-outlined text-primary text-3xl flex-shrink-0"
+                            data-icon="biotech">biotech</span>
+                        <div>
+                            <h4 class="font-headline-md text-headline-md mb-2">Scientific Precision</h4>
+                            <p class="font-body-md text-body-md text-on-surface-variant">Our kitchen utilizes
+                                state-of-the-art laboratory technology to monitor humidity, temperature, and aging
+                                processes with obsessive accuracy.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <span class="material-symbols-outlined text-primary text-3xl flex-shrink-0"
+                            data-icon="eco">eco</span>
+                        <div>
+                            <h4 class="font-headline-md text-headline-md mb-2">Zero-Waste Philosophy</h4>
+                            <p class="font-body-md text-body-md text-on-surface-variant">Every byproduct is repurposed
+                                through advanced fermentation or composting, closing the loop on our culinary footprint.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest border-t border-white/5 py-section-gap w-full rounded-t-xl">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+            <div class="space-y-6">
+                <h3 class="font-headline-lg text-headline-lg text-primary">L'ELIXIR</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">Elevating the essence of dining to an art
+                    form. Join us for a journey of the senses.</p>
+                <div class="flex space-x-4">
+                    <a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all"
+                        href="#">
+                        <span class="material-symbols-outlined text-xl" data-icon="facebook">face_nod</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all"
+                        href="#">
+                        <span class="material-symbols-outlined text-xl" data-icon="camera">camera</span>
+                    </a>
+                </div>
+            </div>
+            <div class="md:pl-12">
+                <h4 class="font-label-md text-label-md text-white uppercase tracking-widest mb-6">Navigation</h4>
+                <ul class="space-y-4 font-label-sm text-label-sm">
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="../index.html">Home</a></li>
+                    <li><a class="text-primary" href="about.html">About</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="menu.html">Menu</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors"
+                            href="#">Reservations</a></li>
+                </ul>
+            </div>
+            <div class="md:pl-12">
+                <h4 class="font-label-md text-label-md text-white uppercase tracking-widest mb-6">Legal</h4>
+                <ul class="space-y-4 font-label-sm text-label-sm">
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy
+                            Policy</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of
+                            Service</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Careers</a>
+                    </li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Press Kit</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-label-md text-label-md text-white uppercase tracking-widest mb-6">Newsletter</h4>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-6">Subscribe to receive invitations to
+                    private tastings.</p>
+                <form class="relative">
+                    <input
+                        class="w-full bg-surface-container-high border-none rounded-full px-6 py-3 text-on-surface focus:ring-1 focus:ring-primary"
+                        placeholder="Your email address" type="email" />
+                    <button
+                        class="absolute right-2 top-2 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center"
+                        type="submit">
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="mt-20 border-t border-white/5 pt-8 text-center px-margin-desktop">
+            <p class="font-label-sm text-label-sm text-on-surface-variant opacity-60">© 2024 L'ELIXIR LUXURY DINING. ALL
+                RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+    <script>
         // Scroll Reveal Animation
         const observerOptions = {
             threshold: 0.1,
@@ -440,4 +543,6 @@
             }
         });
     </script>
-</body></html>
+</body>
+
+</html>
