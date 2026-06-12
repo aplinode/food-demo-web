@@ -5,10 +5,10 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>L'ELIXIR | Luxury Dining Experience</title>
+    <title>ZAIQA | Modern Pakistani Luxury Dining</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap"
         rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
@@ -16,615 +16,589 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
-    <style>
-        .glass-card {
-            background: rgba(38, 38, 38, 0.4);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .hero-gradient {
-            background: linear-gradient(to top, #131313 0%, rgba(19, 19, 19, 0.4) 50%, rgba(19, 19, 19, 0) 100%);
-        }
-
-        .masonry-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            grid-auto-rows: 200px;
-            gap: 24px;
-        }
-
-        .masonry-item:nth-child(2n) {
-            grid-row: span 2;
-        }
-
-        .masonry-item:nth-child(3n) {
-            grid-row: span 1.5;
-        }
-
-        @keyframes subtle-zoom {
-            0% {
-                transform: scale(1);
-            }
-
-            100% {
-                transform: scale(1.05);
-            }
-        }
-
-        .animate-zoom {
-            animation: subtle-zoom 20s infinite alternate ease-in-out;
-        }
-
-        .sidebar-link {
-            position: relative;
-            display: block;
-            padding: 0.75rem 1.5rem;
-            font-size: 14px;
-            font-weight: 500;
-            letter-spacing: 0.05em;
-            color: #d0c5af;
-            transition: all 0.2s;
-            border-left: 2px solid transparent;
-        }
-        .sidebar-link:hover {
-            color: #f2ca50;
-            background: rgba(242, 202, 80, 0.05);
-            border-left-color: #f2ca50;
-        }
-        .sidebar-link.active {
-            color: #f2ca50;
-            border-left-color: #f2ca50;
-            background: rgba(242, 202, 80, 0.08);
-        }
-    </style>
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     "colors": {
-                        "on-primary-container": "#554300",
-                        "tertiary-fixed-dim": "#c8c6c2",
-                        "surface-dim": "#131313",
-                        "surface-bright": "#393939",
-                        "on-secondary": "#313030",
-                        "on-primary-fixed": "#241a00",
-                        "secondary-fixed": "#e5e2e1",
-                        "on-secondary-container": "#b7b5b4",
-                        "surface-container-lowest": "#0e0e0e",
-                        "secondary-fixed-dim": "#c8c6c5",
-                        "on-tertiary": "#30312e",
-                        "on-secondary-fixed-variant": "#474746",
-                        "on-tertiary-fixed": "#1b1c19",
-                        "tertiary-container": "#b4b3af",
-                        "inverse-on-surface": "#303030",
-                        "surface-container-low": "#1b1c1c",
+                        "surface-variant": "#353535",
                         "primary-container": "#d4af37",
-                        "surface-container-high": "#2a2a2a",
-                        "on-secondary-fixed": "#1c1b1b",
+                        "tertiary-fixed": "#e4e2dd",
+                        "surface-dim": "#131313",
+                        "secondary-container": "#4a4949",
+                        "on-secondary-container": "#bab8b7",
+                        "surface-tint": "#e9c349",
                         "primary-fixed": "#ffe088",
-                        "on-surface": "#e4e2e1",
+                        "tertiary": "#d0ceca",
+                        "on-error": "#690005",
+                        "primary": "#f2ca50",
+                        "secondary-fixed": "#e5e2e1",
+                        "tertiary-fixed-dim": "#c8c6c2",
+                        "surface": "#131313",
+                        "on-background": "#e4e2e1",
                         "surface-container": "#1f2020",
                         "inverse-primary": "#735c00",
                         "error-container": "#93000a",
-                        "on-primary": "#3c2f00",
-                        "tertiary-fixed": "#e4e2dd",
-                        "outline": "#99907c",
-                        "error": "#ffb4ab",
-                        "surface-tint": "#e9c349",
-                        "surface": "#131313",
-                        "on-error": "#690005",
-                        "surface-container-highest": "#353535",
-                        "secondary": "#c8c6c5",
-                        "on-surface-variant": "#d0c5af",
-                        "secondary-container": "#474746",
-                        "on-background": "#e4e2e1",
-                        "tertiary": "#d0ceca",
-                        "primary": "#f2ca50",
-                        "on-primary-fixed-variant": "#574500",
-                        "on-tertiary-container": "#454542",
-                        "surface-variant": "#353535",
-                        "on-tertiary-fixed-variant": "#474744",
-                        "background": "#131313",
+                        "on-primary-container": "#554300",
+                        "on-secondary-fixed": "#1c1b1b",
                         "primary-fixed-dim": "#e9c349",
+                        "on-tertiary": "#30312e",
+                        "surface-bright": "#393939",
+                        "surface-container-low": "#1b1c1c",
+                        "on-tertiary-container": "#454542",
+                        "on-tertiary-fixed-variant": "#474744",
+                        "on-primary-fixed": "#241a00",
+                        "tertiary-container": "#b4b3af",
+                        "on-secondary-fixed-variant": "#474646",
+                        "background": "#131313",
+                        "on-tertiary-fixed": "#1b1c19",
+                        "on-secondary": "#313030",
+                        "error": "#ffb4ab",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary": "#3c2f00",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-highest": "#353535",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "inverse-on-surface": "#303030",
+                        "surface-container-highest": "#353535",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "inverse-on-surface": "#303030",
+                        "surface-container-high": "#2a2a2a",
+                        "on-surface": "#e4e2e1",
+                        "outline": "#99907c",
                         "inverse-surface": "#e4e2e1",
+                        "secondary": "#c8c6c5",
+                        "on-primary-fixed-variant": "#574500",
                         "outline-variant": "#4d4635",
-                        "on-error-container": "#ffdad6"
+                        "on-surface-variant": "#d0c5af"
                     },
                     "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
                     },
                     "spacing": {
+                        "margin-mobile": "16px",
                         "margin-desktop": "64px",
-                        "margin-mobile": "20px",
-                        "section-gap": "120px",
-                        "container-max": "1280px",
                         "gutter": "24px",
-                        "unit": "8px"
+                        "unit": "8px",
+                        "section-gap": "120px",
+                        "container-max": "1280px"
                     },
                     "fontFamily": {
-                        "display-lg-mobile": ["Playfair Display"],
-                        "headline-lg": ["Playfair Display"],
-                        "label-md": ["Inter"],
-                        "body-lg": ["Inter"],
                         "body-md": ["Inter"],
-                        "headline-xl": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "label-md": ["Inter"],
                         "display-lg": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Playfair Display"],
                         "headline-md": ["Playfair Display"],
-                        "label-sm": ["Inter"]
+                        "headline-lg-mobile": ["Playfair Display"]
                     },
                     "fontSize": {
-                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
-                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
-                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
-                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "headline-xl": ["48px", { "lineHeight": "1.2", "fontWeight": "600" }],
-                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
-                        "label-sm": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.08em", "fontWeight": "600" }]
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }]
                     }
                 },
             },
         }
     </script>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e4e2e1;
+            scroll-behavior: smooth;
+        }
+
+        .glass-card {
+            background: rgba(42, 42, 42, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(18, 18, 18, 0.4) 0%, rgba(18, 18, 18, 0.95) 100%);
+        }
+
+        .gold-border {
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .gold-glow {
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
+        }
+
+        @keyframes reveal {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-reveal {
+            animation: reveal 0.8s ease-out forwards;
+        }
+    </style>
 </head>
 
-<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
-    <!-- TopNavBar Shell -->
-    <header
-        class="fixed top-0 w-full z-50 border-b border-white/5 bg-surface/40 backdrop-blur-xl shadow-2xl shadow-black/20">
-        <nav class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
-            <div class="font-headline-md text-headline-md tracking-tighter text-primary dark:text-primary-fixed">
-                L'ELIXIR</div>
-            <div class="hidden md:flex items-center gap-8">
-                <a class="font-label-md text-label-md text-primary dark:text-primary-fixed border-b-2 border-primary pb-1"
+<body class="font-body-md text-body-md overflow-x-hidden">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 border-b border-primary/20 bg-surface/80 backdrop-blur-xl shadow-sm h-20">
+        <div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-full">
+            <div
+                class="font-headline-md text-headline-md font-bold tracking-tighter text-primary dark:text-primary-fixed">
+                ZAIQA</div>
+            <!-- Desktop Links -->
+            <div class="hidden md:flex gap-8 items-center">
+                <a class="text-primary dark:text-primary-fixed border-b-2 border-primary pb-1 font-label-md text-label-md"
                     href="index.html">Home</a>
-                <a class="font-label-md text-label-md text-on-surface dark:text-on-surface-variant hover:text-primary transition-colors"
+                <a class="text-on-surface/80 dark:text-on-surface/70 hover:text-primary transition-colors font-label-md text-label-md"
                     href="pages/about.html">About</a>
-                <a class="font-label-md text-label-md text-on-surface dark:text-on-surface-variant hover:text-primary transition-colors"
+                <a class="text-on-surface/80 dark:text-on-surface/70 hover:text-primary transition-colors font-label-md text-label-md"
                     href="pages/menu.html">Menu</a>
-                <a class="font-label-md text-label-md text-on-surface dark:text-on-surface-variant hover:text-primary transition-colors"
+                <a class="text-on-surface/80 dark:text-on-surface/70 hover:text-primary transition-colors font-label-md text-label-md"
                     href="pages/services.html">Services</a>
-                <a class="font-label-md text-label-md text-on-surface dark:text-on-surface-variant hover:text-primary transition-colors"
+                <a class="text-on-surface/80 dark:text-on-surface/70 hover:text-primary transition-colors font-label-md text-label-md"
                     href="pages/gallery.html">Gallery</a>
-                <a class="font-label-md text-label-md text-on-surface dark:text-on-surface-variant hover:text-primary transition-colors"
-                    href="pages/testimonials.html">Testimonials</a>
+                <a class="text-on-surface/80 dark:text-on-surface/70 hover:text-primary transition-colors font-label-md text-label-md"
+                    href="pages/contact.html">Contact</a>
             </div>
-            <div class="flex items-center gap-6">
-                <button id="sidebar-toggle" class="md:hidden text-on-surface-variant hover:text-primary transition-colors" aria-label="Toggle menu">
-                    <span class="material-symbols-outlined text-3xl">menu</span>
+            <div class="flex items-center gap-4">
+                <button
+                    class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-label-md text-label-md hover:scale-105 transition-transform active:scale-95">
+                    Book a Table
                 </button>
-                <a href="pages/contact.html"
-                    class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-md text-label-md hover:scale-95 active:scale-90 transition-transform inline-block">Book
-                    a Table</a>
-                <div class="hidden md:block w-10 h-10 rounded-full overflow-hidden border border-outline">
-                    <img alt="Chef Portrait" class="w-full h-full object-cover"
-                        data-alt="A professional close-up portrait of an executive chef in a pristine white uniform. The background is a high-end, softly blurred restaurant kitchen with warm, ambient lighting hitting stainless steel surfaces. The lighting is dramatic and moody, reflecting a luxury fine dining atmosphere. The overall aesthetic is clean, sharp, and authoritative, using a palette of deep blacks and warm golds."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTY8xSoO30hzpLHQEwujvppHHeFzqngolU_qTnsAfBujGBwqumy8W8c66ayc1JS4jHAnvfIHHUz71JcXapf8Eai4B8rRHd6dPfklhxwN3ZXWQIonVuZxzePuFGJJ17AFrWSFcjEmxNCj2TLUPddJZkwO1lGaRMe-RzDN1s78cO_GAAAl3biS297d148UkgouL7iZSfC4reFnj9sV9QAyAUlWU4G9C-qslBegvur07W6qzrnwBWtEsV8hSGFidqc35fn7EgwRtyQIq2" />
-                </div>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <!-- Hero Section -->
-        <section class="relative h-screen flex items-center overflow-hidden">
-            <div class="absolute inset-0 z-0">
-                <img class="w-full h-full object-cover animate-zoom"
-                    data-alt="A stunning macro shot of a gourmet seafood dish plated with extreme precision on a dark, textured ceramic plate. The dish features vibrant edible flowers, micro-greens, and a golden reduction sauce. Soft, warm directional lighting highlights the textures of the food against a deep charcoal background, creating a high-fidelity, luxury culinary mood. The atmosphere is sophisticated, spacious, and inviting, emphasizing premium quality and craft."
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC499nBoqip8cF4y7NZ_v6oPQO0hd_K0QdQbvzIdsC1Zv6x7pUVtp03yQZ7n26nU3BAJCqWuS3nT57eCgr7TnOopJvKbEpobJNLZP-JiXyuyT6AGYoFAH56rzhbawd-gxxx0lHBKoWINMf8g2UplEj0zbCTGIO0HVjVW2-p9kCofYn73OtsEG6P5jAa0Pue3X9F9jDqEoMx51Bs0SipbgE6UmUVCYkmmFaGxACIPsUUFJbxgNHKuHTrpnjXdyMb2plIdlcUGppPcGpA" />
-                <div class="absolute inset-0 hero-gradient"></div>
-            </div>
-            <div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full">
-                <div class="max-w-2xl">
-                    <span class="font-label-md text-label-md text-primary tracking-[0.2em] mb-6 block uppercase">The
-                        Pinnacle of Gastronomy</span>
-                    <h1 class="font-display-lg text-display-lg text-on-surface mb-8">Artistry on Every <span
-                            class="text-primary italic">Plate.</span></h1>
-                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-lg">Experience a symphony of
-                        flavors curated by world-renowned chefs in an atmosphere of timeless luxury and precision.</p>
-                    <div class="flex flex-wrap gap-6">
-                        <a href="pages/contact.html"
-                            class="bg-primary text-on-primary px-8 py-4 rounded-full font-label-md text-label-md hover:shadow-xl hover:shadow-primary/20 transition-all inline-block">Book
-                            a Table</a>
-                        <a href="pages/menu.html"
-                            class="border border-outline text-on-surface px-8 py-4 rounded-full font-label-md text-label-md hover:bg-white/5 transition-all inline-block">View
-                            Menu</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Featured Dishes (Bento-style Cards) -->
-        <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
-            <div class="flex justify-between items-end mb-16">
-                <div>
-                    <h2 class="font-headline-xl text-headline-xl text-on-surface">Chef's Signature</h2>
-                    <p class="font-body-md text-body-md text-on-surface-variant">The quarterly selection of seasonal
-                        masterpieces.</p>
-                </div>
-                <a href="pages/menu.html" class="text-primary font-label-md text-label-md flex items-center gap-2 group">
-                    Explore Menu <span
-                        class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                </a>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-                <!-- Card 1 -->
-                <div class="group relative overflow-hidden rounded-xl aspect-[4/5]">
-                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                        data-alt="A close-up of a perfectly seared wagyu beef steak, sliced to reveal a tender pink center, garnished with gold leaf and sea salt. The plate is dark stone, and the lighting is dramatic, accentuating the fatty marbling and juicy texture. Deep charcoal and gold color palette, reflecting a high-end luxury dining experience."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvd5TE7QKiBM-wzAQpe2yS9zc0IFw8iJ9R38Xu19b2wjApBUMuQ67fHvC07b1Id1duAPTEzf3YHqtfJ9cRpDLdA8dhkdBjwQh8nu0K6crZRSSqTdSuoHfoCpk-c-iRjQ4aAIK2eKvYJrvwWkx9r0z3GEwL-7B52MqWNdPKcS5RM2ZCWo-4RY20RPArSoH4SkbWhgjUj8OjXXIGJQRpFRayxdSCGUy7CZiJOHZEp34MuzJR4wUIKog2ARKh0Q5fV1GpEz_Sk4a73EuE" />
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8">
-                        <span class="text-primary font-label-sm text-label-sm uppercase mb-2">Entrée</span>
-                        <h3 class="font-headline-md text-headline-md text-on-surface">Gold-Seared Wagyu</h3>
-                        <p
-                            class="text-on-surface-variant font-body-md mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            Grade A5 Wagyu, Truffle Jus, 24k Gold Leaf.</p>
-                    </div>
-                </div>
-                <!-- Card 2 (Glassmorphism overlap) -->
-                <div class="group relative overflow-hidden rounded-xl aspect-[4/5] md:mt-12">
-                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                        data-alt="A gourmet wood-fired artisan pizza with buffalo mozzarella, fresh basil, and a drizzle of truffle oil. The crust is perfectly charred, and the steam rises softly from the surface. The shot is overhead with warm, ambient lighting that highlights the textures of the ingredients. Dark, sophisticated background and warm tones."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuARn-2AolKhoQx-7hTser_1XNbDw3VTUY1gL6DNvjS0Le8M6j5_906Tv_79K_OEDV8pB9j60lUhyc-Wf-WFwBsa23imu5kgBMz0QdZ3kQrCAwzdBuvbOTFM615u1FQ7SxjSUm-RIUYLHJ2OkIdrSS9pYdfRiaxJ026xCYEoEgXSTOI_YE8kJhqcM81VZYWM4AYmbr38nRIcEhVOQdye2yfVvPRvuUQno9PnEGECgsQPD-SamLBbU8lsijiJgm8Zt9TMO3m-CNWoqvmG" />
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8">
-                        <span class="text-primary font-label-sm text-label-sm uppercase mb-2">Specialty</span>
-                        <h3 class="font-headline-md text-headline-md text-on-surface">Truffle Affumicata</h3>
-                        <p
-                            class="text-on-surface-variant font-body-md mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            Bufala Mozzarella, Black Truffle, Basil Infusion.</p>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="group relative overflow-hidden rounded-xl aspect-[4/5]">
-                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                        data-alt="A decadent dark chocolate sphere being melted by a warm salted caramel sauce pour. Inside, a hidden vanilla bean mousse and gold-dusted hazelnut crunch are revealed. The lighting is high-contrast, highlighting the glossy textures of the chocolate and the golden flow of the sauce. Professional, moody food photography in a luxury setting."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfu7b8poWwj0WQ9pYSzISOGrM8DPERW6WdzW5bS11V73W5e3QakJdcuNvLj2Ofpv6SVO_PHTjpP0XikAIjkyo7nvy5omjR8afy4KoSwS7NF2Tx1AEljBRRpEa3VhKTlTsFUXbZl8fCYIuSF3zA20hqk-UEy74PjPaKHMdfMH560dd2TQFMccpCytWMdGpEU4tekxu68k0RlsZCgxrSIhhid0xq5IvOdsOCcRvEmN6gAaV_FeEG1b79-wQRQPzKvQ3xG0e5ZpJ4vTWu" />
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8">
-                        <span class="text-primary font-label-sm text-label-sm uppercase mb-2">Dessert</span>
-                        <h3 class="font-headline-md text-headline-md text-on-surface">Nocturnal Sphere</h3>
-                        <p
-                            class="text-on-surface-variant font-body-md mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            70% Cacao, Salted Caramel, Gold Dust.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Why Choose Us -->
-        <section class="py-section-gap bg-surface-container-low">
-            <div class="px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span class="material-symbols-outlined text-primary text-3xl">eco</span>
-                    </div>
-                    <h4 class="font-headline-md text-headline-md text-on-surface mb-4">Quality Ingredients</h4>
-                    <p class="font-body-md text-body-md text-on-surface-variant">Sourced exclusively from sustainable
-                        local farms and premium global suppliers to ensure unparalleled freshness.</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span class="material-symbols-outlined text-primary text-3xl">restaurant_menu</span>
-                    </div>
-                    <h4 class="font-headline-md text-headline-md text-on-surface mb-4">Expert Chefs</h4>
-                    <p class="font-body-md text-body-md text-on-surface-variant">Our culinary team consists of
-                        Michelin-starred veterans dedicated to pushing the boundaries of taste and presentation.</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span class="material-symbols-outlined text-primary text-3xl">shuffle</span>
-                    </div>
-                    <h4 class="font-headline-md text-headline-md text-on-surface mb-4">Fast Service</h4>
-                    <p class="font-body-md text-body-md text-on-surface-variant">A seamless dining flow that respects
-                        your time without ever compromising the precision of our craft.</p>
-                </div>
-            </div>
-        </section>
-        <!-- Popular Menu Items (Grid) -->
-        <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
-            <h2 class="font-headline-xl text-headline-xl text-on-surface text-center mb-16">A Legacy of <span
-                    class="text-primary italic">Taste</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-12">
-                <!-- Item 1 -->
-                <div class="flex gap-6 items-center border-b border-white/5 pb-8">
-                    <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
-                        <img class="w-full h-full object-cover"
-                            data-alt="A delicate seafood carpaccio with citrus segments and emerald herb oil on a dark, minimalist plate. The lighting is soft and natural, emphasizing the translucent quality of the fish. Sophisticated presentation."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5Fl4-65XorGJvRkMRDzw8pTqYYZGF42St9fXT4P-0c-YbXx8L0C7yjqW5xRFqui6bf4Ww2HSbXalMuCj6VNrscZnF5-vhzo0ndLH4mnAF6vobNnnxDqBM_UMP6xyuxBd4DrzxW_zBXuttqbHQnQgIxKBzh3OCYZO6NQeBcY9AXPulFO3NOANjtNtwpSkSokLtKolOxGYQ5wzs_LdHEfzR33VDp5dTDhrZwFKhgd42FaeFpy9fjIAKjYLlI1Fnzjgn7rC9XrWCto_J" />
-                    </div>
-                    <div class="flex-grow">
-                        <div class="flex justify-between items-baseline mb-1">
-                            <h5 class="font-headline-md text-headline-md text-on-surface">Lobster Bisque</h5>
-                            <span class="text-primary font-label-md">$42</span>
-                        </div>
-                        <p class="text-on-surface-variant font-body-md">Cognac infusion, cream fraîche, chive oil.</p>
-                        <div class="mt-2">
-                            <span
-                                class="inline-block border border-primary text-primary px-2 py-0.5 rounded-sm font-label-sm text-[10px] uppercase">Gluten
-                                Free</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Item 2 -->
-                <div class="flex gap-6 items-center border-b border-white/5 pb-8">
-                    <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
-                        <img class="w-full h-full object-cover"
-                            data-alt="A classic rack of lamb with a crust of fine herbs, served with roasted root vegetables. High-end plating, dramatic shadows, warm colors."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa2SSD_AWmFzNoejT4lLrbxEc7PXKy9TJfjndw1b5jvllLoQmQ5KCOf7gkfdW_hRtj9aumGbeGELLK3sCJXC_Qa4V-XTKKHN6vO47hy51j8AGS2WvW2mWH8Kfo9pWQU7hOuP6qNVlCEcBeTlat7KU1AAxPcknhrEXBe5uFslhwQntE0aoKVP7P69kmT0okUtaDZLMKGyWbukDljzoDxyOOmrDxsOcMC0mtI7lekPGx6-KKN3Tb0lI5iQNTk8Y3NOgs4MmYLujalSq1" />
-                    </div>
-                    <div class="flex-grow">
-                        <div class="flex justify-between items-baseline mb-1">
-                            <h5 class="font-headline-md text-headline-md text-on-surface">Herb-Crusted Lamb</h5>
-                            <span class="text-primary font-label-md">$68</span>
-                        </div>
-                        <p class="text-on-surface-variant font-body-md">Mint pea purée, glazed heritage carrots.</p>
-                    </div>
-                </div>
-                <!-- Item 3 -->
-                <div class="flex gap-6 items-center border-b border-white/5 pb-8">
-                    <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
-                        <img class="w-full h-full object-cover"
-                            data-alt="Pan-seared scallops on a bed of cauliflower silk with crispy pancetta crumbs. Elegant lighting and dark aesthetic."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_1pZy3KKUB8TG-Q0W0ST1AJGRXnn18YeNWrmRw47faXfYgRVj2DTnv8QBQx3ung2UwdHn_a7APyQ0oXVbfo99Tup7C8F5x_Enoz3oOj-Jc-WpAN_MPmeTSfmAV6FOZR2zV4M4Jl-55ItJU3ktWxjOwk2p4IOedF_R55UJC9MrPlGdcKX0pnc78VKILinvsDFyKc7pV1QUnZTeTHtIObCAFRFo6-q6Y2YxJVbz4hlJFtbH53Fm4ctz4VYWL2KVU7dpIIB6olVRVHF7" />
-                    </div>
-                    <div class="flex-grow">
-                        <div class="flex justify-between items-baseline mb-1">
-                            <h5 class="font-headline-md text-headline-md text-on-surface">Scallop Silk</h5>
-                            <span class="text-primary font-label-md">$38</span>
-                        </div>
-                        <p class="text-on-surface-variant font-body-md">Cauliflower purée, pancetta dust, lemon foam.
-                        </p>
-                    </div>
-                </div>
-                <!-- Item 4 -->
-                <div class="flex gap-6 items-center border-b border-white/5 pb-8">
-                    <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
-                        <img class="w-full h-full object-cover"
-                            data-alt="A vibrant seasonal salad with heirloom tomatoes, burrata, and balsamic pearls. Bright, fresh colors against a dark background."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4-DZ5GLliTlMomVva3aRQMX3C8jkhvASchD1afKOornXaSwpbplv-OYThgEKE5PWVTMjZ-FeCN0LJOZEN0ZYgKcH6ZV3M0jRoobiVEG2sZWE0yw1Pv-L6npaoQcVMCCG-PHgGtIP3KV5OWZ3pMqYKRrJo0cJ_Cb7bW_x-RogN5lum9dTPLEDb4-Xruk2Zfa7uC5kaTBOuMOZ0cj48lUN_-nz_HoL9ZZ1y94AHNkdX_-Rj2qYIrPFyfhvfREDAys9KyO9d_G-jXM6K" />
-                    </div>
-                    <div class="flex-grow">
-                        <div class="flex justify-between items-baseline mb-1">
-                            <h5 class="font-headline-md text-headline-md text-on-surface">Heirloom &amp; Pearls</h5>
-                            <span class="text-primary font-label-md">$26</span>
-                        </div>
-                        <p class="text-on-surface-variant font-body-md">Burrata, balsamic spherification, basil oil.</p>
-                        <div class="mt-2">
-                            <span
-                                class="inline-block border border-primary text-primary px-2 py-0.5 rounded-sm font-label-sm text-[10px] uppercase">Vegan
-                                Option</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Testimonials -->
-        <section class="py-section-gap relative overflow-hidden">
-            <div class="absolute top-0 left-1/2 -translate-x-1/2 opacity-5">
-                <span class="text-[300px] leading-none font-display-lg text-primary">“</span>
-            </div>
-            <div class="px-margin-desktop max-w-container-max mx-auto relative z-10">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
-                    <div>
-                        <h2 class="font-headline-xl text-headline-xl text-on-surface mb-8">What our guests <br /><span
-                                class="text-primary italic">remember.</span></h2>
-                        <div class="glass-card p-12 rounded-xl relative">
-                            <p class="font-body-lg text-body-lg text-on-surface italic mb-8">"L'ELIXIR is not just a
-                                restaurant; it's a sensory journey. The Wagyu melt-in-your-mouth experience was
-                                something I've only ever read about. The attention to detail in every course is simply
-                                breathtaking."</p>
-                            <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 rounded-full overflow-hidden">
-                                    <img alt="Customer" class="w-full h-full object-cover"
-                                        data-alt="A close-up headshot of a sophisticated man in his 40s, smiling gently. The background is a luxurious interior with soft bokeh. High-end lighting."
-                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrSmJlAukxdgxq40O1Jx-xBCxgk8PhQi16rO56FcBXh1RPE-gDvsVucgalqpxjb-h-MKBA7hyKaVVoKi5zmQxVi5mvlEHsVJ9PcY31PcLnQlbFl5FJ2mWy524oRQQY4R5PqKU-ju3FHC0NoCUQCEmSe8hHDF8YBOyQvIea2QXlff-OSuW_BdWUadel_vs3gCF5_P1XsN76D10UxMNh2YOsOhmFMGQc2DLalcTrb3mRS5OA12P8WCPwOemZ17WjWXL6YSWkp80sMsOV" />
-                                </div>
-                                <div>
-                                    <p class="font-label-md text-label-md text-on-surface">Marcus Sterling</p>
-                                    <p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Food
-                                        Critic, The Daily Gourmet</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hidden md:block">
-                        <img class="rounded-xl opacity-50 grayscale hover:grayscale-0 transition-all duration-500"
-                            data-alt="A blurry, atmospheric shot of people enjoying a dinner at L'Elixir. Warm candle lighting, clinking wine glasses, and a sense of shared luxury and joy. Dark background, premium feeling."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAufxKx5h8akqLjy1Nvx-D4mpDq_TEUIvpfENop12W7MeOPhUbcv2fAZp1YESpRlj1JxrzOPNz8VCLAHKjjkzrqeqBZqtXb1RWKrD0-1BUdo1XnPRUpAe9k7-EzIQUg5S7Tg63POsMYIlNbzcoEjzPxmzWI4K8lWyaUITmXitIz0fj2zdFBFaNVFwazWQ7kibuC-c27NisJtV8qfSqapVJnbk9DeL3IKQT3QuDwHtEmJJI0KgrOCY57Wyfz6eVK5Dw-pz2ceeM1lC5y" />
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Gallery Preview -->
-        <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
-            <h2 class="font-headline-xl text-headline-xl text-on-surface text-center mb-16">The Atmosphere</h2>
-            <div class="masonry-grid">
-                <div class="masonry-item rounded-xl overflow-hidden group">
-                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        data-alt="A dimly lit, luxury bar area with rows of high-end spirits and crystal glassware. The counter is polished marble, reflecting soft golden light. The overall vibe is mysterious and elite."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEWLqIaV4sCaqBqQMOcD6ttMwpZo48deyS2pIyVTlh57KCpyLh1eCGSg5Een0TMTHPioiKSyatZLBXYeHOH4gmPsvIKUohoRKveva7j2lLD6__vz1Fqxb28R44gl2HL0vZtn4pnT862vKzD-9p9rbDqxduhZxBc2NGkFJMYR2PuTxu53U2SfUk4v6E7t8IWrOLL23JhvMHqI7nwIL_le_1nYO9QQyMhKTX-LgC4a635i7CPh27FLgANsx3ad9FTwuFIAsT3bRipVft" />
-                </div>
-                <div class="masonry-item rounded-xl overflow-hidden group">
-                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        data-alt="The main dining hall of a Michelin-starred restaurant with high ceilings, plush velvet seating, and large windows looking out to a city skyline at night. Sophisticated warm lighting and spacious layout."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuABE7f5nIM4RkIP-nOck6CzYBfZDuaTUIoIwr4dmf0aoBotWLIuAtLLSdCIG06y2JyKX0taJQh3bu9ECA7h2sqjmoUx9eDm3-o1Uf_3foF6TO1X-7CZfEVS_hf-yNOmZlYoUSaQ71rR5x6xchQHuNllB2pz3Qq5AI9hmUB3wr-rbo9tGJzP6DJbh6AjNWrekoUclAWRDzt-kwBtW2VOd5ToLvl3-cq3hhhaUruLnf2r2oU0HlH6mj7cmvVoq7h4ZzZSQuolzKKQdqTu" />
-                </div>
-                <div class="masonry-item rounded-xl overflow-hidden group">
-                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        data-alt="An artistic shot of a chef's hands delicately placing a garnish on a plate with tweezers. Precision and craft are highlighted in high-contrast lighting."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvRusJNFBgJm71RSlciX5DDwRpe2j-1Uyi2vXNLEA3zVyzU9vz25vZiMNiMNRcvBXgUR-G-CSPpodjoOxpUf05XxYbAqn9Lx49oTByTCGnH3x_YRh4HtwvvA3O05OwV4M5RnsSFixKlgx6UK89jnjZm-7i4aGnpBjFDkk_jX9IRlKpI5UHQp6K3xPgUP2OTobgzWclg8tXenl40thsmf38TcjWclLwqgk1oGKzVq3-Q3lm_KMZuDHCm1edqr7oVQeD6gxxLry5QosC" />
-                </div>
-                <div class="masonry-item rounded-xl overflow-hidden group">
-                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        data-alt="A set table with fine china, silver cutlery, and starched white linen. A single candle flickers in the center. Elegant, simple luxury."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFXRjPEQoewXcNHdXrfQ8qJt74P9dzk42hNgCiSi7HrvoOlmoSkN6pUjF9HWiMutPYBVrexF7Vawlcvvx9BnZGUFitK5TsepsbdaO3WPtMX-8J3Nl3FyQnUVGjzjgMvWhMwIEINnd7MUHHc78OCFjF4RCXcXl2hk7q6ypza_cwbLjqC8jRwfqms1342CV-RfRyr5fB24zmds06qo9R7wOq0rU7Q2iqACnZtSeOhTWeJ4MDDPPYRmlINfOI0pJs8ohvErMXEUavwztg" />
-                </div>
-            </div>
-        </section>
-        <!-- Reservation CTA -->
-        <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
-            <div class="bg-surface-container-high rounded-2xl overflow-hidden relative flex flex-col md:flex-row">
-                <div class="w-full md:w-1/2 p-16 relative z-10">
-                    <h2
-                        class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-8">
-                        Ready for an <span class="text-primary italic">Encounter?</span></h2>
-                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-12">Reservations are highly
-                        recommended. Secure your table for an evening of unparalleled luxury.</p>
-                    <div class="flex flex-col gap-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <input
-                                class="bg-transparent border-b border-outline focus:border-primary focus:ring-0 text-on-surface py-4 px-0 transition-all placeholder:text-on-surface-variant/50"
-                                placeholder="Full Name" type="text" />
-                            <input
-                                class="bg-transparent border-b border-outline focus:border-primary focus:ring-0 text-on-surface py-4 px-0 transition-all placeholder:text-on-surface-variant/50"
-                                placeholder="Email Address" type="email" />
-                        </div>
-                        <button
-                            class="bg-primary text-on-primary px-12 py-5 rounded-full font-label-md text-label-md w-fit hover:translate-y-[-2px] transition-all">Request
-                            Reservation</button>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/2 min-h-[400px]">
-                    <img class="w-full h-full object-cover"
-                        data-alt="A nighttime view of the restaurant entrance with a glowing L'Elixir sign. Valet attendants and expensive cars parked outside. High-end, exclusive nighttime atmosphere."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC88IWFqcTPA3_vlwP1B3n2Ic1RrhCkXkuLaU_UqQeYOSOjQvp0NtAZQ-w-ni6n0ufFRhvJZUD6eXuzhGei6U6HCqSmFX-mjvq4CvRoOrSmL-2ZKtZyBPY-Y_vxqJzBjuE0vQRleaPn-gB5Z0GnNxUBSvz1VoEbCyOT4g_LyGtKgdDgnyr6SrR6gjZck4CT-DkQkFKTBbsYyprI9evid_6zJ6aYjV-yavFspFj_iyVymOJ9YZUSj6imMdmEHqtr1GH8MrFSEVw7bwL0" />
-                </div>
-            </div>
-        </section>
-    </main>
-    <!-- Footer -->
-    <footer class="bg-surface-container-lowest border-t border-white/5 w-full rounded-t-xl mt-section-gap">
-        <div
-            class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
-            <div class="col-span-1 md:col-span-1">
-                <div class="font-headline-lg text-headline-lg text-primary dark:text-primary-fixed mb-6">L'ELIXIR</div>
-                <p class="font-body-md text-body-md text-on-surface-variant mb-8 max-w-xs">Redefining luxury dining
-                    through a fusion of heritage techniques and avant-garde innovation.</p>
-                <div class="flex gap-4">
-                    <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary/20 transition-colors"
-                        href="#">
-                        <span class="material-symbols-outlined text-primary text-xl">share</span>
-                    </a>
-                    <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary/20 transition-colors"
-                        href="#">
-                        <span class="material-symbols-outlined text-primary text-xl">camera</span>
-                    </a>
-                </div>
-            </div>
-            <div class="flex flex-col gap-4">
-                <h6 class="font-label-md text-label-md text-primary uppercase mb-2">Explore</h6>
-                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform duration-200"
-                    href="pages/about.html">Our Story</a>
-                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform duration-200"
-                    href="pages/menu.html">The Menu</a>
-                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform duration-200"
-                    href="#">Wine Cellar</a>
-                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform duration-200"
-                    href="pages/services.html">Private Events</a>
-            </div>
-            <div class="flex flex-col gap-4">
-                <h6 class="font-label-md text-label-md text-primary uppercase mb-2">Support</h6>
-                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform duration-200"
-                    href="#">Privacy Policy</a>
-                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform duration-200"
-                    href="#">Terms of Service</a>
-                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform duration-200"
-                    href="#">Careers</a>
-                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 transition-transform duration-200"
-                    href="#">Press Kit</a>
-            </div>
-            <div class="flex flex-col gap-4">
-                <h6 class="font-label-md text-label-md text-primary uppercase mb-2">Location</h6>
-                <p class="font-label-sm text-label-sm text-on-surface-variant">128 Avenue Montaigne,<br />Paris, France
-                    75008</p>
-                <p class="font-label-sm text-label-sm text-on-surface-variant">T: +33 1 42 65 30 20<br />E:
-                    reserve@lelixir.fr</p>
+                <button class="md:hidden text-primary hover:text-primary-fixed transition-colors"
+                    onclick="toggleSidebar()">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
             </div>
         </div>
-        <div
-            class="px-margin-desktop py-8 border-t border-white/5 max-w-container-max mx-auto flex justify-between items-center opacity-80 hover:opacity-100 transition-opacity">
-            <span class="font-label-sm text-label-sm text-on-surface-variant">© 2024 L'ELIXIR LUXURY DINING. ALL RIGHTS
-                RESERVED.</span>
-            <div class="flex gap-6">
-                <span class="font-label-sm text-label-sm text-on-surface-variant">EN</span>
-                <span class="font-label-sm text-label-sm text-on-surface-variant">FR</span>
+    </nav>
+    <!-- Sidebar Overlay -->
+    <div class="md:hidden fixed inset-0 bg-black/60 z-[100] hidden" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+    <!-- Sidebar -->
+    <div class="md:hidden fixed top-0 left-0 h-full w-72 bg-surface-container-high backdrop-blur-lg border-r border-primary/10 z-[110] -translate-x-full transition-transform duration-300 ease-in-out shadow-2xl"
+        id="sidebar">
+        <div class="flex items-center justify-between px-6 h-20 border-b border-primary/10">
+            <h2 class="font-headline-md text-headline-md text-primary">ZAIQA</h2>
+            <button class="text-on-surface-variant hover:text-primary transition-colors" onclick="toggleSidebar()">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <nav class="py-4 flex flex-col">
+            <a class="flex items-center gap-3 px-6 py-3 text-primary border-l-2 border-primary bg-primary-container/10 font-label-md text-label-md"
+                href="index.html">
+                <span class="material-symbols-outlined">home</span> Home
+            </a>
+            <a class="flex items-center gap-3 px-6 py-3 text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md"
+                href="pages/about.html">
+                <span class="material-symbols-outlined">info</span> About
+            </a>
+            <a class="flex items-center gap-3 px-6 py-3 text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md"
+                href="pages/menu.html">
+                <span class="material-symbols-outlined">restaurant_menu</span> Menu
+            </a>
+            <a class="flex items-center gap-3 px-6 py-3 text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md"
+                href="pages/services.html">
+                <span class="material-symbols-outlined">delivery_dining</span> Services
+            </a>
+            <a class="flex items-center gap-3 px-6 py-3 text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md"
+                href="pages/gallery.html">
+                <span class="material-symbols-outlined">photo_library</span> Gallery
+            </a>
+            <a class="flex items-center gap-3 px-6 py-3 text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md"
+                href="pages/contact.html">
+                <span class="material-symbols-outlined">event</span> Contact
+            </a>
+        </nav>
+    </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img class="w-full h-full object-cover scale-105"
+                data-alt="A cinematic, overhead, high-resolution close-up of a lavish Pakistani feast featuring sizzling seekh kebabs on an iron platter and a vibrant pot of aromatic mutton biryani. The lighting is moody and warm, highlighting the textures of spices and glistening fats, set against a dark rustic table. The overall aesthetic is one of extreme luxury, culinary artistry, and high-end modern hospitality with rich golden and amber tones."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGK8cvtuQTWQSGjyXjkBYmGMlc7qFEo1hWWH-65YAxQUu66nH8d-pCpPCEYsalsafBQfDIbwsAVC9Cq_yjgPsf2G5AaksOGmJyp_A-gIEihhkytZVoNlHfS05iekR_-PJN7FY61jIqk_k18x9akYlB0iVnPg9CHI7vbdcP_Dp1HUxj61juMYbwUCik5a4mWCzv4JO88gWOt0xv3X6Qj8LetHjgHvTGvJ89Yl2ZtPq3UECpqYWsekSkdXIc5kSOyGdB4cP6x5slx3BH" />
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        <div class="relative z-10 text-center max-w-4xl px-margin-mobile animate-reveal">
+            <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-6">
+                The Art of Modern <span class="text-primary">Pakistani Heritage</span>
+            </h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">
+                Experience the soulful flavors of the Indus Valley reimagined for the contemporary palate. A fusion of
+                centuries-old recipes and avant-garde culinary techniques.
+            </p>
+            <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                <button
+                    class="bg-primary-container text-on-primary-container px-10 py-4 rounded-full font-label-md text-label-md hover:brightness-110 transition-all gold-glow">
+                    Order Now
+                </button>
+                <button
+                    class="border border-primary text-primary px-10 py-4 rounded-full font-label-md text-label-md hover:bg-primary/10 transition-all">
+                    Explore Menu
+                </button>
             </div>
+        </div>
+    </section>
+    <!-- Featured Dishes -->
+    <section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <div class="text-center mb-20">
+            <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-4">Our
+                Signature Creations</h2>
+            <div class="w-24 h-1 bg-primary mx-auto"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+            <!-- Dish Card 1 -->
+            <div
+                class="glass-card rounded-xl overflow-hidden group hover:scale-[1.02] transition-transform duration-500">
+                <div class="h-80 overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        data-alt="A gourmet presentation of Mutton Karahi in a traditional black iron pot, garnished with julienned ginger and fresh cilantro. The rich, thick tomato-based gravy has a vibrant red-orange hue with shimmering oils, captured under professional studio lighting with a soft bokeh background. The composition exudes premium quality, emphasizing the authenticity and spice richness of high-end Pakistani cuisine."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIKOPdrz_XQinJHWJ1ANlj5f8QkkL-Sr82JgvuTd2X8nthO2-j4-MTdAxdNuSD3NDopnQdXQzvA0SaFWKuYKZ0Kq29UYBgZq52dsZDToPGr5DvWKa3CVSgtbeoja10fbip2vaGDX5TpHYgBHIVzjk7k98V-X-Vko6Zr1HvDplUy2PQ-EHJQTinGLgfx7U9HNvXu6-cbrI1sFAGY4NetmWPgWlq1abQRbvEskxquGDqsQ5Lle8ZsxO7IRl_OsCbaDVCoYfPpp0uaklA" />
+                </div>
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-headline-md text-headline-md text-primary">Mutton Karahi</h3>
+                        <span class="text-primary font-bold">$34</span>
+                    </div>
+                    <p class="text-on-surface-variant font-body-md mb-6">Tender grass-fed lamb simmered in a reduction
+                        of vine-ripened tomatoes and cracked black pepper.</p>
+                    <div class="flex gap-2">
+                        <span
+                            class="bg-primary/10 text-primary text-[10px] px-3 py-1 rounded-full uppercase tracking-widest font-bold">Chef's
+                            Choice</span>
+                        <span
+                            class="bg-surface-variant text-on-surface-variant text-[10px] px-3 py-1 rounded-full uppercase tracking-widest font-bold">Heritage</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Dish Card 2 -->
+            <div
+                class="glass-card rounded-xl overflow-hidden group hover:scale-[1.02] transition-transform duration-500">
+                <div class="h-80 overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        data-alt="An expansive, luxurious Pakistani BBQ platter featuring charred seekh kebabs, creamy malai boti, and spicy tandoori chicken pieces arranged artistically on a heavy slate tray. Wisps of steam rise from the meats, accented by charred lemons and fresh mint chutney in small stoneware bowls. The lighting is warm and directional, creating deep shadows and vibrant highlights on the succulent meat textures."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJoFH0iYMa7SFdZDU7AU3iQrpYADzrL_WHmutLRhOgG5To2MHscoFGFbmwYL0_XHEXr0ODbRCqi0KI1SupRvYi82o8aKBZU8FvbBB1C6yRjKaawE57pp4NELKeFAtt0Lncc9df2-wb_a38s05laJnrrOQANpI5e95DjFc2xqgQG9stlqd378LyBZ1lzSrIN6Sb64VL144w0JMwgu7CKcM3jZZNhlWrrT_gA6lmOpupovCbDkjgoTZfNvtp0KH6XaWgE9LKmaY4WzJm" />
+                </div>
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-headline-md text-headline-md text-primary">Premium BBQ Platter</h3>
+                        <span class="text-primary font-bold">$52</span>
+                    </div>
+                    <p class="text-on-surface-variant font-body-md mb-6">A grand selection of Malai Boti, Seekh Kebabs,
+                        and Tandoori Chops charred over acacia charcoal.</p>
+                    <div class="flex gap-2">
+                        <span
+                            class="bg-primary/10 text-primary text-[10px] px-3 py-1 rounded-full uppercase tracking-widest font-bold">Signature</span>
+                        <span
+                            class="bg-surface-variant text-on-surface-variant text-[10px] px-3 py-1 rounded-full uppercase tracking-widest font-bold">Sharing</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Dish Card 3 -->
+            <div
+                class="glass-card rounded-xl overflow-hidden group hover:scale-[1.02] transition-transform duration-500">
+                <div class="h-80 overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        data-alt="A sophisticated presentation of Royal Biryani served in a gold-plated pot, showing long grains of basmati rice tinted with saffron and layered with slow-cooked meat. Garnished with golden fried onions, fresh mint leaves, and a sprinkle of saffron strands. The setting is dark and elegant with golden cutlery nearby, creating an atmosphere of royal Pakistani dining heritage."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj3DGe5f0LXVPaXB4BAzZKE6VRq4h-ihRw7uTYWCbv1ub4ISPIMXgs00wzSoo-V38S_ddUE_36rMakQmxLLrEJ8ReS7hikGvpTOFBI90NEg6N9nwRVSppYjxNf1EdNpogrI7S8V5Ef4tYOWOKpzWnU-4ooyAcOkeRT0R6HouSnCIFT064Fmd82gXuRmeIsHk-8N7MgCrcLB6k2pCW_Gq5bh8mw4frAMBbrdvcY_jpyXCOnEs8vXVnt4MJON1J-cAx256j1PuQChWyp" />
+                </div>
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-headline-md text-headline-md text-primary">Royal Saffron Biryani</h3>
+                        <span class="text-primary font-bold">$38</span>
+                    </div>
+                    <p class="text-on-surface-variant font-body-md mb-6">Aged basmati rice layered with slow-marinated
+                        chicken, infused with Iranian saffron and rose water.</p>
+                    <div class="flex gap-2">
+                        <span
+                            class="bg-primary/10 text-primary text-[10px] px-3 py-1 rounded-full uppercase tracking-widest font-bold">Royal</span>
+                        <span
+                            class="bg-surface-variant text-on-surface-variant text-[10px] px-3 py-1 rounded-full uppercase tracking-widest font-bold">Aromatic</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Why Choose Us -->
+    <section class="bg-surface-container py-section-gap">
+        <div
+            class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div class="relative">
+                <img class="rounded-xl w-full h-[600px] object-cover gold-border shadow-2xl"
+                    data-alt="A professional master chef in a minimalist modern kitchen delicately plating a high-end Pakistani dish. The chef wears a clean black apron, and the lighting is focused on his hands using silver tweezers for garnishing. The background is blurred, showing a high-tech dark kitchen environment. The mood is one of extreme precision, dedication to craft, and high-end culinary excellence."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAj7xShqd7qhFRAo6BZilRnN7zfMKQ_liO7CSbpqM7xwEkYPb0p3eeOzJA94GiEOMa3H_Wzq07fbA_pjBs0yjawEpeJSSTLqWVlhhh9Y4vmhQw4vKf1-dkA_ypQtEIE9sTEjU_YVsQmo9_ecouss9FLm2wCIJryUBEeNpUF5d8L7MiyHIJjAxw8VAO-oi9dZJ2LycBMhvJGuKsqbTSEHWYZ0UVUrzDGBlN_hvlH-lrmxiDP4VVTyTiRlu0z9xpEYUHUjw_MiNgNFwOD" />
+                <div
+                    class="absolute -bottom-10 -right-10 hidden md:block glass-card p-10 rounded-xl max-w-xs gold-glow">
+                    <p class="font-headline-md text-headline-md text-primary italic mb-2">"Cooking is a form of poetry
+                        where spices are the words."</p>
+                    <p class="text-on-surface-variant text-label-md uppercase tracking-tighter">— Executive Chef Hussain
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-12">
+                <div>
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-6">
+                        Redefining Pakistani Hospitality</h2>
+                    <p class="text-on-surface-variant font-body-lg">At ZAIQA, we believe that luxury is in the details.
+                        Every spice is hand-selected from heritage farms, and every recipe is a bridge between the past
+                        and the future.</p>
+                </div>
+                <div class="space-y-8">
+                    <div class="flex gap-6 items-start">
+                        <div
+                            class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center shrink-0 border border-primary/20">
+                            <span class="material-symbols-outlined text-primary text-3xl">eco</span>
+                        </div>
+                        <div>
+                            <h4 class="font-headline-md text-headline-md text-primary mb-2">Organic Ingredients</h4>
+                            <p class="text-on-surface-variant">Sourced exclusively from sustainable farms in the fertile
+                                plains of Punjab and the northern mountains.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 items-start">
+                        <div
+                            class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center shrink-0 border border-primary/20">
+                            <span class="material-symbols-outlined text-primary text-3xl">restaurant</span>
+                        </div>
+                        <div>
+                            <h4 class="font-headline-md text-headline-md text-primary mb-2">Master Chefs</h4>
+                            <p class="text-on-surface-variant">Our culinary team consists of Michelin-trained chefs who
+                                have mastered the nuances of open-fire cooking.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 items-start">
+                        <div
+                            class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center shrink-0 border border-primary/20">
+                            <span class="material-symbols-outlined text-primary text-3xl">history_edu</span>
+                        </div>
+                        <div>
+                            <h4 class="font-headline-md text-headline-md text-primary mb-2">Heritage Recipes</h4>
+                            <p class="text-on-surface-variant">Archived family recipes from the Mughal era, preserved
+                                and elevated for the modern dining table.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials -->
+    <section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop overflow-hidden">
+        <div class="text-center mb-20">
+            <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-4">Guest
+                Impressions</h2>
+            <div class="w-24 h-1 bg-primary mx-auto"></div>
+        </div>
+        <div class="flex flex-col md:flex-row gap-gutter">
+            <div class="glass-card p-10 rounded-xl flex-1 relative overflow-hidden group">
+                <div class="absolute -top-10 -right-10 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <span class="material-symbols-outlined text-[200px] text-primary">format_quote</span>
+                </div>
+                <div class="flex mb-6 text-primary">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <p class="text-body-lg italic text-on-surface mb-8">"ZAIQA is a revelation. The Karahi had a depth of
+                    flavor I haven't experienced outside of Lahore, yet the presentation and service are world-class
+                    luxury."</p>
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-12 h-12 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center font-bold text-primary">
+                        AM</div>
+                    <div>
+                        <p class="font-bold text-on-surface">Asif Mansoor</p>
+                        <p class="text-sm text-on-surface-variant">Food Critic, London</p>
+                    </div>
+                </div>
+            </div>
+            <div class="glass-card p-10 rounded-xl flex-1 relative overflow-hidden group">
+                <div class="absolute -top-10 -right-10 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <span class="material-symbols-outlined text-[200px] text-primary">format_quote</span>
+                </div>
+                <div class="flex mb-6 text-primary">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <p class="text-body-lg italic text-on-surface mb-8">"An atmospheric masterpiece. The ambient lighting
+                    and the fusion of traditional music with modern decor make it the perfect spot for corporate
+                    dinners."</p>
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-12 h-12 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center font-bold text-primary">
+                        SK</div>
+                    <div>
+                        <p class="font-bold text-on-surface">Sarah Khan</p>
+                        <p class="text-sm text-on-surface-variant">CEO, Tech Innovations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Reservation CTA -->
+    <section class="py-section-gap relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img class="w-full h-full object-cover"
+                data-alt="A wide-angle shot of an empty, ultra-luxurious dining hall at night. The interior features dark velvet seating, gold-inlaid marble tables, and a central crystal chandelier that glows warmly. Large windows show a hint of a city skyline. The overall feeling is one of exclusive, intimate luxury and high-end modern hospitality, matching a premium dark mode aesthetic."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAgUNbqVws1BuKJUWfmiWR1iQbNLkNZdeyv4Hsdo2aIAF8sXhkWsTdNN6MaZXc5IrU82wk2BrpLTsIGiaaZ8aSuZAgrEiG5m36YcxqBiqv1OcpAZHtqazyRd1ijm2cB1DaTmRaBe-4xBl0XhroX-xYyP-GVdoIjPgfX7-UmvyczuJS-WMk9q2VbkHRuQC_hW4JQCfc3egKTcHkqahYr33T5c1PAf9Sif_YEQObxmnKUIAaKK0jUYmEMc-VaLWx7-C_Zw8DvcxRPUKM" />
+            <div class="absolute inset-0 bg-primary/20 backdrop-blur-sm mix-blend-multiply"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
+        </div>
+        <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="max-w-xl">
+                <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-6">Secure
+                    Your Experience</h2>
+                <p class="text-body-lg text-on-surface-variant mb-10">We host a limited number of guests each evening to
+                    ensure every plate is a masterpiece. Reserve your table for an unforgettable evening.</p>
+                <form class="glass-card p-8 rounded-xl flex flex-col gap-6 gold-glow">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex flex-col gap-2">
+                            <label class="text-label-md text-primary uppercase tracking-widest text-[10px]">Guest
+                                Count</label>
+                            <input
+                                class="bg-surface/50 border-b border-primary/30 border-x-0 border-t-0 focus:border-primary focus:ring-0 text-on-surface placeholder:text-on-surface-variant/50 p-3"
+                                placeholder="2 Persons" type="number" />
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="text-label-md text-primary uppercase tracking-widest text-[10px]">Date</label>
+                            <input
+                                class="bg-surface/50 border-b border-primary/30 border-x-0 border-t-0 focus:border-primary focus:ring-0 text-on-surface placeholder:text-on-surface-variant/50 p-3"
+                                type="date" />
+                        </div>
+                    </div>
+                    <button
+                        class="w-full bg-primary-container text-on-primary-container py-4 rounded-xl font-bold hover:brightness-110 transition-all"
+                        type="submit">
+                        Request Reservation
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Contact & Location Preview -->
+    <section class="bg-surface-container-low py-20 border-t border-primary/10">
+        <div
+            class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter text-center md:text-left">
+            <div>
+                <h4 class="text-primary font-headline-md mb-4">Location</h4>
+                <p class="text-on-surface-variant font-body-md leading-relaxed">
+                    12th Avenue, Heritage Square<br />
+                    Luxury District, LD-4022<br />
+                    Islamabad, Pakistan
+                </p>
+                <div class="mt-4 flex justify-center md:justify-start gap-4">
+                    <a class="text-primary hover:scale-110 transition-transform" href="#"><span
+                            class="material-symbols-outlined">map</span></a>
+                    <a class="text-primary hover:scale-110 transition-transform" href="#"><span
+                            class="material-symbols-outlined">navigation</span></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-primary font-headline-md mb-4">Dining Hours</h4>
+                <ul class="text-on-surface-variant font-body-md space-y-2">
+                    <li class="flex justify-between max-w-[200px] mx-auto md:mx-0"><span>Mon - Thu:</span> <span>6PM -
+                            11PM</span></li>
+                    <li class="flex justify-between max-w-[200px] mx-auto md:mx-0"><span>Fri - Sat:</span> <span>6PM -
+                            1AM</span></li>
+                    <li class="flex justify-between max-w-[200px] mx-auto md:mx-0"><span>Sunday:</span> <span>Brunch
+                            Only</span></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-primary font-headline-md mb-4">Connect</h4>
+                <p class="text-on-surface-variant font-body-md mb-4">reservations@zaiqadining.com</p>
+                <p class="text-primary font-headline-md">+92 (51) 555-0123</p>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest border-t border-primary/10">
+        <div
+            class="max-w-container-max mx-auto px-margin-desktop py-section-gap grid grid-cols-1 md:grid-cols-4 gap-gutter">
+            <div class="col-span-1 md:col-span-1">
+                <div class="font-headline-md text-headline-md text-primary mb-4">ZAIQA</div>
+                <p class="text-on-surface-variant text-body-md">Honoring the heritage of Pakistani cuisine through
+                    modern innovation and uncompromising luxury.</p>
+            </div>
+            <div class="flex flex-col gap-4">
+                <h5 class="text-primary font-bold">Quick Links</h5>
+                <a class="text-on-surface-variant hover:text-primary hover:translate-x-1 transition-transform font-label-md"
+                    href="pages/menu.html">Menu</a>
+                <a class="text-on-surface-variant hover:text-primary hover:translate-x-1 transition-transform font-label-md"
+                    href="pages/services.html">Catering</a>
+                <a class="text-on-surface-variant hover:text-primary hover:translate-x-1 transition-transform font-label-md"
+                    href="pages/contact.html">Reservations</a>
+            </div>
+            <div class="flex flex-col gap-4">
+                <h5 class="text-primary font-bold">Legal</h5>
+                <a class="text-on-surface-variant hover:text-primary hover:translate-x-1 transition-transform font-label-md"
+                    href="#">Privacy Policy</a>
+                <a class="text-on-surface-variant hover:text-primary hover:translate-x-1 transition-transform font-label-md"
+                    href="#">Careers</a>
+                <a class="text-on-surface-variant hover:text-primary hover:translate-x-1 transition-transform font-label-md"
+                    href="#">Terms of Service</a>
+            </div>
+            <div class="flex flex-col gap-4">
+                <h5 class="text-primary font-bold">Newsletter</h5>
+                <p class="text-on-surface-variant text-sm">Join our list for exclusive seasonal menus.</p>
+                <div class="flex gap-2">
+                    <input
+                        class="bg-surface border border-primary/20 rounded-lg p-2 text-sm w-full focus:border-primary focus:ring-0"
+                        placeholder="Email" type="email" />
+                    <button class="bg-primary p-2 rounded-lg text-on-primary"><span
+                            class="material-symbols-outlined">send</span></button>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-primary/5 py-8 text-center text-on-surface-variant text-sm">
+            © 2024 Zaiqa Luxury Dining. All Rights Reserved.
         </div>
     </footer>
     <script>
-        // Micro-interactions for smooth scrolling or hover effects
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+        // Smooth reveal on scroll logic
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-reveal');
+                }
             });
-        });
+        }, observerOptions);
 
-        // Sidebar toggle
-        const sidebarToggle = document.getElementById('sidebar-toggle');
-        const sidebarClose = document.getElementById('sidebar-close');
-        const sidebar = document.getElementById('sidebar');
-        const sidebarOverlay = document.getElementById('sidebar-overlay');
-
-        function openSidebar() {
-            sidebar.classList.remove('-translate-x-full');
-            sidebarOverlay.classList.remove('hidden');
-            setTimeout(() => { sidebarOverlay.classList.remove('opacity-0'); }, 10);
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeSidebar() {
-            sidebar.classList.add('-translate-x-full');
-            sidebarOverlay.classList.add('opacity-0');
-            setTimeout(() => {
-                sidebarOverlay.classList.add('hidden');
-                document.body.style.overflow = '';
-            }, 300);
-        }
-
-        if (sidebarToggle) sidebarToggle.addEventListener('click', openSidebar);
-        if (sidebarClose) sidebarClose.addEventListener('click', closeSidebar);
-        if (sidebarOverlay) sidebarOverlay.addEventListener('click', closeSidebar);
-
-        // Simple parallax effect for hero
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const heroImg = document.querySelector('.animate-zoom');
-            if (heroImg) {
-                heroImg.style.transform = `scale(${1 + scrolled * 0.0001}) translateY(${scrolled * 0.2}px)`;
-            }
+        document.querySelectorAll('section > div').forEach(el => {
+            el.style.opacity = '0';
+            observer.observe(el);
         });
     </script>
-    <!-- Sidebar Overlay -->
-    <div id="sidebar-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] hidden opacity-0 transition-opacity duration-300"></div>
-    <!-- Sidebar Panel -->
-    <div id="sidebar" class="fixed top-0 left-0 h-full w-72 bg-surface-container-high border-r border-white/5 z-[70] transform -translate-x-full transition-transform duration-300 flex flex-col overflow-y-auto">
-        <div class="flex justify-between items-center p-6 border-b border-white/5">
-            <span class="font-headline-md text-headline-md text-primary">L'ELIXIR</span>
-            <button id="sidebar-close" class="text-on-surface-variant hover:text-primary transition-colors" aria-label="Close menu">
-                <span class="material-symbols-outlined text-3xl">close</span>
-            </button>
-        </div>
-        <nav class="flex flex-col py-4">
-            <a class="sidebar-link active" href="index.html">Home</a>
-            <a class="sidebar-link" href="pages/about.html">About</a>
-            <a class="sidebar-link" href="pages/menu.html">Menu</a>
-            <a class="sidebar-link" href="pages/services.html">Services</a>
-            <a class="sidebar-link" href="pages/gallery.html">Gallery</a>
-            <a class="sidebar-link" href="pages/testimonials.html">Testimonials</a>
-            <a class="sidebar-link" href="pages/contact.html">Contact</a>
-        </nav>
-        <div class="mt-auto p-6 border-t border-white/5">
-            <a href="pages/contact.html" class="block w-full bg-primary text-on-primary text-center py-3 rounded-full font-label-md text-label-md hover:scale-95 active:scale-90 transition-transform">Book a Table</a>
-        </div>
-    </div>
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('-translate-x-full');
+            document.getElementById('sidebar-overlay').classList.toggle('hidden');
+        }
+    </script>
 </body>
 
 </html>

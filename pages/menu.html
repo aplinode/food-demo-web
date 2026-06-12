@@ -1,610 +1,574 @@
 <!DOCTYPE html>
-
 <html class="dark" lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>L'ELIXIR | The Menu</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Menu | ZAIQA Modern Pakistani Heritage</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap"
-        rel="stylesheet" />
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+        rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+        rel="stylesheet">
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     "colors": {
-                        "on-primary-container": "#554300",
-                        "tertiary-fixed-dim": "#c8c6c2",
-                        "surface-dim": "#131313",
-                        "surface-bright": "#393939",
-                        "on-secondary": "#313030",
-                        "on-primary-fixed": "#241a00",
-                        "secondary-fixed": "#e5e2e1",
-                        "on-secondary-container": "#b7b5b4",
-                        "surface-container-lowest": "#0e0e0e",
-                        "secondary-fixed-dim": "#c8c6c5",
-                        "on-tertiary": "#30312e",
-                        "on-secondary-fixed-variant": "#474746",
-                        "on-tertiary-fixed": "#1b1c19",
-                        "tertiary-container": "#b4b3af",
-                        "inverse-on-surface": "#303030",
-                        "surface-container-low": "#1b1c1c",
+                        "surface-variant": "#353535",
                         "primary-container": "#d4af37",
-                        "surface-container-high": "#2a2a2a",
-                        "on-secondary-fixed": "#1c1b1b",
+                        "tertiary-fixed": "#e4e2dd",
+                        "surface-dim": "#131313",
+                        "secondary-container": "#4a4949",
+                        "on-secondary-container": "#bab8b7",
+                        "surface-tint": "#e9c349",
                         "primary-fixed": "#ffe088",
-                        "on-surface": "#e4e2e1",
+                        "tertiary": "#d0ceca",
+                        "on-error": "#690005",
+                        "primary": "#f2ca50",
+                        "secondary-fixed": "#e5e2e1",
+                        "tertiary-fixed-dim": "#c8c6c2",
+                        "surface": "#131313",
+                        "on-background": "#e4e2e1",
                         "surface-container": "#1f2020",
                         "inverse-primary": "#735c00",
                         "error-container": "#93000a",
-                        "on-primary": "#3c2f00",
-                        "tertiary-fixed": "#e4e2dd",
-                        "outline": "#99907c",
-                        "error": "#ffb4ab",
-                        "surface-tint": "#e9c349",
-                        "surface": "#131313",
-                        "on-error": "#690005",
-                        "surface-container-highest": "#353535",
-                        "secondary": "#c8c6c5",
-                        "on-surface-variant": "#d0c5af",
-                        "secondary-container": "#474746",
-                        "on-background": "#e4e2e1",
-                        "tertiary": "#d0ceca",
-                        "primary": "#f2ca50",
-                        "on-primary-fixed-variant": "#574500",
-                        "on-tertiary-container": "#454542",
-                        "surface-variant": "#353535",
-                        "on-tertiary-fixed-variant": "#474744",
-                        "background": "#131313",
+                        "on-primary-container": "#554300",
+                        "on-secondary-fixed": "#1c1b1b",
                         "primary-fixed-dim": "#e9c349",
+                        "on-tertiary": "#30312e",
+                        "surface-bright": "#393939",
+                        "surface-container-low": "#1b1c1c",
+                        "on-tertiary-container": "#454542",
+                        "on-tertiary-fixed-variant": "#474744",
+                        "on-primary-fixed": "#241a00",
+                        "tertiary-container": "#b4b3af",
+                        "on-secondary-fixed-variant": "#474646",
+                        "background": "#131313",
+                        "on-tertiary-fixed": "#1b1c19",
+                        "on-secondary": "#313030",
+                        "error": "#ffb4ab",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary": "#3c2f00",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-highest": "#353535",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "inverse-on-surface": "#303030",
+                        "surface-container-highest": "#353535",
+                        "surface-container-high": "#2a2a2a",
+                        "on-surface": "#e4e2e1",
+                        "outline": "#99907c",
                         "inverse-surface": "#e4e2e1",
+                        "secondary": "#c8c6c5",
+                        "on-primary-fixed-variant": "#574500",
                         "outline-variant": "#4d4635",
-                        "on-error-container": "#ffdad6"
+                        "on-surface-variant": "#d0c5af"
                     },
                     "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
                     },
                     "spacing": {
+                        "margin-mobile": "16px",
                         "margin-desktop": "64px",
-                        "margin-mobile": "20px",
-                        "section-gap": "120px",
-                        "container-max": "1280px",
                         "gutter": "24px",
-                        "unit": "8px"
+                        "unit": "8px",
+                        "section-gap": "120px",
+                        "container-max": "1280px"
                     },
                     "fontFamily": {
-                        "display-lg-mobile": ["Playfair Display"],
-                        "headline-lg": ["Playfair Display"],
-                        "label-md": ["Inter"],
-                        "body-lg": ["Inter"],
                         "body-md": ["Inter"],
-                        "headline-xl": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "label-md": ["Inter"],
                         "display-lg": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Playfair Display"],
                         "headline-md": ["Playfair Display"],
-                        "label-sm": ["Inter"]
+                        "headline-lg-mobile": ["Playfair Display"]
                     },
                     "fontSize": {
-                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
-                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
-                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
-                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "headline-xl": ["48px", { "lineHeight": "1.2", "fontWeight": "600" }],
-                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
-                        "label-sm": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.08em", "fontWeight": "600" }]
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }]
                     }
                 },
             },
         }
     </script>
     <style>
-        .glass-card {
-            background: rgba(38, 38, 38, 0.4);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .text-gradient-gold {
-            background: linear-gradient(to right, #f2ca50, #ffe088);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
         body {
-            background-color: #131313;
+            background-color: #121212;
             color: #e4e2e1;
             scroll-behavior: smooth;
         }
 
-        .sidebar-link {
-            position: relative;
-            display: block;
-            padding: 0.75rem 1.5rem;
-            font-size: 14px;
-            font-weight: 500;
-            letter-spacing: 0.05em;
-            color: #d0c5af;
-            transition: all 0.2s;
-            border-left: 2px solid transparent;
+        .glass {
+            background: rgba(42, 42, 42, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.1);
         }
-        .sidebar-link:hover {
-            color: #f2ca50;
-            background: rgba(242, 202, 80, 0.05);
-            border-left-color: #f2ca50;
+
+        .text-gold {
+            color: #d4af37;
         }
-        .sidebar-link.active {
+
+        .bg-gold {
+            background-color: #d4af37;
+        }
+
+        .border-gold {
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        .active-nav-item {
             color: #f2ca50;
-            border-left-color: #f2ca50;
-            background: rgba(242, 202, 80, 0.08);
+            border-bottom: 2px solid #f2ca50;
+        }
+
+        /* Hide scrollbar but keep functionality */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
     </style>
 </head>
 
-<body class="overflow-x-hidden">
+<body class="font-body-md text-body-md overflow-x-hidden">
     <!-- TopNavBar -->
-    <header
-        class="fixed top-0 w-full z-50 bg-surface/40 dark:bg-surface/40 backdrop-blur-xl border-b border-white/5 shadow-2xl shadow-black/20">
-        <nav class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
-            <a class="font-headline-md text-headline-md tracking-tighter text-primary dark:text-primary-fixed"
-                href="../index.html">L'ELIXIR</a>
-            <div class="hidden md:flex items-center space-x-8">
-                <a class="font-label-md text-label-md text-on-surface dark:text-on-surface-variant hover:text-primary transition-colors"
+    <nav class="fixed top-0 w-full z-50 border-b border-primary/20 bg-surface/80 backdrop-blur-xl shadow-sm">
+        <div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-20">
+            <a class="font-headline-md text-headline-md font-bold tracking-tighter text-primary dark:text-primary-fixed"
+                href="../index.html">ZAIQA</a>
+            <div class="hidden md:flex gap-8">
+                <a class="font-label-md text-label-md text-on-surface/80 dark:text-on-surface/70 hover:text-primary transition-colors"
                     href="../index.html">Home</a>
-                <a class="font-label-md text-label-md text-on-surface dark:text-on-surface-variant hover:text-primary transition-colors"
+                <a class="font-label-md text-label-md text-on-surface/80 dark:text-on-surface/70 hover:text-primary transition-colors"
                     href="about.html">About</a>
                 <a class="font-label-md text-label-md text-primary dark:text-primary-fixed border-b-2 border-primary pb-1"
                     href="menu.html">Menu</a>
-                <a class="font-label-md text-label-md text-on-surface dark:text-on-surface-variant hover:text-primary transition-colors"
+                <a class="font-label-md text-label-md text-on-surface/80 dark:text-on-surface/70 hover:text-primary transition-colors"
                     href="services.html">Services</a>
-                <a class="font-label-md text-label-md text-on-surface dark:text-on-surface-variant hover:text-primary transition-colors"
+                <a class="font-label-md text-label-md text-on-surface/80 dark:text-on-surface/70 hover:text-primary transition-colors"
                     href="gallery.html">Gallery</a>
-                <a class="font-label-md text-label-md text-on-surface dark:text-on-surface-variant hover:text-primary transition-colors"
-                    href="testimonials.html">Testimonials</a>
+                <a class="font-label-md text-label-md text-on-surface/80 dark:text-on-surface/70 hover:text-primary transition-colors"
+                    href="contact.html">Contact</a>
             </div>
-            <button id="sidebar-toggle" class="md:hidden text-on-surface-variant hover:text-primary transition-colors mr-2" aria-label="Toggle menu">
-                <span class="material-symbols-outlined text-3xl">menu</span>
-            </button>
-            <a href="contact.html"
-                class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-md text-label-md hover:scale-95 active:scale-90 transition-all duration-300 inline-block">
+            <button
+                class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-md text-label-md hover:scale-95 transition-transform">
                 Book a Table
+            </button>
+            <button class="md:hidden text-primary hover:text-primary-fixed transition-colors"
+                onclick="toggleSidebar()">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </nav>
+    <!-- Sidebar Overlay -->
+    <div class="md:hidden fixed inset-0 bg-black/60 z-[100] hidden" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+    <!-- Sidebar -->
+    <div class="md:hidden fixed top-0 left-0 h-full w-72 bg-surface-container-high backdrop-blur-lg border-r border-primary/10 z-[110] -translate-x-full transition-transform duration-300 ease-in-out shadow-2xl"
+        id="sidebar">
+        <div class="flex items-center justify-between px-6 h-20 border-b border-primary/10">
+            <h2 class="font-headline-md text-headline-md text-primary">ZAIQA</h2>
+            <button class="text-on-surface-variant hover:text-primary transition-colors" onclick="toggleSidebar()">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <nav class="py-4 flex flex-col">
+            <a class="flex items-center gap-3 px-6 py-3 text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md"
+                href="../index.html">
+                <span class="material-symbols-outlined">home</span> Home
+            </a>
+            <a class="flex items-center gap-3 px-6 py-3 text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md"
+                href="about.html">
+                <span class="material-symbols-outlined">info</span> About
+            </a>
+            <a class="flex items-center gap-3 px-6 py-3 text-primary border-l-2 border-primary bg-primary-container/10 font-label-md text-label-md"
+                href="menu.html">
+                <span class="material-symbols-outlined">restaurant_menu</span> Menu
+            </a>
+            <a class="flex items-center gap-3 px-6 py-3 text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md"
+                href="services.html">
+                <span class="material-symbols-outlined">delivery_dining</span> Services
+            </a>
+            <a class="flex items-center gap-3 px-6 py-3 text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md"
+                href="gallery.html">
+                <span class="material-symbols-outlined">photo_library</span> Gallery
+            </a>
+            <a class="flex items-center gap-3 px-6 py-3 text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md"
+                href="contact.html">
+                <span class="material-symbols-outlined">event</span> Contact
             </a>
         </nav>
-    </header>
-    <main class="pt-32">
-        <!-- Elegant Page Header -->
-        <section class="px-margin-desktop max-w-container-max mx-auto mb-section-gap text-center relative">
-            <div class="absolute -top-20 left-1/2 -translate-x-1/2 w-full h-96 opacity-20 pointer-events-none">
-
-            </div>
-            <span class="font-label-sm text-label-sm tracking-[0.2em] text-primary uppercase mb-4 block">Seasonal
-                Gastronomy</span>
-            <h1 class="font-display-lg text-display-lg mb-6">The Culinary Anthology</h1>
-            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
-                A curated sequence of flavors designed to evoke emotion and celebrate the artistry of modern luxury
-                dining.
-            </p>
-        </section>
-        <!-- Category Navigation -->
-        <section class="sticky top-20 z-40 bg-surface/80 backdrop-blur-md py-6 border-b border-white/5 mb-16">
-            <div
-                class="px-margin-desktop max-w-container-max mx-auto flex justify-center space-x-12 overflow-x-auto no-scrollbar">
-                <button
-                    class="font-label-md text-label-md text-primary whitespace-nowrap border-b border-primary pb-1">Appetizers</button>
-                <button
-                    class="font-label-md text-label-md text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors">Main
-                    Course</button>
-                <button
-                    class="font-label-md text-label-md text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors">Desserts</button>
-                <button
-                    class="font-label-md text-label-md text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors">Signature
-                    Cocktails</button>
+    </div>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative h-[40vh] md:h-[50vh] flex items-center justify-center overflow-hidden">
+            <img class="absolute inset-0 w-full h-full object-cover brightness-[0.3]"
+                data-alt="A cinematic, high-angle close-up of a richly textured Pakistani dining table set in a dark, moody luxury restaurant environment. The scene features flickering warm candlelight illuminating hand-crafted ceramic plates and golden cutlery. Soft embers and rising steam create an atmosphere of opulent hospitality, with deep shadows and vibrant amber highlights reflecting the modern heritage aesthetic of Zaiqa."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9LZMQkNtgorNw-A12RXYtC9bH63UjAZtgDT76GgCn-Z_VfNBYhss4jC1aNZlx8EC7SXot8GI0d5pu6OydehPHIWEkVQpBi2ybLYRJJxXDZh55eI6bOf6C111r19mBW2PQJb33akZ8IH3M3xQYqibiMcq9IISERgf3K2mvn-IoijExJerXeTFtFtaSCQZ2q3GfkUok72lMKrb8VZi0zt2bXqLgSuSlbCYJrvZfvwh_O0A6vmSPPSv_PHFhpYuFsr8T165pgfYCEpO456c">
+            <div class="relative z-10 text-center px-4">
+                <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-4">The
+                    Culinary Journey</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Explore the fusion of
+                    ancient Indus traditions and modern gastronomic artistry.</p>
             </div>
         </section>
-        <!-- Menu Grid Section -->
-        <section class="px-margin-desktop max-w-container-max mx-auto mb-section-gap">
+        <!-- Category Navigation (Sticky) -->
+        <nav class="sticky top-20 z-40 bg-surface/95 backdrop-blur-md border-b border-primary/10 shadow-lg">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="flex items-center justify-center gap-4 md:gap-12 py-6 overflow-x-auto no-scrollbar">
+                    <a class="font-label-md text-label-md text-primary whitespace-nowrap border-b-2 border-primary pb-1"
+                        href="#starters">Starters</a>
+                    <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors"
+                        href="#bbq">BBQ</a>
+                    <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors"
+                        href="#mains">Main Course</a>
+                    <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors"
+                        href="#desserts">Desserts</a>
+                    <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors"
+                        href="#beverages">Beverages</a>
+                </div>
+            </div>
+        </nav>
+        <!-- Menu Listings -->
+        <section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop" id="starters">
+            <div class="flex flex-col md:flex-row justify-between items-baseline mb-12">
+                <div>
+                    <span class="text-primary font-label-md text-label-md tracking-[0.2em] uppercase">Beginnings</span>
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mt-2">Signature Starters
+                    </h2>
+                </div>
+                <div class="h-px flex-1 bg-primary/10 mx-8 hidden md:block"></div>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-                <!-- Card 1 -->
+                <!-- Food Card 1 -->
                 <div
-                    class="glass-card group rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500">
-                    <div class="aspect-[4/5] overflow-hidden relative">
-                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                            data-alt="A macro photography shot of a gourmet seared scallop appetizer served on a slate plate. The dish is garnished with delicate micro-greens and a vibrant citrus foam, illuminated by soft atmospheric lighting that highlights the textures of the food against a dark, moody background. Professional culinary styling with high-fidelity detail and a luxurious, warm color palette."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyN3zU33TKrx9NufHPSqJs1D74iKiX9Oog4QErY3NnEYyo4iXmDgHbWeB3CQSTVWSyXAwVNSIxwcriQH84iVwxXhX7pyMbGau5y9_A6J5qVFJKHSUwnsPeXJiyFLK0283pULukLmFNJKs3e5J91ThBlWRYEk4TtQajVyyGqef-SlxUXdnBtHFyDk0cEsEpt1sHsck9Vpd4sLnPQpnsq_D4jY3S4P1x7-pN9mBEQQLvRsHhGRTsheFyrzXaScvHMPgwRuWmgvFN2SnF" />
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60">
-                        </div>
-                        <div class="absolute top-4 right-4">
-                            <span
-                                class="font-label-sm text-label-sm bg-primary/20 backdrop-blur-md text-primary px-3 py-1 rounded-full border border-primary/30">Chef's
-                                Choice</span>
-                        </div>
+                    class="group relative overflow-hidden glass rounded-xl transition-all duration-500 hover:-translate-y-2">
+                    <div class="aspect-[4/5] overflow-hidden">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            data-alt="A professional food photography shot of golden-brown Samosas arranged artistically on a black slate platter. The lighting is dramatic, high-contrast, and warm, highlighting the flaky texture of the pastry. Fresh coriander leaves and a drizzle of vibrant tamarind chutney add splashes of green and deep red against the dark background. The aesthetic is clean and upscale, emphasizing gourmet Pakistani snacks."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVtBXSdVI5DgbLX0fXtRn9oxHMd2Vus8B0k41VQCZJwC2zInqR6jyI3-HBSR0jxTCHMO2Qc0DPlhrF4bOD8-zqyZhHTZDDcKTxwMYaM-GRMquM2tuCLxkngeOt6UYSSJs0YbSPE284fMtgKOtI0MX3E9UJjTRGyyTwGgkxwOW5BRfOsCgepihyfWIMZP3GEL6i5JxJeZOCcnPSmZ6VTrIOW0LKdHFPnKXoasQTCrEVEmz09-EBK5Z2_sLsIFzqUhQ3WoX5EDAbpx3_">
                     </div>
-                    <div class="p-8">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="font-headline-md text-headline-md">Hokkaido Scallops</h3>
-                            <span class="font-headline-md text-headline-md text-primary">$32</span>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-headline-md text-headline-md text-on-surface">Artisan Samosa Trio</h3>
+                            <span class="font-headline-md text-headline-md text-primary">$18</span>
                         </div>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-6">
-                            Pan-seared with brown butter, cauliflower silk, black truffle shavings, and crispy pancetta.
-                        </p>
+                        <p class="text-on-surface-variant font-body-md text-body-md mb-4">Hand-folded pastry shells
+                            filled with spiced organic potatoes and heritage peas, served with mint-yogurt emulsion.</p>
                         <div class="flex gap-2">
                             <span
-                                class="font-label-sm text-label-sm px-2 py-0.5 border border-outline-variant rounded text-on-surface-variant">Gluten-Free</span>
+                                class="bg-primary/10 text-primary text-[10px] px-2 py-1 rounded-full border border-primary/20 uppercase tracking-tighter">Vegetarian</span>
                             <span
-                                class="font-label-sm text-label-sm px-2 py-0.5 border border-outline-variant rounded text-on-surface-variant">Signature</span>
+                                class="bg-primary/10 text-primary text-[10px] px-2 py-1 rounded-full border border-primary/20 uppercase tracking-tighter">Halal</span>
                         </div>
                     </div>
                 </div>
-                <!-- Card 2 -->
+                <!-- Food Card 2 -->
                 <div
-                    class="glass-card group rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500">
-                    <div class="aspect-[4/5] overflow-hidden relative">
-                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                            data-alt="Close-up of a vibrant heirloom tomato and burrata salad presented in a deep charcoal bowl. The creamy white cheese is surrounded by colorful basil oil droplets and ruby-red tomato slices. The lighting is dramatic and side-lit, emphasizing the glossy textures and fresh ingredients within the sophisticated, dark-themed culinary environment of L'Elixir."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuClWmd0dIJ9bhHsvKvjiGC4vp7GTqalW4oJyx1r_0K86L8VYHw0FCsOnYVJeOH9f0xlpukZN45FNtFPtl8aGdFJwHsufl3gRMHlxf7bZ8kPgxHiTsB5BHwFbf-vOjdqIkqvZZe4pWsUQmD7mZx7NxDOWyyn4gN0cK4NaMYlGof3BXq3ikEkWINs7rXSdS-YgXc7gngX1SGVV77Gq2VBHcL2LkurMP-N6pQZFcS1Vgdk99Epnmeh9hChayzmQ1Birmxw6K-eBo4GxOVB" />
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60">
-                        </div>
+                    class="group relative overflow-hidden glass rounded-xl transition-all duration-500 hover:-translate-y-2">
+                    <div class="aspect-[4/5] overflow-hidden">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            data-alt="A high-end culinary close-up of grilled Seekh Kebabs resting on a bed of charred red onions and lime wedges. The meat is juicy with visible grill marks and aromatic spices, reflecting a warm golden glow from soft ambient lighting. The background is a blurred luxury dining setting with dark wood and metallic accents, creating a sophisticated and indulgent Pakistani barbecue atmosphere."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2kQUgqGoZ6PqynoT4gGPyEWIurFOitHtfkjR-FHvYz7EXswsiChZJ02t0SbHmY1kjhkqvEkHfnYCokYjYhMkrE-F9waCcNy_SnQwCp3CI-rbHHKzZwg6wu47_SDff0MoUfenp9niZ714g0Cnx6UJAy4nOEQfm17iPSODTi4v-PqmxTxix8B4sMxNFfNe-TldgnEcTYQl1Jgl4bDEXJUUod8wYK-IK0Ahlwq9vJkw9X3vvzJjDDMBV-6M34eMJrHgUgwc5gAef6wCP">
                     </div>
-                    <div class="p-8">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="font-headline-md text-headline-md">Heritage Burrata</h3>
-                            <span class="font-headline-md text-headline-md text-primary">$28</span>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-headline-md text-headline-md text-on-surface">Silk Route Seekh</h3>
+                            <span class="font-headline-md text-headline-md text-primary">$24</span>
                         </div>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-6">
-                            Heirloom tomatoes, hand-pressed basil oil, 12-year balsamic glaze, and pine nut crumble.
-                        </p>
+                        <p class="text-on-surface-variant font-body-md text-body-md mb-4">Melt-in-your-mouth minced lamb
+                            skewers infused with smoked paprika and royal cumin.</p>
                         <div class="flex gap-2">
                             <span
-                                class="font-label-sm text-label-sm px-2 py-0.5 border border-outline-variant rounded text-on-surface-variant">Vegetarian</span>
+                                class="bg-primary/10 text-primary text-[10px] px-2 py-1 rounded-full border border-primary/20 uppercase tracking-tighter">Signature</span>
+                            <span
+                                class="bg-primary/10 text-primary text-[10px] px-2 py-1 rounded-full border border-primary/20 uppercase tracking-tighter">Spicy</span>
                         </div>
                     </div>
                 </div>
-                <!-- Card 3 -->
+                <!-- Food Card 3 -->
                 <div
-                    class="glass-card group rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500">
-                    <div class="aspect-[4/5] overflow-hidden relative">
-                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                            data-alt="Exquisite Wagyu beef tartare served with a golden quail egg yolk and artisanal crackers. The dish is presented on a textured marble plate with a dark, luxurious aesthetic. Fine-dining macro photography with warm gold accents and deep charcoal backgrounds, highlighting the precision and premium quality of the ingredients at L'Elixir Luxury Dining."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzFU0UVMsucgvXKY72fAtEH4sMHJY7O60EKlEJ8N0NMZk0fpJeku2GW5JWID3DFkkr70bRvTZ5unnJB7JlS09Hfr8q-nkoVYbauZBlLtvScDTb45lFqEHhcV3GzFJIvi1uuCLu_t1T_CFqSMKUtldlcpzGPur5CchV-uZr_T5NX8p-2Kfdng3R898MphUL1SzezEBGv7XTU3tTDFJz2Q9dnBfU_-m5a3CcJexEEd3iBtZX6U9Thu1WmdKdhAvdVy9BCgzHkiKAVU3g" />
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60">
-                        </div>
+                    class="group relative overflow-hidden glass rounded-xl transition-all duration-500 hover:-translate-y-2">
+                    <div class="aspect-[4/5] overflow-hidden">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            data-alt="A gourmet presentation of crispy Pakora fritters served in a minimalist ceramic bowl. The lighting captures the intricate, crunchy golden-yellow texture of the chickpea batter and fresh spinach leaves. A side of vibrant green cilantro dip sits next to it. The overall look is modern and minimalist with a focus on high-contrast textures and natural earthy tones."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5FxY-50Uq8gOLywlvGtgpDKmSj_DUeoEMYiGtnsNWHNLFs75rzvbKlRVQ1HCIlr8aR7j4Hw1jrLbSEDeh01epBA_k_WTbwsYXA41JqKXoVdKLAKk7m1Fu7pHuPi2WKPWFJeSH_UPu45gi76bdb_JSDrnoP4BL4d3hKkmVDVkeicDeKIYZyVjHt7xa_5e0y-UXho8DCIso-CTwGSc_OjHQxKeAvV-GqHWvu4gxELyo3EFl0NV6dJIG_KJucOCJE6fK6-44WYuhCBfL">
                     </div>
-                    <div class="p-8">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="font-headline-md text-headline-md">Wagyu Tartare</h3>
-                            <span class="font-headline-md text-headline-md text-primary">$42</span>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-headline-md text-headline-md text-on-surface">Lahori Pakora Nest</h3>
+                            <span class="font-headline-md text-headline-md text-primary">$16</span>
                         </div>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-6">
-                            A5 Miyazaki Wagyu, pickled shallots, caper berries, and cured organic egg yolk.
-                        </p>
+                        <p class="text-on-surface-variant font-body-md text-body-md mb-4">Thinly sliced seasonal
+                            vegetables fried in a light, spiced chickpea tempura.</p>
                         <div class="flex gap-2">
                             <span
-                                class="font-label-sm text-label-sm px-2 py-0.5 border border-outline-variant rounded text-on-surface-variant">Premium</span>
+                                class="bg-primary/10 text-primary text-[10px] px-2 py-1 rounded-full border border-primary/20 uppercase tracking-tighter">Gluten
+                                Free</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Chef's Special Section -->
-        <section class="mb-section-gap relative">
-            <div class="px-margin-desktop max-w-container-max mx-auto">
-                <div class="grid grid-cols-1 lg:grid-cols-12 items-center glass-card rounded-2xl overflow-hidden">
-                    <div class="lg:col-span-7 h-[600px] overflow-hidden group">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms]"
-                            data-alt="A cinematic, wide-angle shot of the Chef's signature main course: a roasted rack of lamb with a herb crust, served with seasonal root vegetables and a rich red wine reduction. The plate sits on a rustic wooden table under warm, spotlighting that creates a high-contrast, luxury atmosphere. The mood is intimate and sophisticated, featuring a deep charcoal background and golden lighting highlights."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJS0RLQk2DhN9L5UnJmoCzsLI8Dc-E4myUG6sNS-KfjWPYFKH2DYNAhRitkaFTbqutC1a6emhikIxM_dD-Z_94WJf9k1rWLPIvWObFH5bIbZ70JpbIiek-w9VL9bneuxBkcDn0g-o_CZEoiT1QTSvG53Abilx0IzZUnM4PAtiL9H_JuZUrs_VXBZTQxr_wkqkG_djniiUX4RtcxpYRvkJJJX6lRb4DSh1dns3hMmr8YTt08yHlE7JEUZJcLygFaH4aGFfjhQt7vvRO" />
-                    </div>
-                    <div class="lg:col-span-5 p-12 lg:p-16">
-                        <span
-                            class="font-label-sm text-label-sm text-primary tracking-widest uppercase mb-6 block">Featured
-                            Masterpiece</span>
-                        <h2 class="font-display-lg text-display-lg mb-8 leading-tight">The Midnight Sea Bass</h2>
-                        <p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
-                            Our signature dish features wild-caught Chilean sea bass, oven-roasted in an aromatic herb
-                            crust and served atop a velvet parsnip purée with saffron-infused beurre blanc.
-                        </p>
-                        <div class="flex items-center space-x-6 mb-10">
-                            <div class="w-12 h-px bg-primary/40"></div>
-                            <span class="font-headline-md text-headline-md text-primary">$68</span>
-                            <div class="w-12 h-px bg-primary/40"></div>
+        <!-- Featured Platter: Royal Zaiqa Platter -->
+        <section class="relative min-h-[70vh] flex items-center overflow-hidden mb-section-gap">
+            <div class="absolute inset-0 w-full h-full">
+                <img class="w-full h-full object-cover brightness-[0.4]"
+                    data-alt="An expansive, wide-angle shot of a grand Royal Platter featuring a variety of Pakistani delicacies: succulent tandoori meats, saffron-infused long-grain Biryani, buttery naan bread, and diverse chutneys. The platter is arranged on a large ornate copper tray. The scene is lit with warm, cinematic lighting that highlights the textures of the food and the metallic gleam of the tray. The background shows a luxurious, dimly lit dining room with elegant glass accents."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUzA2K_UO0xD-mReKryDL1KHrcWS6xbPeed6URnCoJFhaiZF7ncYCae6b8zLV8Tt7z86Tfm67lcKI69o5q2nPLIg-Fm1u3XjX1UVenwtHGa3CvkBpXPljX__AnBdedBvLRY19a4Ga84Y1S0W-6i3FyBi5UG36s0YowSWICh_ujhm5T-ghE7G9j9nZfK4IvJqMxtQMBldGZz61EKvvZKwn6t1EiUvWDSKnHQnnjbq6TefzGwdmVD7zF9GCeJxNfx6cqOEhZ4q8lQV9G">
+            </div>
+            <div
+                class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+                <div class="glass p-10 md:p-16 rounded-2xl border-l-4 border-l-primary">
+                    <span class="text-primary font-label-md text-label-md tracking-[0.3em] uppercase block mb-4">Chef's
+                        Masterpiece</span>
+                    <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6">The Royal Zaiqa Platter
+                    </h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                        An opulent feast designed for royalty. This grand assortment includes our signature Lamb Chops,
+                        Malai Boti, Seekh Kebabs, and Tandoori King Prawns, served alongside aromatic Saffron Biryani
+                        and hand-stretched Garlic Naan.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-6 items-center">
+                        <div class="text-center sm:text-left">
+                            <span class="text-on-surface-variant text-sm block">Experience for Two</span>
+                            <span class="font-display-lg text-primary">$120</span>
                         </div>
-                        <button class="group flex items-center space-x-4 font-label-md text-label-md text-primary">
-                            <span>Explore the Pairing</span>
-                            <span
-                                class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+                        <button
+                            class="w-full sm:w-auto bg-primary text-on-primary px-10 py-4 rounded-full font-label-md text-label-md hover:scale-105 transition-transform">
+                            Reserve Now
                         </button>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Secondary Menu Grid (Main Courses) -->
-        <section class="px-margin-desktop max-w-container-max mx-auto mb-section-gap">
-            <div class="flex items-center justify-between mb-12">
-                <h2 class="font-headline-xl text-headline-xl">Main Selection</h2>
-                <div class="h-px flex-1 bg-white/5 mx-12 hidden md:block"></div>
-                <div class="flex space-x-4">
-                    <button
-                        class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary/10 hover:border-primary transition-all">
-                        <span class="material-symbols-outlined">chevron_left</span>
-                    </button>
-                    <button
-                        class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary/10 hover:border-primary transition-all">
-                        <span class="material-symbols-outlined">chevron_right</span>
-                    </button>
-                </div>
+        <!-- Main Course Grid -->
+        <section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop" id="mains">
+            <div class="text-center mb-20">
+                <span class="text-primary font-label-md text-label-md tracking-[0.2em] uppercase">Heart of the
+                    Kitchen</span>
+                <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mt-2">The Main Course</h2>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-                <!-- Main 1 -->
-                <div class="flex space-x-8 items-start group">
-                    <div class="w-32 h-32 rounded-lg overflow-hidden flex-shrink-0">
-                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                            data-alt="Close-up of a perfectly grilled ribeye steak with a sprig of rosemary and garlic butter melting over its surface. The meat is juicy and rich in color, presented on a dark ceramic plate. Soft, warm lighting emphasizes the savory textures and luxury appeal of this high-end culinary creation in L'Elixir's signature dark aesthetic."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsIwnnwW-vxr9t3b_U8IjBenm0vuI1y_YNIHjB2A8KBIln_pERH2agvxm0hZMomRv9IKvDFAOYiSqfv8C1Z4_jT0vFG09kB1gFf4AY36uXcnc8JDNqtWLVZUXEsZn1vGe86tF_fyYqxcqnazLckzLlox8Xp3r6bzkiHlJzPfMNo_oZ0M_uZ1ZgbMGe2TJxyWtR-MycoraW3RGqutouvVcOhv2UJG8Dm5-0W-_YgAVVs0V2IhlU2e5p-L_gTwbY2WwuGTisg2QeX7qn" />
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Biryani Entry -->
+                <div class="flex flex-col md:flex-row gap-8 items-center glass p-4 rounded-2xl">
+                    <div class="w-full md:w-48 h-48 flex-shrink-0 overflow-hidden rounded-xl">
+                        <img class="w-full h-full object-cover"
+                            data-alt="A detailed close-up of a premium Lamb Biryani served in a traditional hand-hammered copper handi. Each grain of saffron-infused long-grain basmati rice is distinct and aromatic. Tender chunks of slow-cooked lamb are nestled within the rice, garnished with caramelized onions, fresh mint, and a hard-boiled egg. The lighting is warm and invites the viewer to experience the rich aromas of Pakistani heritage."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1VDG16w0xCnG29pG6y1RBW9bZibErJVvk4WmVEMjMgfb2MO-pQi75WqbtjKsRYlpFN4iKmpv0l8Gxamp1JkPt2P8C4S40VNAEdQYYHVM5KFzVQltikZ3qp6Zm1gicSSyo6XMl4vy4M7WDuUDrvOaZMSDzVGWDljUeCOVZH_2ZjVlHlJdnpEBs8B5j_KJZaQcwX4EGY7iiOJiTLJ7Ex9CgA9qapEIvOpJYQR_k9BxEm6MaNCfmq2in13VzOdYVOzS1H18jEtzxARY4">
                     </div>
-                    <div class="flex-1 border-b border-white/5 pb-8">
-                        <div class="flex justify-between mb-2">
-                            <h4 class="font-headline-md text-headline-md group-hover:text-primary transition-colors">
-                                Smoked Ribeye</h4>
-                            <span class="font-label-md text-label-md text-primary">$58</span>
+                    <div class="flex-1">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <h3 class="font-headline-md text-headline-md">Heritage Lamb Biryani</h3>
+                            <span class="text-primary font-bold text-lg">$32</span>
                         </div>
-                        <p class="font-body-md text-body-md text-on-surface-variant">45-day dry-aged beef, hickory
-                            smoked with bone marrow butter and roasted fingerling potatoes.</p>
+                        <p class="text-on-surface-variant font-body-md text-body-md mb-4">Aged Basmati rice layered with
+                            succulent grass-fed lamb, infused with saffron and 12 secret spices.</p>
+                        <div class="flex gap-2">
+                            <span class="material-symbols-outlined text-primary text-sm"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="text-xs text-on-surface-variant font-label-md">House Specialty</span>
+                        </div>
                     </div>
                 </div>
-                <!-- Main 2 -->
-                <div class="flex space-x-8 items-start group">
-                    <div class="w-32 h-32 rounded-lg overflow-hidden flex-shrink-0">
-                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                            data-alt="A delicate presentation of saffron-infused risotto topped with roasted vegetables and edible flowers. The bright yellow of the saffron contrasts beautifully with the dark charcoal bowl. The image captures the elegance and precision of fine dining at L'Elixir, with soft, ambient lighting creating a sophisticated and inviting mood."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmUDqr77Ou9LSLw8vFbs601a3ep0Zh223YjGB1Nzmm1Wae4Ows0caLmlhjl0fsW7qNETZLstskz_1SftDSSndY63oTjQZ4heBDogZPLWvx2SG7G2x5k0mHJFi7ItaE11CUIcS_lrDs8Z_smAhL55DS7rn5x0zYlxQZuWtnc7djacmtu5AQpEL2wTfCB6P3z0tY1u8PP30CNMCP276uI_pi8zOas4xZFM-adkuJJj9lTlXSTddlXBguP1HdWeX1O7y_RBj0WLuFt-CI" />
+                <!-- Karahi Entry -->
+                <div class="flex flex-col md:flex-row gap-8 items-center glass p-4 rounded-2xl">
+                    <div class="w-full md:w-48 h-48 flex-shrink-0 overflow-hidden rounded-xl">
+                        <img class="w-full h-full object-cover"
+                            data-alt="A high-contrast culinary photograph of a sizzling Chicken Karahi served in its original cast iron wok. The thick, dark red gravy is bubbling, coated with ginger juliennes and fresh green chilies. The lighting emphasizes the glossy texture of the sauce and the rustic appeal of the cast iron. The style is sophisticated and emphasizes the raw, intense flavors of authentic Pakistani street food elevated for fine dining."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYYe7xI_rfeDqQgQBd_Vbu8_ZS_H4dZKCJAYWzTyRr54ukoguEcoOXWwewKydWn_HZgx0xRgC9vQNT8eOr6MmAM6n-SSvft47YVrcAgtXrUierS-IqAF6JfiJS151QMBNgY-ysFFy8MpQHn26dcT0z_OTMxCIdd2vi7mFrEAG_4Ph5b8UY3XPVSya9T7bALvC8FfpQbeyjqg2-a5Dher_uAjyi8Agjvyq1NuJ9vQdfvguiaX8GKNG7JO1Ck3gvuwPnhAe2YanbN821">
                     </div>
-                    <div class="flex-1 border-b border-white/5 pb-8">
-                        <div class="flex justify-between mb-2">
-                            <h4 class="font-headline-md text-headline-md group-hover:text-primary transition-colors">
-                                Saffron Risotto</h4>
-                            <span class="font-label-md text-label-md text-primary">$38</span>
+                    <div class="flex-1">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <h3 class="font-headline-md text-headline-md">Charcoal Chicken Karahi</h3>
+                            <span class="text-primary font-bold text-lg">$28</span>
                         </div>
-                        <p class="font-body-md text-body-md text-on-surface-variant">Acquerello rice, Persian saffron,
-                            36-month Parmesan, and winter truffle shavings.</p>
+                        <p class="text-on-surface-variant font-body-md text-body-md mb-4">Wok-tossed chicken in a robust
+                            tomato and ginger base, finished with fresh green chilies.</p>
+                        <div class="flex gap-2">
+                            <span class="material-symbols-outlined text-primary text-sm"
+                                style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                            <span class="text-xs text-on-surface-variant font-label-md">High Spice</span>
+                        </div>
                     </div>
                 </div>
-                <!-- Main 3 -->
-                <div class="flex space-x-8 items-start group">
-                    <div class="w-32 h-32 rounded-lg overflow-hidden flex-shrink-0">
-                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                            data-alt="Roasted duck breast with a honey glaze and a side of cherry reduction. The dish is plated on a dark, artisanal ceramic dish with a dusting of spices. The atmosphere is quiet and luxurious, with focused lighting that brings out the deep colors and glossy textures of the food, perfectly fitting the L'Elixir brand aesthetic."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ3VWdnJA1_PAVYRjkWpdsGRt7icxMLl715_ozTtyaKL4l18OCMOyQaxsps7D5_eawNs9QCnhQ_pe22hVZg9YJvguWPFivAcANHq82iddY_CPBjLVTIWDzxtehtjUORmjMKh-6XDz66z-fc_goZe5vZ1-BYe912w8al0TdGbtld0aPpYNwVdff1RDKJdapU19Item3JvrxtXHUm37RIhY1gH9CU3iQEOvhXyTeD5VOhOtimTLghOkWa-_gfxGijvKUf2I_Hea7daCI" />
+                <!-- Nihari Entry -->
+                <div class="flex flex-col md:flex-row gap-8 items-center glass p-4 rounded-2xl">
+                    <div class="w-full md:w-48 h-48 flex-shrink-0 overflow-hidden rounded-xl">
+                        <img class="w-full h-full object-cover"
+                            data-alt="A luxurious close-up of Beef Nihari, a slow-cooked Pakistani stew. The deep mahogany sauce is rich and velvety, surrounding a tender beef shank that effortlessly falls apart. The garnish of ginger, coriander, and lemon is precisely placed. The bowl sits on a dark, textured table with soft golden light creating a warm, cozy atmosphere that emphasizes slow-cooked indulgence."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIYYDhWJBlfYTkJHXFunkqMMUSG4QnJ6ZUkvoeHwQrr1EYOi29Dbaclk64A7OWNaHI-k3mnYVfxawg0E0lETWEYok0iGw22cSHY1yTbFLppms53uZF2ZsVPK4clPsBgPfKr3FQC2dfNz1C3R5da0bLqVsjbg_hbDSM7AuK0WqzuSBGsj5Uk3kPhS_4M33cPNQd96QR_tJOkIQNBeZjF1hXhOu74H8Q9N3KCIOtR41qc-MEu4kA4eMYDLWkiVbY_hvTQt7mgoIjEw3s">
                     </div>
-                    <div class="flex-1 border-b border-white/5 pb-8">
-                        <div class="flex justify-between mb-2">
-                            <h4 class="font-headline-md text-headline-md group-hover:text-primary transition-colors">
-                                Glazed Duck Breast</h4>
-                            <span class="font-label-md text-label-md text-primary">$46</span>
+                    <div class="flex-1">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <h3 class="font-headline-md text-headline-md">Overnight Beef Nihari</h3>
+                            <span class="text-primary font-bold text-lg">$34</span>
                         </div>
-                        <p class="font-body-md text-body-md text-on-surface-variant">Honey-glazed Muscovy duck, spiced
-                            cherry reduction, and parsnip mousseline.</p>
+                        <p class="text-on-surface-variant font-body-md text-body-md mb-4">Slow-cooked for 12 hours, this
+                            velvety stew of beef shank is the pinnacle of luxury breakfast-to-dinner dining.</p>
                     </div>
                 </div>
-                <!-- Main 4 -->
-                <div class="flex space-x-8 items-start group">
-                    <div class="w-32 h-32 rounded-lg overflow-hidden flex-shrink-0">
-                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                            data-alt="A modern interpretation of a classic seafood linguine, featuring fresh lobster and squid ink pasta in a sophisticated arrangement. The plate is dark stone, and the lighting is crisp and detailed, showcasing the vibrant colors of the seafood against the dark pasta. A high-fidelity culinary shot that embodies luxury and exclusivity."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjV232tMCn7mEtWzjEIjrOwrZdTbaH5hIqwmCasasttugQ_yhGFHGAiVmhzELSPno8PpmGqnGEEQ7SkXLPzsMjGHRXdd5vRLFhtOuPl8Jl0pRKDI8pjsW4F79d0rgvTlj3Oalab4x2rFmR4A1ZsMCG6twM8Ti7sIIRB-ASI6fq-25FWBwzTSbXhsJlAvhQ8-C2mILgJs1d1VvmsNYVxKBUf6bx74VJ9sJhCbZYRlS7SM9wQj0xC1julv762LpWEonk6tyBIEqpfBEA" />
+                <!-- Dal Entry -->
+                <div class="flex flex-col md:flex-row gap-8 items-center glass p-4 rounded-2xl">
+                    <div class="w-full md:w-48 h-48 flex-shrink-0 overflow-hidden rounded-xl">
+                        <img class="w-full h-full object-cover"
+                            data-alt="A clean, minimalist shot of Dal Makhani in a simple white ceramic bowl. The lentils are creamy and dark, topped with a precise swirl of white cream and a small cube of melting butter. The lighting is soft and even, highlighting the smooth texture. This shot focuses on pure, comforting vegetarian luxury within a modern heritage setting."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoeduVmpEUSg_hgtdeScCHTuxXet8sFLopSO_zxmANSe3YX6WGuWY5P2SGol60vh-iLRMCU3s9C20VC6owLuTbsn6BZ6XXl12PUgQuJkuFR-nGKehhFe_oOQkS4sGinnGv6bGaOWgqhxOWZWucpkB2MfvSaacQgcOowC-xmMYNfn-FqAhbfMfrPfLzivY_BxGPt0sxmJi5jgvtbJz06-j-W8CLFrg9UpEThzZbH09M6zMPfG215HY0o5pJ3_u5TC84FdPrKpf6i0z0">
                     </div>
-                    <div class="flex-1 border-b border-white/5 pb-8">
-                        <div class="flex justify-between mb-2">
-                            <h4 class="font-headline-md text-headline-md group-hover:text-primary transition-colors">Ink
-                                Linguine</h4>
-                            <span class="font-label-md text-label-md text-primary">$44</span>
+                    <div class="flex-1">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <h3 class="font-headline-md text-headline-md">Black Lentil Dal</h3>
+                            <span class="text-primary font-bold text-lg">$22</span>
                         </div>
-                        <p class="font-body-md text-body-md text-on-surface-variant">Squid ink pasta, Maine lobster,
-                            bird's eye chili, and Amalfi lemon butter.</p>
+                        <p class="text-on-surface-variant font-body-md text-body-md mb-4">Slow-simmered black lentils
+                            finished with cultured butter and a touch of organic cream.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Signature Cocktails - Horizontal Scroll -->
-        <section class="bg-surface-container-low py-section-gap">
-            <div class="px-margin-desktop max-w-container-max mx-auto overflow-hidden">
-                <div class="mb-12">
-                    <h2 class="font-headline-xl text-headline-xl mb-4">The Alchemist's Selection</h2>
-                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">Liquid artistry crafted with
-                        rare botanicals and clarified essences.</p>
+        <!-- Desserts Section -->
+        <section class="py-section-gap bg-surface-container" id="desserts">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="text-center mb-16">
+                    <span class="text-primary font-label-md text-label-md tracking-[0.2em] uppercase">Sweet
+                        Endings</span>
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mt-2">Traditional Delicacies
+                    </h2>
                 </div>
-                <div class="flex space-x-8 overflow-x-auto pb-12 no-scrollbar">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                    <!-- Gulab Jamun -->
                     <div
-                        class="flex-shrink-0 w-80 glass-card p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300">
-                        <div class="h-80 mb-6 rounded-lg overflow-hidden">
-                            <img class="w-full h-full object-cover"
-                                data-alt="A crystal glass of a signature golden cocktail, garnished with a single clear ice cube and a gold leaf. The background is dark and moody, with a slight blur of a luxury bar setting. The focus is sharp on the condensation of the glass and the shimmering golden liquid, reflecting the sophisticated and premium nature of L'Elixir's beverage menu."
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPk8QEfdH58ehZZCANE1cku1fxzUESj18gbDmZt4340GZtb-gA9-qwlInKOKAGHXcg-iPxCElbUNL9HX0XtVWhf2c0Lc9l5pMpFuYpKmJSbpwTDa_RMyCj9f_hWSiEY_9VNxbYW-_UBhdqT3SJMOPZkS8f5VbirLQzzxb7GMcym-lvgWvTQSpv7QFeFdtliGIGsJEqVU9qYBCDymHba9xaBQ8e8WHebJJCzYw3do36MmmNuIeBkC5q6CeT_6DFUwTIpT48Xg8jN2Nb" />
+                        class="group flex bg-surface-container-high rounded-2xl overflow-hidden border border-primary/5">
+                        <div class="w-1/3 overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                data-alt="A macro photography shot of two warm Gulab Jamun globes glistening in a gold-flecked sugar syrup. The lighting is intimate and warm, showing the soft, porous texture of the sweets. One is garnished with a single silver leaf (varq) and crushed emerald-green pistachios. The background is a soft-focus dark luxury dining scene, evoking a sense of refined sweetness."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzfHnwrsN4SwQ_LzKkGrQjdUjwkyy4ZmPSmHCeymhwY_KFTGNLfCQ5s18CbZ9oFSs4GxLovR9choiEbxJlwrRlq4RBRXgglWwn9BCeAIYvKiII4hxEhnwnFi14cuzceYo48Y2BGZWISpy8LNpDBlop484-XZmprav2iXPzaDiZtrfwGJgHDzKqLZVawRwTJLZeQU_OjC6ZfNJwob16kq15Hj_VXkLu41Boe226jgM3kVUDOMaPt4JD1u434YiQux9XY4XETeJQRFvk">
                         </div>
-                        <h5 class="font-headline-md text-headline-md mb-2">Golden Elixir</h5>
-                        <p class="font-label-sm text-label-sm text-primary mb-4">$24</p>
-                        <p class="font-body-md text-body-md text-on-surface-variant">Aged Bourbon, honey-saffron syrup,
-                            clarified lemon, gold dust.</p>
+                        <div class="w-2/3 p-8 flex flex-col justify-center">
+                            <h3 class="font-headline-md text-headline-md text-on-surface mb-2">Golden Gulab Jamun</h3>
+                            <p class="text-on-surface-variant text-body-md mb-4">Warm milk dumplings soaked in
+                                cardamom-infused rose syrup, finished with 24k silver leaf.</p>
+                            <span class="text-primary font-bold text-xl">$14</span>
+                        </div>
                     </div>
+                    <!-- Kheer -->
                     <div
-                        class="flex-shrink-0 w-80 glass-card p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300">
-                        <div class="h-80 mb-6 rounded-lg overflow-hidden">
-                            <img class="w-full h-full object-cover"
-                                data-alt="A deep violet-colored cocktail in a tall, elegant glass, garnished with a sprig of fresh lavender. The drink is luminous against a dark, textured background. Soft, cool lighting enhances the mystical and artistic feel of the cocktail, embodying the creative mixology at L'Elixir Luxury Dining."
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3KSGmeQdxWu2ueoXrfMIhMEIgiPa5xuHL7DiuZTnbSDSL9Dc61GGfgpHRqfihODRhaY1154TJHcItq5ZrtbDLB0xUASwamdGzGLDSsTI6wNcyaNskeDMiaNMqkcJxT1C2Wk58b650fC59qbLz7mCDzkgi-cQ1c91uN9cS52Hf4S409DpY_AgZmwhnHrhShFp5oUHOb29hovPKdT6oFKXaCrNTLpJD0OjR3iZ6BXyLi3v0iHwgC9uh8iDgmuBQ3DgG3CQYl5axQB3w" />
+                        class="group flex bg-surface-container-high rounded-2xl overflow-hidden border border-primary/5">
+                        <div class="w-1/3 overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                data-alt="An elegant presentation of Shahi Kheer served in an individual earthenware pot (matka). The rice pudding is creamy white, decorated with a radial pattern of sliced almonds, pistachios, and saffron threads. The lighting is cool and clean, emphasizing the freshness and delicate nature of the dessert. The earthy texture of the pot contrasts beautifully with the refined garnish."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNQaZgHN_AVKo0J-sOYmKFYSlBvL7exjP1WLU8WudAqWW1KMNCzU5R1YaPtrk9bUjjtdlGJRQnqG46vadXTQ0iosEXUznmFVztuyO0SE2VBuPSXrdy7IPujsfZJbKmEf2iLoNkgIcANDA42_odtlf4Mg5fNbW73l1EfC5MQnDyY1SHVVebc9LrQy01285Q3FE4D3a-D8wce3zSixHRSJ4kf5p5SfQrw6PrSNg5vH_m7yhgSs9t_DQkarob5gyRvs6Ht6Ir0xIySyPj">
                         </div>
-                        <h5 class="font-headline-md text-headline-md mb-2">Lavender Mist</h5>
-                        <p class="font-label-sm text-label-sm text-primary mb-4">$22</p>
-                        <p class="font-body-md text-body-md text-on-surface-variant">Botanical Gin, lavender essence,
-                            butterfly pea, soda pearls.</p>
-                    </div>
-                    <div
-                        class="flex-shrink-0 w-80 glass-card p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300">
-                        <div class="h-80 mb-6 rounded-lg overflow-hidden">
-                            <img class="w-full h-full object-cover"
-                                data-alt="A classic negroni variation with a smoky twist, served in a heavy crystal rocks glass with a large clear sphere of ice. Wisps of smoke are captured within the glass. The lighting is warm and amber, highlighting the rich red color of the drink and the premium bar atmosphere of L'Elixir."
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0TYe3ct0g4TczukERWyl-RK1il2R2uMWg-Xn6Qq5zfwu23yDUZK1mVtc9iDuU86Pb6Fsz3jojvaJ0_1Q5npelG95_iI-H5cc3LgWz8SxlncMsiWwzDIpo7c4Y-PfhUxmz9tuwLL3OnH50qiDz3C1YF1qcujscobq9HNIwhwzNqelBA8jyICKd5Sj9fBySDgN_iqSOFs3IrTND71U6t0fZnopBoyciYeiWT2fSrFlg-AN8QCFvBv5oHMFSx-ezQ5UiERGn2qYLFuOI" />
+                        <div class="w-2/3 p-8 flex flex-col justify-center">
+                            <h3 class="font-headline-md text-headline-md text-on-surface mb-2">Shahi Saffron Kheer</h3>
+                            <p class="text-on-surface-variant text-body-md mb-4">Slow-reduced milk pudding with aromatic
+                                basmati rice, saffron, and toasted pistachios.</p>
+                            <span class="text-primary font-bold text-xl">$16</span>
                         </div>
-                        <h5 class="font-headline-md text-headline-md mb-2">Smoked Negroni</h5>
-                        <p class="font-label-sm text-label-sm text-primary mb-4">$26</p>
-                        <p class="font-body-md text-body-md text-on-surface-variant">Mezcal-infused Campari, sweet
-                            vermouth, cedar smoke.</p>
-                    </div>
-                    <div
-                        class="flex-shrink-0 w-80 glass-card p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300">
-                        <div class="h-80 mb-6 rounded-lg overflow-hidden">
-                            <img class="w-full h-full object-cover"
-                                data-alt="A vibrant green cocktail with fresh herbs and a cucumber ribbon, served in a chilled coupe glass. The lighting is bright yet atmospheric, showcasing the freshness of the ingredients in a high-end, modern dining setting. The overall aesthetic is clean, luxurious, and visually striking."
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKvC_OqJM9OQEcU2FsAgYHEX_z119GRO-5lOU6si1_TMOWCxczyjHEwsVeq7Gvn4mamvjAmBVkIY8r0zce1eEHbj1us_Kg5l4AVzuogKkRl5qay6U8l8rrgpLmvw6EyYwLIx3T7yaexBKButxXelu0yl8dk7Yhjivvg026OulYg67XB1LG7VC80w8ttRQkKJLTw0f8NntdnACsjFKJh0e32DTVoQOq41sv87wra2esY8a26AmCeuwDuS9SzQeFXdWz0JSBaRa4XO0_" />
-                        </div>
-                        <h5 class="font-headline-md text-headline-md mb-2">Verdant Muse</h5>
-                        <p class="font-label-sm text-label-sm text-primary mb-4">$20</p>
-                        <p class="font-body-md text-body-md text-on-surface-variant">Vodka, cucumber-mint reduction,
-                            elderflower, lime oil.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
     <!-- Footer -->
-    <footer
-        class="w-full rounded-t-xl bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-white/5">
+    <footer class="bg-surface-container-lowest border-t border-primary/10">
         <div
-            class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
+            class="max-w-container-max mx-auto px-margin-desktop py-section-gap grid grid-cols-1 md:grid-cols-4 gap-gutter">
             <div class="col-span-1 md:col-span-2">
-                <h2 class="font-headline-lg text-headline-lg text-primary dark:text-primary-fixed mb-6">L'ELIXIR</h2>
-                <p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-8">
-                    Defining the future of luxury dining through a relentless pursuit of culinary excellence and
-                    atmospheric perfection.
-                </p>
-                <div class="flex space-x-4">
-                    <a class="w-10 h-10 flex items-center justify-center border border-white/10 rounded-full hover:border-primary transition-colors"
-                        href="#">
-                        <span class="material-symbols-outlined text-on-surface-variant">share</span>
-                    </a>
-                    <a class="w-10 h-10 flex items-center justify-center border border-white/10 rounded-full hover:border-primary transition-colors"
-                        href="#">
-                        <span class="material-symbols-outlined text-on-surface-variant">mail</span>
-                    </a>
+                <h3 class="font-headline-md text-headline-md text-primary mb-4">ZAIQA</h3>
+                <p class="text-on-surface-variant max-w-sm mb-6">Redefining Pakistani cuisine through a lens of modern
+                    luxury. Every dish tells a story of heritage, spice, and unmatched hospitality.</p>
+                <div class="flex gap-4">
+                    <a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span
+                            class="material-symbols-outlined">public</span></a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span
+                            class="material-symbols-outlined">alternate_email</span></a>
                 </div>
             </div>
             <div>
-                <h6 class="font-label-md text-label-md text-on-surface mb-6 uppercase tracking-wider">Navigation</h6>
+                <h4 class="font-label-md text-label-md text-primary mb-6 uppercase tracking-widest">Navigation</h4>
                 <ul class="space-y-4">
-                    <li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all inline-block"
-                            href="#">Privacy Policy</a></li>
-                    <li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all inline-block"
-                            href="#">Terms of Service</a></li>
-                    <li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all inline-block"
-                            href="#">Careers</a></li>
-                    <li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all inline-block"
-                            href="#">Press Kit</a></li>
+                    <li class=""><a
+                            class="text-on-surface-variant hover:text-primary transition-all duration-200 hover:translate-x-1 block"
+                            href="menu.html">Menu</a></li>
+                    <li class=""><a
+                            class="text-on-surface-variant hover:text-primary transition-all duration-200 hover:translate-x-1 block"
+                            href="services.html">Catering</a></li>
+                    <li class=""><a
+                            class="text-on-surface-variant hover:text-primary transition-all duration-200 hover:translate-x-1 block"
+                            href="contact.html">Reservations</a></li>
                 </ul>
             </div>
             <div>
-                <h6 class="font-label-md text-label-md text-on-surface mb-6 uppercase tracking-wider">Experience</h6>
-                <ul class="space-y-4">
-                    <li class="font-body-md text-body-md text-on-surface-variant">72nd Floor, Grand Plaza</li>
-                    <li class="font-body-md text-body-md text-on-surface-variant">Manhattan, NY 10001</li>
-                    <li class="font-body-md text-body-md text-on-surface-variant mt-4">+1 (555) 012-3456</li>
-                    <li class="font-body-md text-body-md text-on-surface-variant">reservations@lelixir.com</li>
+                <h4 class="font-label-md text-label-md text-primary mb-6 uppercase tracking-widest">Contact</h4>
+                <ul class="space-y-4 text-on-surface-variant">
+                    <li class="">123 Luxury Lane, Food District</li>
+                    <li class="">reservations@zaiqa.com</li>
+                    <li class="">+1 (555) 924-724-1</li>
                 </ul>
             </div>
         </div>
-        <div class="border-t border-white/5 py-8 text-center">
-            <p class="font-label-sm text-label-sm text-on-surface-variant opacity-80 uppercase tracking-widest">
-                © 2024 L'ELIXIR LUXURY DINING. ALL RIGHTS RESERVED.
-            </p>
+        <div
+            class="max-w-container-max mx-auto px-margin-desktop py-8 border-t border-primary/5 text-center text-sm text-on-surface-variant">
+            © 2024 Zaiqa Luxury Dining. All Rights Reserved.
         </div>
     </footer>
     <script>
-        // Interactive parallax and micro-interactions
+        // Simple scroll spy for category navigation
         window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('bg-surface/90');
-                header.classList.add('shadow-xl');
-            } else {
-                header.classList.remove('bg-surface/90');
-                header.classList.remove('shadow-xl');
-            }
-        });
+            const sections = ['starters', 'bbq', 'mains', 'desserts', 'beverages'];
+            const navLinks = document.querySelectorAll('nav.sticky a');
 
-        // Simple tab switching simulation
-        const navButtons = document.querySelectorAll('section.sticky button');
-        navButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                navButtons.forEach(b => {
-                    b.classList.remove('text-primary', 'border-b', 'border-primary');
-                    b.classList.add('text-on-surface-variant');
-                });
-                btn.classList.add('text-primary', 'border-b', 'border-primary');
-                btn.classList.remove('text-on-surface-variant');
+            let current = '';
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                if (element) {
+                    const sectionTop = element.offsetTop;
+                    if (window.scrollY >= sectionTop - 150) {
+                        current = section;
+                    }
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active-nav-item', 'text-primary', 'border-b-2', 'border-primary', 'pb-1');
+                link.classList.add('text-on-surface-variant');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active-nav-item', 'text-primary', 'border-b-2', 'border-primary', 'pb-1');
+                    link.classList.remove('text-on-surface-variant');
+                }
             });
         });
-        // Sidebar toggle
-        const sidebarToggle = document.getElementById('sidebar-toggle');
-        const sidebarClose = document.getElementById('sidebar-close');
-        const sidebar = document.getElementById('sidebar');
-        const sidebarOverlay = document.getElementById('sidebar-overlay');
 
-        function openSidebar() {
-            sidebar.classList.remove('-translate-x-full');
-            sidebarOverlay.classList.remove('hidden');
-            setTimeout(() => { sidebarOverlay.classList.remove('opacity-0'); }, 10);
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeSidebar() {
-            sidebar.classList.add('-translate-x-full');
-            sidebarOverlay.classList.add('opacity-0');
-            setTimeout(() => {
-                sidebarOverlay.classList.add('hidden');
-                document.body.style.overflow = '';
-            }, 300);
-        }
-
-        if (sidebarToggle) sidebarToggle.addEventListener('click', openSidebar);
-        if (sidebarClose) sidebarClose.addEventListener('click', closeSidebar);
-        if (sidebarOverlay) sidebarOverlay.addEventListener('click', closeSidebar);
     </script>
-    <!-- Sidebar Overlay -->
-    <div id="sidebar-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] hidden opacity-0 transition-opacity duration-300"></div>
-    <!-- Sidebar Panel -->
-    <div id="sidebar" class="fixed top-0 left-0 h-full w-72 bg-surface-container-high border-r border-white/5 z-[70] transform -translate-x-full transition-transform duration-300 flex flex-col overflow-y-auto">
-        <div class="flex justify-between items-center p-6 border-b border-white/5">
-            <span class="font-headline-md text-headline-md text-primary">L'ELIXIR</span>
-            <button id="sidebar-close" class="text-on-surface-variant hover:text-primary transition-colors" aria-label="Close menu">
-                <span class="material-symbols-outlined text-3xl">close</span>
-            </button>
-        </div>
-        <nav class="flex flex-col py-4">
-            <a class="sidebar-link" href="../index.html">Home</a>
-            <a class="sidebar-link" href="about.html">About</a>
-            <a class="sidebar-link active" href="menu.html">Menu</a>
-            <a class="sidebar-link" href="services.html">Services</a>
-            <a class="sidebar-link" href="gallery.html">Gallery</a>
-            <a class="sidebar-link" href="testimonials.html">Testimonials</a>
-            <a class="sidebar-link" href="contact.html">Contact</a>
-        </nav>
-        <div class="mt-auto p-6 border-t border-white/5">
-            <a href="contact.html" class="block w-full bg-primary text-on-primary text-center py-3 rounded-full font-label-md text-label-md hover:scale-95 active:scale-90 transition-transform">Book a Table</a>
-        </div>
-    </div>
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('-translate-x-full');
+            document.getElementById('sidebar-overlay').classList.toggle('hidden');
+        }
+    </script>
+
+
 </body>
 
 </html>
