@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>L'ELIXIR | The Gallery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #131313;
+            color: #e4e2e1;
+            overflow-x: hidden;
+        }
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-auto-rows: 200px;
+            gap: 24px;
+        }
+        .masonry-item-tall { grid-row: span 3; }
+        .masonry-item-wide { grid-column: span 2; }
+        .masonry-item-standard { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .masonry-item-wide { grid-column: span 1; }
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(16px);
+            background: rgba(19, 19, 19, 0.4);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .image-zoom-hover:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                "on-primary-container": "#554300",
+                "tertiary-fixed-dim": "#c8c6c2",
+                "surface-dim": "#131313",
+                "surface-bright": "#393939",
+                "on-secondary": "#313030",
+                "on-primary-fixed": "#241a00",
+                "secondary-fixed": "#e5e2e1",
+                "on-secondary-container": "#b7b5b4",
+                "surface-container-lowest": "#0e0e0e",
+                "secondary-fixed-dim": "#c8c6c5",
+                "on-tertiary": "#30312e",
+                "on-secondary-fixed-variant": "#474746",
+                "on-tertiary-fixed": "#1b1c19",
+                "tertiary-container": "#b4b3af",
+                "inverse-on-surface": "#303030",
+                "surface-container-low": "#1b1c1c",
+                "primary-container": "#d4af37",
+                "surface-container-high": "#2a2a2a",
+                "on-secondary-fixed": "#1c1b1b",
+                "primary-fixed": "#ffe088",
+                "on-surface": "#e4e2e1",
+                "surface-container": "#1f2020",
+                "inverse-primary": "#735c00",
+                "error-container": "#93000a",
+                "on-primary": "#3c2f00",
+                "tertiary-fixed": "#e4e2dd",
+                "outline": "#99907c",
+                "error": "#ffb4ab",
+                "surface-tint": "#e9c349",
+                "surface": "#131313",
+                "on-error": "#690005",
+                "surface-container-highest": "#353535",
+                "secondary": "#c8c6c5",
+                "on-surface-variant": "#d0c5af",
+                "secondary-container": "#474746",
+                "on-background": "#e4e2e1",
+                "tertiary": "#d0ceca",
+                "primary": "#f2ca50",
+                "on-primary-fixed-variant": "#574500",
+                "on-tertiary-container": "#454542",
+                "surface-variant": "#353535",
+                "on-tertiary-fixed-variant": "#474744",
+                "background": "#131313",
+                "primary-fixed-dim": "#e9c349",
+                "inverse-surface": "#e4e2e1",
+                "outline-variant": "#4d4635",
+                "on-error-container": "#ffdad6"
+              },
+              "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+              },
+              "spacing": {
+                "margin-desktop": "64px",
+                "margin-mobile": "20px",
+                "section-gap": "120px",
+                "container-max": "1280px",
+                "gutter": "24px",
+                "unit": "8px"
+              },
+              "fontFamily": {
+                "display-lg": ["Playfair Display"],
+                "headline-xl": ["Playfair Display"],
+                "headline-lg": ["Playfair Display"],
+                "headline-md": ["Playfair Display"],
+                "body-lg": ["Inter"],
+                "body-md": ["Inter"],
+                "label-md": ["Inter"],
+                "label-sm": ["Inter"]
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-surface selection:bg-primary/30">
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 w-full z-50 bg-surface/40 backdrop-blur-xl border-b border-white/5 shadow-2xl shadow-black/20">
+<nav class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md tracking-tighter text-primary">L'ELIXIR</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Menu</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Services</a>
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1" href="#">Gallery</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Testimonials</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-md text-label-md hover:scale-95 active:scale-90 transition-transform duration-300">
+                Book a Table
+            </button>
+</nav>
+</header>
+<main class="pt-32 pb-section-gap">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-20 text-center">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.2em] mb-4 block">Visual Journey</span>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-6">The Art of Dining</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Explore the meticulous craft and architectural elegance that defines the L'ELIXIR experience. Each frame captures a moment of sensory perfection.
+            </p>
+</section>
+<!-- Category Filters -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-12">
+<div class="flex flex-wrap justify-center gap-4">
+<button class="gallery-filter px-8 py-3 rounded-full border border-primary bg-primary text-on-primary font-label-md text-label-md transition-all duration-300" onclick="filterGallery('all')">All Perspectives</button>
+<button class="gallery-filter px-8 py-3 rounded-full border border-white/10 text-on-surface-variant hover:border-primary/50 font-label-md text-label-md transition-all duration-300" onclick="filterGallery('food')">Culinary Creations</button>
+<button class="gallery-filter px-8 py-3 rounded-full border border-white/10 text-on-surface-variant hover:border-primary/50 font-label-md text-label-md transition-all duration-300" onclick="filterGallery('interior')">Interior Design</button>
+<button class="gallery-filter px-8 py-3 rounded-full border border-white/10 text-on-surface-variant hover:border-primary/50 font-label-md text-label-md transition-all duration-300" onclick="filterGallery('events')">Atmospheric Moments</button>
+</div>
+</section>
+<!-- Masonry Gallery -->
+<section class="max-w-container-max mx-auto px-margin-desktop">
+<div class="masonry-grid" id="gallery-grid">
+<!-- Item 1: Interior (Tall) -->
+<div class="masonry-item-tall group relative overflow-hidden rounded-xl bg-surface-container cursor-pointer image-zoom-hover" data-category="interior" onclick="openLightbox('img-1')">
+<img class="w-full h-full object-cover transition-transform duration-700" data-alt="A luxurious restaurant interior featuring deep charcoal walls, golden ambient lighting from minimalist fixtures, and high-end velvet furniture. The atmosphere is sophisticated and moody, with architectural lines leading toward a central glass installation. Reflections play across polished marble floors under a soft, golden glow, creating a sense of premium exclusivity and modern luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_aJ5vv6ywm2BpbGKLKNOLpXp5C5CmF7iFiuLgdqQ18RZ_cje6d68vE4nC7HUEt-Iln4XKHKaEWHnDljJkxqiZ5KAwqhMR8XWKC4sdmp_ZQQLLOa_aIiNpW0Qqa_0afcFfMNAd5ClzFAV2c7rEwMFtJwE61eT6btsSm3fo7tn9NTy3QBfNcp5nM-naHDQ5ZIk4RE03i33azPRbH3Ml2DcX1V9NgcDDWAecAmRGWRPt0XMS4NzJL1d0uayGlvvQ_CHr561sjA_BVBhM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="font-label-sm text-label-sm text-primary mb-2">Interior</span>
+<h3 class="font-headline-md text-headline-md text-white">The Grand Atrium</h3>
+</div>
+</div>
+<!-- Item 2: Food (Standard) -->
+<div class="masonry-item-standard group relative overflow-hidden rounded-xl bg-surface-container cursor-pointer image-zoom-hover" data-category="food" onclick="openLightbox('img-2')">
+<img class="w-full h-full object-cover transition-transform duration-700" data-alt="A macro photography shot of a gourmet dessert plated on a handmade dark ceramic plate. The dish features delicate gold leaf accents, vibrant edible flowers, and precise geometric chocolate shards. Soft, warm directional lighting emphasizes the textures of the cream and fruit, contrasting against the deep charcoal background of the restaurant table. The aesthetic is high-fidelity and artistic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn-8KqtbWAXiGaEzKNuAL5JLyW22YAaGN6LQhp_9WDuKJnlQs_GAW6RFBMBaAmXsKqHmyMQa0NBWrryrTHyeXVPlo2vvilXwHQ_kBOwdiSavPtefTw8RPsCsgFKebZlfn-cb41TAWWAcB890gE1d-6GWdU8FTwQ1QhKfhitRWXbTd9TenusFIPC4E06K9mU7GDwSORYCYvyvvqo0lYlouZP20SEQvFgvo5cnbK34L6SVShWghrj27NhQHAViEH0d5KHMtzmWqOuLzY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="font-label-sm text-label-sm text-primary mb-2">Food</span>
+<h3 class="font-headline-md text-headline-md text-white">Velvet Symphony</h3>
+</div>
+</div>
+<!-- Item 3: Food (Wide) -->
+<div class="masonry-item-wide masonry-item-standard group relative overflow-hidden rounded-xl bg-surface-container cursor-pointer image-zoom-hover" data-category="food" onclick="openLightbox('img-3')">
+<img class="w-full h-full object-cover transition-transform duration-700" data-alt="A wide-angle, atmospheric shot of a multi-course tasting menu spread across a dark oak dining table. Each plate is a masterpiece of precision and color, illuminated by soft candlelight that creates long, elegant shadows. The composition is clean and airy despite the dark tones, evoking a sense of refined abundance and curated culinary excellence in a high-end luxury setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtX2SGa9CNzpbBkUabwnH4QJa_OEJNQgluBzsA4T4Y1kv9RJYZXiOLxZ0xe5Irrnh_xRhXM_Xr5Vs2QpPCQjG3jYPiAhq7omtNUQ9fQ-ZRMoLlpynVq-eoZ1BLtkfK6CwOMYtVa-U-98kWIDgCigRJ5wz-GPBA4M_R2m3UpeLJT2Wfe5MD2-bjNr9EYfF1esV7gdmqEutjRFqdhfSGTQzdw2tMlUwvhB_40IjM_xopB6F0AH4WZQqRTuxHYsEiUqSgUSBqAJp2Yn7i"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="font-label-sm text-label-sm text-primary mb-2">Food</span>
+<h3 class="font-headline-md text-headline-md text-white">The Tasting Journey</h3>
+</div>
+</div>
+<!-- Item 4: Events (Standard) -->
+<div class="masonry-item-standard group relative overflow-hidden rounded-xl bg-surface-container cursor-pointer image-zoom-hover" data-category="events" onclick="openLightbox('img-4')">
+<img class="w-full h-full object-cover transition-transform duration-700" data-alt="An elegant evening event scene at L'ELIXIR with guests in formal attire enjoying cocktails in a softly lit, glass-walled lounge. The lighting is low-key with warm amber glows, catching the sparkle of fine glassware and jewelry. In the background, the city skyline twinkles through large windows, creating a sophisticated and unhurried atmosphere of high-end social interaction and tactile luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm2IHpRqdcUrqYpma_KzmSkgWgIammMm_ISIngkOnnB0hoJOPhUKjAoOqHoJiXILmuN9PxiF1olXQDozVHJ7XaxuVSdwYVNNjChHFyhLP0H731zqonHH2EYBFuH4iy9_bl0tqyPRltxw94zYZcjSCjsDDOaK0d2ZMGljkPAVXZd0rI1W13SiG_zKu1N4ddWCyKOdzVSq2i3ydyBI_hDg7V3jGmvecGPVIWuolmckvMM-8xeo7ilANZx0kOeoOyNi6OpX1sRxm1l7BG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="font-label-sm text-label-sm text-primary mb-2">Events</span>
+<h3 class="font-headline-md text-headline-md text-white">Soirée d'Or</h3>
+</div>
+</div>
+<!-- Item 5: Interior (Standard) -->
+<div class="masonry-item-standard group relative overflow-hidden rounded-xl bg-surface-container cursor-pointer image-zoom-hover" data-category="interior" onclick="openLightbox('img-5')">
+<img class="w-full h-full object-cover transition-transform duration-700" data-alt="A focused shot of a perfectly set table in a luxury dining room. Pristine white linen, polished silver cutlery, and crystalline wine glasses are arranged with mathematical precision. The background is softly blurred, showing a hint of the deep charcoal walls and warm wooden accents. The mood is one of quiet anticipation and impeccable service, embodying the understated elegance of the brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC40Vy5QkJxZ3iXgRrvxz6N47A2mvabAPWAAiK1arRNPsLQJLcN3lc210df6Nd0gv3_N8iOfOOSimy6ctTkVcjKHeIyaByFyaOsdEKSG94rsAootFBIN9JnFxbP9ZaDpRWND_miOcHH4fvvturXG1VvlYAjtEm0WDvdCpGEDSfAES70H4GFG2IotPZesNvj4D4R7eTmaKYsn9zH6pJtwLOlgTJCVNQA8QgKI6hxrzj18MzMvrMDQV_eOCHsZRleK_K6PFOQ_rLdggoE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="font-label-sm text-label-sm text-primary mb-2">Interior</span>
+<h3 class="font-headline-md text-headline-md text-white">Precision Set</h3>
+</div>
+</div>
+<!-- Item 6: Food (Tall) -->
+<div class="masonry-item-tall group relative overflow-hidden rounded-xl bg-surface-container cursor-pointer image-zoom-hover" data-category="food" onclick="openLightbox('img-6')">
+<img class="w-full h-full object-cover transition-transform duration-700" data-alt="A vertical macro shot of a signature cocktail being prepared. A clear liquid is poured into a chilled, thin-rimmed glass, capturing the splash in high-fidelity detail. A garnish of dried citrus and a sprig of aromatic herb is highlighted by a sharp pin-light. The background is a dark, moody bar scene with glowing amber bottles, emphasizing the tactile sophistication and craftsmanship of the mixology process." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSdvRxbzUhrV8Uoj2t17rLFsBautbjgrF1plLKLcjMmjnH819ODAgWSll29-t03rWPoYOwyV_k5HeB3r8LkjDV4WvIwCBxooMTfLaggl38BOVlmNELbMjFZQfIDOzq9XgKHsZWNGW0VYm7dvztM19-FUhrS79fnBdFOmvQMDWoECy9YGvjySoTheOuGBqn0suUZF0e73pcG9IUv1PXWw-rs0FI5lWulITgKLXWzOi169XAqI2Q803eISsK_JBl2ttWonmzIJVdjUfp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="font-label-sm text-label-sm text-primary mb-2">Bar</span>
+<h3 class="font-headline-md text-headline-md text-white">Liquid Gold</h3>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-white/5 w-full rounded-t-xl mt-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-24 max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-lg text-headline-lg text-primary mb-6">L'ELIXIR</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+                    Crafting extraordinary culinary moments through precision, passion, and the art of modern luxury dining.
+                </p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-md text-label-md text-on-surface uppercase tracking-widest mb-4">Discover</h4>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all" href="#">Menu</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all" href="#">Private Events</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all" href="#">Wine Cellar</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all" href="#">Gift Cards</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-md text-label-md text-on-surface uppercase tracking-widest mb-4">Legal</h4>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all" href="#">Careers</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all" href="#">Press Kit</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-md text-label-md text-on-surface uppercase tracking-widest mb-4">Connect</h4>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all" href="#">Instagram</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all" href="#">Facebook</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all" href="#">Twitter</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:translate-x-1 transition-all" href="#">YouTube</a>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop py-8 border-t border-white/5 text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 L'ELIXIR LUXURY DINING. ALL RIGHTS RESERVED.</p>
+</div>
+</footer>
+<!-- Lightbox UI Representation -->
+<div class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-3xl hidden flex-col items-center justify-center p-margin-mobile md:p-margin-desktop opacity-0 transition-opacity duration-500" id="lightbox">
+<button class="absolute top-8 right-8 text-on-surface hover:text-primary transition-colors" onclick="closeLightbox()">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+<div class="w-full max-w-5xl aspect-video relative overflow-hidden rounded-xl">
+<img class="w-full h-full object-contain" data-alt="Placeholder for lightbox display" id="lightbox-img" src=""/>
+</div>
+<div class="mt-8 text-center max-w-2xl">
+<h2 class="font-headline-xl text-headline-xl text-white mb-4" id="lightbox-title"></h2>
+<p class="font-body-md text-body-md text-on-surface-variant" id="lightbox-desc">Experience the pinnacle of culinary excellence, where every plate is a canvas and every flavor a masterpiece.</p>
+</div>
+<div class="mt-12 flex gap-4">
+<button class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<script>
+        function filterGallery(category) {
+            const items = document.querySelectorAll('#gallery-grid > div');
+            const buttons = document.querySelectorAll('.gallery-filter');
+            
+            // Update buttons
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-primary', 'text-on-primary');
+                btn.classList.add('border-white/10', 'text-on-surface-variant');
+            });
+            event.target.classList.remove('border-white/10', 'text-on-surface-variant');
+            event.target.classList.add('bg-primary', 'text-on-primary');
+
+            // Animate items
+            items.forEach(item => {
+                item.style.transition = 'all 0.4s ease';
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.style.opacity = '1';
+                    item.style.transform = 'scale(1)';
+                    item.style.display = 'block';
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 400);
+                }
+            });
+        }
+
+        function openLightbox(id) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxTitle = document.getElementById('lightbox-title');
+            
+            // Mock content retrieval based on click
+            const sourceItem = event.currentTarget;
+            const imgSrc = sourceItem.querySelector('img').src;
+            const title = sourceItem.querySelector('h3').innerText;
+
+            lightboxImg.src = imgSrc;
+            lightboxTitle.innerText = title;
+
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            setTimeout(() => {
+                lightbox.classList.add('opacity-100');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('opacity-100');
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                lightbox.classList.remove('flex');
+            }, 500);
+            document.body.style.overflow = 'auto';
+        }
+
+        // Add subtle scroll reveal micro-interactions
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.masonry-grid > div').forEach(item => {
+            item.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+            observer.observe(item);
+        });
+    </script>
+</body></html>

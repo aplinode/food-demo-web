@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services | L'ELIXIR Luxury Dining</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#554300",
+                    "tertiary-fixed-dim": "#c8c6c2",
+                    "surface-dim": "#131313",
+                    "surface-bright": "#393939",
+                    "on-secondary": "#313030",
+                    "on-primary-fixed": "#241a00",
+                    "secondary-fixed": "#e5e2e1",
+                    "on-secondary-container": "#b7b5b4",
+                    "surface-container-lowest": "#0e0e0e",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "on-tertiary": "#30312e",
+                    "on-secondary-fixed-variant": "#474746",
+                    "on-tertiary-fixed": "#1b1c19",
+                    "tertiary-container": "#b4b3af",
+                    "inverse-on-surface": "#303030",
+                    "surface-container-low": "#1b1c1c",
+                    "primary-container": "#d4af37",
+                    "surface-container-high": "#2a2a2a",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "primary-fixed": "#ffe088",
+                    "on-surface": "#e4e2e1",
+                    "surface-container": "#1f2020",
+                    "inverse-primary": "#735c00",
+                    "error-container": "#93000a",
+                    "on-primary": "#3c2f00",
+                    "tertiary-fixed": "#e4e2dd",
+                    "outline": "#99907c",
+                    "error": "#ffb4ab",
+                    "surface-tint": "#e9c349",
+                    "surface": "#131313",
+                    "on-error": "#690005",
+                    "surface-container-highest": "#353535",
+                    "secondary": "#c8c6c5",
+                    "on-surface-variant": "#d0c5af",
+                    "secondary-container": "#474746",
+                    "on-background": "#e4e2e1",
+                    "tertiary": "#d0ceca",
+                    "primary": "#f2ca50",
+                    "on-primary-fixed-variant": "#574500",
+                    "on-tertiary-container": "#454542",
+                    "surface-variant": "#353535",
+                    "on-tertiary-fixed-variant": "#474744",
+                    "background": "#131313",
+                    "primary-fixed-dim": "#e9c349",
+                    "inverse-surface": "#e4e2e1",
+                    "outline-variant": "#4d4635",
+                    "on-error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px",
+                    "section-gap": "120px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "label-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-xl": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "label-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.08em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(31, 32, 32, 0.4);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .text-gradient-gold {
+            background: linear-gradient(to right, #f2ca50, #ffe088);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #131313; }
+        ::-webkit-scrollbar-thumb { background: #474746; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #f2ca50; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/40 backdrop-blur-xl border-b border-white/5 shadow-2xl shadow-black/20">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<span class="font-headline-md text-headline-md tracking-tighter text-primary">L'ELIXIR</span>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Menu</a>
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1" href="#">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Gallery</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Testimonials</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-label-md text-label-md hover:scale-95 active:scale-90 transition-transform duration-300">
+                Book a Table
+            </button>
+</div>
+</nav>
+<main class="mt-20">
+<!-- Hero Section -->
+<section class="relative h-[614px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-black/60 z-10"></div>
+<img alt="Luxury Dining" class="w-full h-full object-cover" data-alt="A cinematic, high-angle macro shot of a meticulously plated gourmet dish featuring vibrant edible flowers and gold leaf accents. The setting is a dimly lit, high-end restaurant with dark charcoal surfaces and warm, amber atmospheric lighting. The mood is sophisticated, exclusive, and evocative of artisanal craftsmanship, perfectly aligning with the L'ELIXIR luxury dining aesthetic of precision and sensory appeal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPoBMsXjzNdDDEp_NQPInvNk12W21Lr_wjzY7s0uGjvJ3QJNsc3fv0ggS2oxruNl1bsSurnD41ttDxRQd4exKo1zBNjyUtYCpjiQe6WW321Y38nLbfBsSECSYQTAZhfDsebTA-1Acn9XMzvPQL70rfgPbngSPNKkB1TblfWN-a0Ee47-Zz8FhRwJstFjs8mFwMWAjjeqN24ZtunVZn_DUtcJnyBW2u1yoraP09jhX046aSOe7-IsDHAdHOmVwnvF8iltRQqhnoNG_w"/>
+</div>
+<div class="relative z-20 text-center px-margin-mobile">
+<span class="text-primary font-label-md text-label-md tracking-widest uppercase mb-4 block">Crafting Experiences</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6">Our Services</h1>
+<div class="w-24 h-1 bg-primary mx-auto"></div>
+</div>
+</section>
+<!-- Premium Service Cards -->
+<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Dine-In -->
+<div class="group relative aspect-[4/5] overflow-hidden rounded-xl bg-surface-container shadow-2xl transition-all duration-500 hover:-translate-y-2">
+<img alt="Dine-In" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A sophisticated dining table setup in a dark-mode luxury restaurant. The scene features crystal glassware, polished silver cutlery, and white linen napkins under soft, warm spotlighting that highlights the textures of the fine table materials. The background is a deep charcoal, creating an intimate and exclusive atmosphere consistent with high-end culinary excellence and modern luxury aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeIT1gghhq9bbW_jfN2WLSNcOg21oaxoWqCUb1XOeoBhZ5lVLUENOOHybyPUE3ukqtf2I_gCC2hxedkOTih67Khkeq2azLPHoSDIZyF466KLaRcHXUBGGsDvsykHydNZdk0dTvEBldZhVzR0t1gMMcD3-QwLvQlPN6XWsFyiLELlzz6U5dk929hoXCyic81FRwrSdEfyZmn1Mf1zPd7nHb6PfhAZoYRMHKbfOR0Gpo9XF0-CjlATkAKaXLLo-0h0w8O47pAZysE9uP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="material-symbols-outlined text-primary mb-4" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Exquisite Dine-In</h3>
+<p class="text-on-surface-variant font-body-md opacity-0 group-hover:opacity-100 transition-opacity duration-500">A sensory journey through modern gastronomy in our meticulously designed architectural space.</p>
+</div>
+</div>
+<!-- Private Events -->
+<div class="group relative aspect-[4/5] overflow-hidden rounded-xl bg-surface-container shadow-2xl transition-all duration-500 hover:-translate-y-2 lg:mt-12">
+<img alt="Private Events" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An opulent private event space decorated with abundant floral arrangements, flickering taper candles, and gold-trimmed dinnerware. The lighting is low and atmospheric, casting soft glows on the rich textures of the velvet chairs and dark wood tables. The aesthetic is curated and magazine-like, emphasizing luxury hospitality and an unhurried, premium guest experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9SltYPhdHuVdDuSW1cKCMpMcqgrTAYlrakehNqeCteHDbn6zubrwIs-yXUMAj2G7NHknxWWjOA4borG5sysUSAphCssLptfigaK5OUubnGuDcQkpRoxRmaHsJlZU-Gs3NUSfMhHmcxX_TpaGCKPxwBqqYN3L5-Zr3PNwNYM31O88r8deSWpUdU-URsnWNW-E4lZozRO8EIRQ_oPUB7aBVu3bhmEi50fPHDQHO8tNFpLaWnj60p_CYnwnJZ6WdICvUWgwTXNIfHNwt"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="material-symbols-outlined text-primary mb-4" style="font-variation-settings: 'FILL' 1;">celebration</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Private Events</h3>
+<p class="text-on-surface-variant font-body-md opacity-0 group-hover:opacity-100 transition-opacity duration-500">Tailored celebrations in our exclusive lounges, featuring curated menus and dedicated sommelier service.</p>
+</div>
+</div>
+<!-- Gourmet Delivery -->
+<div class="group relative aspect-[4/5] overflow-hidden rounded-xl bg-surface-container shadow-2xl transition-all duration-500 hover:-translate-y-2">
+<img alt="Gourmet Delivery" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A minimalist, premium delivery package for a luxury restaurant. The packaging is a matte deep charcoal box with a gold embossed logo of L'ELIXIR. Inside, meticulously arranged gourmet ingredients are visible, conveying a sense of precision and luxury even in a takeaway format. The lighting is high-fidelity and professional, showcasing the tactile sophistication of the packaging materials." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt7VT3cGdduQr3nzin5Bhsz6BJPQywAlL6-wfjirabsDUadaIa1gkOOaYyL_RWJMSHEiutYUcVGjHkQ-OmkKq91WKCJ_gWxyLw929mGyNWlcC56mhyJ4BBLVd6CZbTc8kh_3pzTKTG5aTb14NIhRItWuPUJgGCeFy8P5LpFZLpoR3BPVrSX5O4jq6V15KxAklCl3IEqSvpD_LkSc467Rhq3xjZ_Cv_fEGSpHwDsj5UM6yXJuwFXT93kZVoH_biWN8fZqAUrPHw2jY3"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="material-symbols-outlined text-primary mb-4" style="font-variation-settings: 'FILL' 1;">delivery_dining</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Gourmet Delivery</h3>
+<p class="text-on-surface-variant font-body-md opacity-0 group-hover:opacity-100 transition-opacity duration-500">The L'ELIXIR experience delivered to your doorstep with temperature-controlled precision.</p>
+</div>
+</div>
+<!-- Corporate Catering -->
+<div class="group relative aspect-[4/5] overflow-hidden rounded-xl bg-surface-container shadow-2xl transition-all duration-500 hover:-translate-y-2">
+<img alt="Corporate Catering" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A high-end corporate catering buffet featuring a minimalist and modern display of artisanal appetizers. Each dish is a work of art, presented on slate and marble platforms under bright, professional studio lighting. The color palette is dominated by whites, grays, and the vibrant colors of fresh ingredients, reflecting a professional yet highly luxurious catering standard for corporate stakeholders." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCpf0y-F5koruUbX82O7rOqKcOtgY9xMuZ9kumP2Qhp-aK7f7CEFzZR-0k77rKETIWbpEznJeEiVuisMWe8vDRN99wVM4fXuSMWu8mvf0pdw-KzLZUIysNOBITm9XwJRNPEQDMbStTvJ-6S8TCLaD2POF--NC0EfwUlFrX_prZxawyCAnkBHFZQpjOW-gFRxKJ63KcG5kBh-XbZs-DnLHRnySh4fVXNG0W2DBt_TnHi8yTo-rzPoQj0KULwth506m-pgoLuaXBeR5-"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="material-symbols-outlined text-primary mb-4" style="font-variation-settings: 'FILL' 1;">business_center</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Corporate Catering</h3>
+<p class="text-on-surface-variant font-body-md opacity-0 group-hover:opacity-100 transition-opacity duration-500">Impress your partners with our signature boardroom banquets and executive lunch services.</p>
+</div>
+</div>
+<!-- Takeaway -->
+<div class="group relative aspect-[4/5] overflow-hidden rounded-xl bg-surface-container shadow-2xl transition-all duration-500 hover:-translate-y-2 lg:mt-12">
+<img alt="Takeaway" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A close-up of a barista preparing a premium coffee in a luxury cafe environment. The image focuses on the steam and the rich texture of the coffee, with the background showing a dark, polished stone counter and high-end espresso machinery. The lighting is warm and directional, creating a sense of morning luxury and artisanal beverage craft consistent with the L'ELIXIR brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoe7tY0VpEODhxgyVcByTsdlM2EZwi9nZZBRvLTVPZuKC9-Uwg7DHN0FCBIS3c5drToZwbMNxqI4P1AozHyH2zzRqifb-jcGzgT_iqZ6prgldasCJdyFF2FdjFRjitb83c8U3wchKfq2ilj0_BmajdER2EKcLHeLo47moBYEBTWOI-8-277ABoeQnt0-Q0OeGZVH_9_n6fSprc0inP3ICwq_7kR1SE5BcGPqfjQ2QrqQXRtGgZSahfbiOTeBMWmxJ9DDZHO8P44q0x"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="material-symbols-outlined text-primary mb-4" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Premium Takeaway</h3>
+<p class="text-on-surface-variant font-body-md opacity-0 group-hover:opacity-100 transition-opacity duration-500">Fast-tracked gourmet selections for those who value time as much as taste.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Event Gallery (Asymmetric Bento) -->
+<section class="py-section-gap bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-16">
+<h2 class="font-headline-xl text-headline-xl text-on-surface mb-4">Event Mastery</h2>
+<p class="text-on-surface-variant max-w-2xl">A curated glimpse into the bespoke environments we create for the world's most discerning hosts.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[900px]">
+<div class="md:col-span-8 group overflow-hidden rounded-xl relative">
+<img alt="Large Event" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="A wide-angle shot of a grand gala dinner in a historic, high-ceilinged venue. The room is filled with long banquet tables adorned with gold centerpieces and thousands of tiny white fairy lights overhead, creating a magical, starlit atmosphere. The design is airy and spacious, using a deep charcoal and gold palette to maintain a premium, modern luxury feel for a large-scale event." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG-B9TQGFKdk56LzOBfRfCPko0irGsYFExOFYuR4IGrn8N-nhnp-964GRK75o9s-TQMCzOmfszUZTJ5Mj0LllmURD2DEIuJ88UuUkcOt72H4jq2EU2-nIZC9GyKewmtYVJsK4rmb0ec701f6vsxkOfOg5PjjchffxOIBK94jzv3nsoql5ciMdfFVg7BhIa8U7Gkt9DGChs77VzaNmDupmTZyT61_7TCc-Nn735_L8D1WY3GphIFtM_ScOmqq8kjIffg-zOHnKHW5Ad"/>
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"></div>
+</div>
+<div class="md:col-span-4 grid grid-rows-2 gap-6">
+<div class="group overflow-hidden rounded-xl relative">
+<img alt="Wedding" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="An intimate evening wedding reception with a focused view on a luxurious table setting. Warm candlelight flickers against dark navy linens and gold-edged plates. In the background, the soft blur of guests enjoying themselves creates a sense of celebratory warmth. The visual style is editorial and sophisticated, emphasizing the tactile luxury of the event's components." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPBC3Ea3XApm94gGZITfGiE7mFknWc4gYSLLSITedR2O2JnGrDqKvCUMulvC9aUrOtxXCstMQtCiFQ7-hoa_ol8jJaBCG-t6JgzZPOqXBZc0IPJYZNO0zBi9FhyTffzh6n00xNcGyl5KH5SdRrJcstCDaLm5OP2QKq42bwD3WcVf_9bq0JjP-wtbdeAEZ2boUOSkkdR_w-LmwJd7qJWu9-y39ADJunnh-rTiPgKPGlqO3r6I3gBFq4iLqpMYsA9NUwB2xDbylvP3mk"/>
+</div>
+<div class="group overflow-hidden rounded-xl relative">
+<img alt="Cocktail" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="A modern corporate cocktail party held in a sleek glass-walled atrium overlooking a city skyline at night. Guests in formal attire are silhouetted against the bright city lights. The interior features minimalist furniture and subtle blue and gold accent lighting, creating a high-tech, exclusive business environment consistent with premium hospitality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbUS8XAEYPPgv8EP9Bo2v79SH6LdmH3KTdjlzFmxRYC6Jz9RtcQJ8NAa_E0vwSSkkp7YzEwnMb0Pgren7gR1Z4-Ddogo8S7IwV2pEodTfYAbACMigC7KmPWXjj9_RhEUCoKPhDgTzLjRUfirjCJN_lTN7F_Co8mlDkT8md69PcZjz2J-OvTbhBjTGODlIo0frrEl_dKFNzxeZMWWzf6Tp9H1kJ6QPrKbeGTiMDo-6PdteEJinidQ6YEz8ZxTMSUp-5J6dtadqOtlGD"/>
+</div>
+</div>
+<div class="md:col-span-4 group overflow-hidden rounded-xl relative">
+<img alt="Kitchen Craft" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="A close-up shot of a chef finishing a plate with extreme precision in a modern, open-concept kitchen. The kitchen is composed of dark steel and marble, with bright task lighting highlighting the textures of the food and the professional tools. The atmosphere is one of focused artistry and elite culinary craft, reflecting the 'Modern Luxury' brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlPAiHnkVt6qfPaHwl1kNaE9RRG2mi-rl36HL3QdyI8cjz8jJ2NHQnOnotMXPzPXFYNFf-i4VSPaudpHA2Dtp5RWoo1_OeVz-6gDq-vUjwkt5bN4Q9gMvDhGeebbQnqikANfvEDfon5Y-w2QCQVegF1hb_lUTdYHyK5WFqMUvXXR77zTDi6luqkhoK3yJcmjmaDy-sBVF_V28XoXz8DvrEGRhPV2ut5lXtpOUYIxMQI28YEGToDJqXvdhCVMtwnq0B_cNAhwuDbVK9"/>
+</div>
+<div class="md:col-span-8 group overflow-hidden rounded-xl relative">
+<img alt="Outdoor Event" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="A glamorous outdoor dining event at dusk, set in a manicured Mediterranean garden. Long tables are illuminated by strings of warm Edison bulbs hung between trees. The color palette features earthy greens, deep blacks, and the golden glow of the lights, creating a serene, exclusive, and unhurried dining environment that emphasizes atmospheric depth and tactile elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4TJt_3RG6MiGetfdhxK8VKOXwZ6BiyIOeaVajt89h9U95OWuqDgu38Yxa-6IV5eEhcV76INt4the2S3Iw6VFZE_4RULCjOdDc9R2M2qnxNYI7C1h8T-oiGM-xNyQ51TVS2tOeyEug4nlp2cjzjA8bvQ6Cauzs9UkRsZgjVDlPUJFEkkx8_Z_NHNo_WGBp-GEntN6uMErT7wVfxhffkXg0qKq5KXAE1IJn7-N6Go3AslO2ctGqYkEpeHFIXmeu9lsEoPv7p88XZddL"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Booking Inquiry Form -->
+<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-xl text-on-surface mb-8">Let’s Orchestrate Your Vision</h2>
+<p class="text-on-surface-variant font-body-lg mb-12 leading-relaxed">
+                        From intimate family gatherings to grand corporate galas, our team of dedicated event planners is ready to bring your concept to life with L'ELIXIR’s signature precision.
+                    </p>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<p class="font-headline-md text-headline-md text-on-surface">Bespoke Menu Creation</p>
+<p class="text-on-surface-variant font-body-md">Collaborate directly with our executive chef.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<p class="font-headline-md text-headline-md text-on-surface">Sommelier Curations</p>
+<p class="text-on-surface-variant font-body-md">Perfect wine pairings for every course.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<p class="font-headline-md text-headline-md text-on-surface">End-to-End Planning</p>
+<p class="text-on-surface-variant font-body-md">From lighting to logistics, we handle it all.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="glass-panel p-10 rounded-2xl shadow-2xl relative overflow-hidden">
+<!-- Subtle background glow -->
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+<form class="relative z-10 space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-2">Full Name</label>
+<input class="w-full bg-surface-container-high border-0 border-b border-white/10 focus:border-primary focus:ring-0 text-on-surface py-3 px-0 transition-colors placeholder:text-on-surface-variant/30" placeholder="Julian Vane" type="text"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-2">Email Address</label>
+<input class="w-full bg-surface-container-high border-0 border-b border-white/10 focus:border-primary focus:ring-0 text-on-surface py-3 px-0 transition-colors placeholder:text-on-surface-variant/30" placeholder="j.vane@luxury.com" type="email"/>
+</div>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-2">Event Type</label>
+<select class="w-full bg-surface-container-high border-0 border-b border-white/10 focus:border-primary focus:ring-0 text-on-surface py-3 px-0 transition-colors appearance-none">
+<option>Private Dinner</option>
+<option>Corporate Gala</option>
+<option>Wedding Reception</option>
+<option>Product Launch</option>
+</select>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-2">Date of Event</label>
+<input class="w-full bg-surface-container-high border-0 border-b border-white/10 focus:border-primary focus:ring-0 text-on-surface py-3 px-0 transition-colors" type="date"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-2">Guest Count</label>
+<input class="w-full bg-surface-container-high border-0 border-b border-white/10 focus:border-primary focus:ring-0 text-on-surface py-3 px-0 transition-colors" placeholder="12" type="number"/>
+</div>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-2">Additional Details</label>
+<textarea class="w-full bg-surface-container-high border-0 border-b border-white/10 focus:border-primary focus:ring-0 text-on-surface py-3 px-0 transition-colors placeholder:text-on-surface-variant/30" placeholder="Tell us about your requirements..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-label-md text-label-md uppercase tracking-widest hover:bg-primary-fixed transition-all duration-300 shadow-lg shadow-primary/20" type="submit">
+                            Submit Inquiry
+                        </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-white/5 w-full rounded-t-xl mt-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<span class="font-headline-lg text-headline-lg text-primary block mb-6">L'ELIXIR</span>
+<p class="text-on-surface-variant font-body-md">Defining the pinnacle of modern culinary luxury through precision and passion.</p>
+</div>
+<div>
+<h4 class="text-on-surface font-label-md text-label-md uppercase tracking-widest mb-8">Navigation</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary transition-transform duration-200 hover:translate-x-1 inline-block" href="#">Our Story</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-transform duration-200 hover:translate-x-1 inline-block" href="#">The Menu</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-transform duration-200 hover:translate-x-1 inline-block" href="#">Reservations</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-transform duration-200 hover:translate-x-1 inline-block" href="#">Private Cellar</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-on-surface font-label-md text-label-md uppercase tracking-widest mb-8">Services</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary transition-transform duration-200 hover:translate-x-1 inline-block" href="#">Catering</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-transform duration-200 hover:translate-x-1 inline-block" href="#">Events</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-transform duration-200 hover:translate-x-1 inline-block" href="#">Gift Cards</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-transform duration-200 hover:translate-x-1 inline-block" href="#">Delivery</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-on-surface font-label-md text-label-md uppercase tracking-widest mb-8">Contact</h4>
+<ul class="space-y-4">
+<li class="text-on-surface-variant font-body-md">1200 Gastronomy Blvd, Paris</li>
+<li class="text-on-surface-variant font-body-md">+33 1 23 45 67 89</li>
+<li class="text-on-surface-variant font-body-md">concierge@lelixir.com</li>
+</ul>
+</div>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop py-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">© 2024 L'ELIXIR LUXURY DINING. ALL RIGHTS RESERVED.</span>
+<div class="flex gap-6">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Careers</a>
+</div>
+</div>
+</footer>
+<!-- Micro-interaction scripts -->
+<script>
+        document.querySelectorAll('a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if(this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Simple scroll reveal for cards
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.group').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>
